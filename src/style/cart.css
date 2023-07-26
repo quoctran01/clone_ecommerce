@@ -1,0 +1,259 @@
+.shopping-cart {
+  margin: 0 auto;
+  width: 1200px;
+  padding: 40px 0;
+}
+.shopping-cart * {
+  font-size: 12px;
+}
+.shopping-cart .empty {
+  background: #fff
+    url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/shoppingcart/no_login.png)
+    no-repeat center 50px;
+  background-size: 305px 206px;
+  height: 350px;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 305px;
+}
+.shopping-cart .empty p {
+  color: #999;
+  font-size: 14px;
+  margin-top: 270px;
+  text-align: center;
+}
+.tab span {
+  font-size: 22px !important;
+  font-weight: 600;
+  color: #0083ef;
+}
+.tab p {
+  border-top: 1px solid #a8a2a266;
+  margin-top: 2px;
+  position: relative;
+}
+.tab p::after {
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 4px;
+  bottom: 1px;
+  background: #0083ef;
+}
+.all-select-top {
+  border: 1px solid #eee;
+  height: 36px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  overflow: hidden;
+  width: 1198px;
+  display: flex;
+  align-items: center;
+}
+.all-select-top span {
+  color: #333;
+  float: left;
+  font-weight: 700;
+  line-height: 36px;
+}
+.shopping-cart .select-input-false {
+  height: 14px;
+  width: 14px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin: 10px;
+}
+.all-select-top span:nth-of-type(2) {
+  margin-right: 86px;
+}
+.all-select-top span:nth-of-type(3) {
+  margin-right: 273px;
+}
+.all-select-top span:nth-of-type(4) {
+  margin-right: 164px;
+}
+.all-select-top span:nth-of-type(5) {
+  margin-right: 135px;
+}
+.all-select-top span:nth-of-type(6) {
+  margin-right: 54px;
+}
+.all-select-top span:nth-of-type(7) {
+  margin-right: 56px;
+}
+.shop-item .shop-msg {
+  display: flex;
+  align-items: center;
+}
+.shop-msg .shop-img {
+  height: 16px;
+  margin-top: 1px;
+  width: 16px;
+  margin-right: 6px;
+}
+.shop-msg a {
+  margin-top: 1px;
+  text-decoration: none;
+}
+.shop-goods {
+  border: 1px solid #e5e5e5;
+  margin-bottom: 28px;
+  overflow: hidden;
+  width: 1198px;
+}
+.daigou .goods-item {
+  display: flex;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  position: relative;
+  width: 100%;
+}
+.daigou .goods-img-box {
+  display: flex;
+  height: auto;
+  margin-right: 10px;
+  width: 80px;
+}
+.goods-img-box > div {
+  height: 80px;
+  width: 80px;
+  display: inline-block;
+  border: 1px solid rgb(238, 238, 238);
+  overflow: hidden;
+  background: none;
+  border-radius: 0px;
+}
+.goods-name {
+  height: auto;
+  margin-right: 50px;
+  overflow: visible;
+  width: 310px;
+  z-index: 10;
+}
+.goods-name a {
+  text-decoration: none;
+}
+.goods-name .title {
+  color: #333;
+  font-size: 12px;
+  font-weight: 700;
+  max-height: 37px;
+  overflow: hidden;
+  width: 100%;
+}
+.goods-item .select-input-false {
+  margin: 0 10px 0 29px;
+}
+.remark {
+  color: #666;
+  font-size: 12px;
+  margin-right: 20px;
+  width: 200px;
+}
+.unit-price-box {
+  width: 160px;
+}
+.goods-item .number {
+  color: #555;
+  margin-right: 45px;
+}
+.goods-item .number span {
+  background-color: #f0f0f0;
+  border: 1px solid #e5e5e5;
+  cursor: pointer;
+  float: left;
+  height: 23px;
+  line-height: 25px;
+  text-align: center;
+  width: 17px;
+}
+.goods-item .number input {
+  border: 1px solid #a7a6aa;
+  float: left;
+  height: 23px;
+  line-height: 25px;
+  text-align: center;
+  width: 39px;
+  outline: none;
+}
+.goods-item .total-price {
+  color: #e6505f;
+  font-weight: 800;
+  width: 96px;
+  font-size: 14px;
+}
+.goods-item .remove {
+  color: #666;
+  cursor: pointer;
+}
+.goods-total {
+  overflow: hidden;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  width: 100%;
+  border-top: 1px solid #a8a2a266;
+}
+.goods-total .goods-total-price {
+  float: right;
+  color: #333;
+  font-size: 12px;
+  padding-right: 37px;
+}
+.goods-total-price span {
+  margin-left: 20px;
+}
+.all-select-bottom {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: #fff;
+  border: 1px solid #eee;
+  font-size: 12px;
+  height: 54px;
+  margin-bottom: 40px;
+  margin-top: 10px;
+  width: 1198px;
+}
+.shops-total-price {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+}
+.gray-color {
+  color: #ccc;
+  font-size: 14px;
+  font-weight: 400;
+}
+.all-select-bottom > span {
+  margin-right: 10px;
+}
+.shops-total-price p {
+  margin: 0;
+}
+.all-select-bottom p:nth-child(1) {
+  color: #666;
+}
+.all-select-bottom p:nth-child(1) b {
+  color: #e6505f;
+  font-size: 18px;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.all-select-bottom p:nth-child(1) i {
+  color: #e6505f;
+  margin-right: 20px;
+}
+.account-btn-gray {
+  background-color: #ccc;
+  color: #fff;
+  cursor: auto;
+  float: right;
+  font-size: 18px;
+  font-weight: 700;
+  height: 56px;
+  line-height: 56px;
+  margin-top: -1px;
+  text-align: center;
+  width: 120px;
+}

@@ -1,0 +1,320 @@
+.header-top {
+  background-color: #f5f5f5;
+  height: 40px;
+  line-height: 40px;
+  min-width: 1190px;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+.header-wrapper {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  margin: 0 auto;
+  color: #666;
+  width: 1190px;
+}
+.beijing-time span {
+  font-weight: 700;
+  margin-right: 4px;
+  font-size: 14px;
+}
+.fl .translate {
+  cursor: pointer;
+  position: relative;
+}
+.fl .translate:hover .translate-drop-down {
+  animation: fadeIn 0.2s ease;
+  display: block;
+}
+
+.translate-drop-down {
+  display: none;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  position: absolute;
+  background: #fff;
+  width: 250px;
+  height: 216px;
+}
+.translate-drop-down dd {
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  border-radius: 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #333;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 10px;
+  margin-top: 10px;
+  text-align: center;
+  width: 100px;
+}
+.translate-drop-down dd:hover {
+  border-color: #666;
+}
+.translate-drop-down dd.active {
+  background: #f8fbfd;
+  border-color: #0083ef !important;
+  color: #0083ef;
+}
+
+.translate-drop-down dt {
+  margin-left: -10px;
+  color: #666;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 8px 0 0 8px;
+}
+.translate-drop-down-wrapper {
+  margin-left: -10px;
+}
+.translate-drop-down button {
+  position: relative;
+  background: none;
+  border: 1px solid #e5e5e5;
+  border-radius: 15px;
+  color: #0083ef;
+  cursor: pointer;
+  float: right;
+  font-size: 14px;
+  height: 30px;
+  line-height: 30px;
+  margin: 20px 9px 5px 0;
+  padding: 0 15px;
+  width: 100px;
+  bottom: 17px;
+  left: 9px;
+}
+.translate-drop-down button:hover {
+  background: #0083ef;
+  color: #fff;
+}
+.fl {
+  display: flex;
+}
+.fl div {
+  font-size: 14px;
+  padding: 0 10px;
+}
+.fr {
+  display: flex;
+}
+.register {
+  padding-right: 20px;
+}
+.register .car-drop-down {
+  text-decoration: none;
+  color: #666;
+}
+.register .new-gift {
+  width: 88px;
+  color: #0083ef;
+  background-color: #fff;
+  border-radius: 10px;
+  font-size: 12px;
+  padding: 4px 14px;
+  height: 26px;
+  font-weight: 700;
+  text-align: center;
+  margin-right: 8px;
+}
+.fr .login {
+  margin-right: 8px;
+}
+.fr .login a:hover {
+  cursor: pointer;
+  color: #0083ef;
+}
+.fr .login a {
+  text-decoration: none;
+  color: #666;
+}
+.register a:hover {
+  cursor: pointer;
+  color: #0083ef;
+}
+.header-icon {
+  padding: 0 6px 0 10px;
+  position: relative;
+}
+.header-icon span {
+  font-size: 20px;
+}
+.header-icon .dotred {
+  position: absolute;
+  background: red;
+  width: 3px;
+  height: 3px;
+  top: 13px;
+  right: 5px;
+}
+.header-icon span:hover {
+  cursor: pointer;
+  color: #0083ef;
+}
+.header-special:hover {
+  color: #0083ef;
+  cursor: pointer;
+  background: #ffff;
+}
+.header-special {
+  display: flex;
+}
+.header-special-wrapper {
+  position: relative;
+}
+.header-special-wrapper:hover .special-drop-down {
+  animation: fadeIn 0.2s ease;
+  display: block;
+}
+
+.header-special .header-special-text {
+  font-weight: 700;
+}
+.header-icon .header-icon--drop i {
+  font-size: 30px;
+  margin-left: -10px;
+}
+.special-drop-down {
+  display: none;
+  position: absolute;
+}
+.special-drop-down ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 !important;
+}
+.special-drop-down {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  background: #fff;
+  margin-top: 27px;
+  box-sizing: border-box;
+  padding: 20px 18px;
+  right: 0 !important;
+  width: 360px;
+  margin-top: 42px;
+}
+.special-drop-down ul a {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #333;
+  font-size: 14px;
+}
+.special-drop-down ul a .icon-outer {
+  background: #dbefff;
+  border-radius: 100px;
+  color: #0083ef;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  width: 30px;
+}
+.special-drop-down ul a span {
+  line-height: 14px;
+  margin: 8px 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+.special-drop-down ul a span:hover {
+  animation: fadeIn 0.2s ease;
+  cursor: pointer;
+  color: #0083ef;
+}
+.notice-wrap {
+  border-top: 1px solid #ccc;
+}
+.notice-wrap .notice-header {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+.notice-wrap .notice-list {
+  display: flex;
+}
+.notice-wrap .notice-list .waring-notice {
+  display: flex;
+}
+.header-middle {
+  background: #ffff;
+  height: 60px;
+  width: 100%;
+  line-height: 60px;
+  min-width: 1190px;
+  position: relative;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+}
+.header-middle-main {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  margin: 0 auto;
+  display: flex;
+  width: 1190px;
+}
+.header-logo {
+  padding: 0 0 16px 0;
+}
+.header-nav {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-item {
+  position: relative;
+  padding: 0 18px;
+}
+.nav-item a {
+  text-decoration: none;
+  color: #666;
+}
+.nav-item a:hover {
+  cursor: pointer;
+  color: #0083ef;
+}
+.header-middle .header-nav .nav-item:nth-child(-n + 7):after {
+  color: rgba(0, 0, 0, 0.15);
+  content: "/";
+  font-size: 22px;
+  height: 22px;
+  line-height: 20px;
+  margin-top: -10px;
+  position: absolute;
+  right: -6px;
+  top: 50%;
+}
+.header-middle .header-nav .nav-item .active:before {
+  background: #0083ef;
+  bottom: 9px;
+  content: "";
+  display: block;
+  height: 5px;
+  left: 50%;
+  margin-left: -8px;
+  position: absolute;
+  width: 16px;
+}
+.header-middle .header-nav .nav-item .shoppingagent:before {
+  border-left: 1px solid #333;
+  border-top: 1px solid #333;
+  content: "";
+  display: block;
+  height: 5px;
+  position: absolute;
+  right: 18px;
+  top: 25px;
+  transform: rotate(-135deg);
+  width: 5px;
+  z-index: 1;
+}

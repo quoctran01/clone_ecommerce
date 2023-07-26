@@ -1,0 +1,44 @@
+.shoppingAgent-rank__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+.shoppingAgent-rank main {
+  margin: 0 auto;
+  width: 1234px;
+}
+.shoppingAgent-rank .title-bar {
+  margin-top: 72px;
+}
+.shoppingAgent-rank__title h3 {
+  font-size: 32px;
+  padding-right: 20px;
+}
+.shoppingAgent-rank__title--left {
+  display: flex;
+}
+.shoppingAgent-rank__title--left p {
+  margin-top: 14px;
+  color: rgba(135, 135, 135, 1);
+}
+.shoppingAgent-rank__title--right a {
+  color: #333;
+  font-size: 18px;
+  top: -0.9px;
+}
+.shoppingAgent-rank__title--right a:hover {
+  color: #4498dc;
+}
+.shoppingAgent-rank__slider {
+  padding: 0 24px;
+}
+.carousel-wrap {
+  height: 479px;
+  margin-top: 22px;
+}
+.carousel-wrap .carousel-content-wrap {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}

@@ -1,0 +1,98 @@
+.shopping-guide {
+  display: flex;
+  margin: 20px auto;
+  min-width: 1190px;
+  width: 1190px;
+  z-index: 1;
+}
+.shopping-guide-inner {
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+  cursor: default;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+}
+.shopping-guide-inner h3 {
+  color: #0083ef;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-left: 30px;
+}
+.shopping-guide-inner ul {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 72%;
+  padding: 0;
+  margin: 0;
+  top: 6px;
+}
+.shopping-guide-inner ul li {
+  right: -15px;
+  position: relative;
+}
+
+.shopping-guide-inner ul li p.title span {
+  color: #333;
+}
+.shopping-guide-inner ul li:before {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/img/banner-arrow-grey.png)
+    no-repeat 100%;
+  background-size: 8px;
+  bottom: 0;
+  content: "";
+  height: 14px;
+  margin: auto;
+  position: absolute;
+  right: -5px;
+  top: -12px;
+  width: 10px;
+}
+.shopping-guide-inner ul li p {
+  font-size: 12px;
+}
+.shopping-guide-inner ul li p span:first-child {
+  color: #0083ef;
+  margin-right: 4px;
+  font-weight: 8000;
+}
+.shopping-guide-inner ul li p.title {
+  display: flex;
+  font-weight: 600;
+  line-height: 14px;
+}
+.shopping-guide-inner ul li:first-child p.title span:last-child {
+  width: 148px;
+}
+.shopping-guide-inner ul li:nth-child(2) p.title span:last-child {
+  width: 128px;
+}
+.shopping-guide-inner ul li p.title span:last-child {
+  display: inline-block;
+  width: 164px;
+}
+.shopping-guide-inner ul li:nth-child(4) p.title span:last-child {
+  width: 108px;
+}
+.shopping-guide-inner ul li:nth-child(5) p.title span:last-child {
+  width: 124px;
+}
+.shopping-guide-inner > a {
+  text-decoration: none;
+  border: 1px solid #e5e5e5;
+  border-radius: 35px;
+  color: #333;
+  margin-right: 30px;
+  padding: 6px 16px;
+  transition: all 0.3s linear;
+  font-size: 14px;
+}
+.shopping-guide-inner > a:hover {
+  color: #0083ef;
+}

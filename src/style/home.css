@@ -1,0 +1,102 @@
+.homepage-wrapper {
+  background: rgb(250, 250, 250);
+  padding-bottom: 20px;
+}
+.homepage-goods-waterfall {
+  width: 1190px;
+  margin: 0 auto;
+}
+.goods-waterfall-container h2 {
+  color: #333;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.goods-waterfall-operation .operation-list {
+  display: flex;
+  padding-left: none !important;
+}
+.operation-list li:nth-child(1) span:first-child,
+.operation-list li:nth-child(2) span:first-child {
+  color: #999;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.operation-list li:nth-child(1):hover,
+.operation-list li:nth-child(2):hover {
+  cursor: pointer;
+  background: #fff;
+}
+.operation-list li {
+  margin-right: 22px;
+  padding: 16px;
+}
+.operation-list_item span:last-child {
+  color: #333333;
+  font-size: 14px;
+  font-weight: 600;
+}
+.operation-list_item .operation-items {
+  font-size: 14px;
+  font-weight: 700;
+}
+.goods-waterfall-operation {
+  position: relative;
+  left: -46px;
+}
+.operation-list > li.hover:after {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/img/homepage/banner-up.png)
+    100% no-repeat;
+  content: "";
+  height: 16px;
+  position: absolute;
+  right: 1px;
+  top: 22px;
+  transform: rotate(-180deg);
+  transition: all 0.3s linear;
+  width: 12px;
+}
+.operation-list_item {
+  position: relative;
+}
+
+.operation-list_item ul.host-class {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  max-width: 636px;
+  height: 50px;
+  left: 0;
+  background: #fff;
+  padding-left: none !important;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.03);
+}
+.operation-list_item .host-class li {
+  font-size: 14px;
+  margin: 6px;
+  padding: 0px;
+}
+.operation-list_item .host-class li:first-child {
+  padding-left: 11px !important;
+}
+.operation-list_item .host-class li:hover {
+  cursor: pointer;
+  color: #0083ef;
+}
+.operation-list_item input {
+  margin-right: 6px;
+}
+.operation-list_item input:hover {
+  cursor: pointer;
+}
+.waterfall-list-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}

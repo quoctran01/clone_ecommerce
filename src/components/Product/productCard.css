@@ -1,0 +1,87 @@
+.product-items {
+  height: auto !important;
+  margin-left: -10px;
+  margin-right: 0;
+  margin-top: -10px;
+  padding: 10px;
+  padding-bottom: 0 !important;
+  transition: all 0.3s linear;
+  width: 230px;
+  border-radius: 10px;
+  margin-bottom: 60px;
+}
+.common-item {
+  padding: 10px;
+  position: relative;
+  transition: all 0.3s linear;
+}
+.product-items:hover {
+  background: #fff;
+  box-shadow: 8px 13px 10px 0 rgba(0, 0, 0, 0.05);
+  transform: translateY(-10px);
+  z-index: 2;
+}
+.product-items .product-items__wrapper {
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s linear;
+  text-decoration: none;
+}
+.product-items .good-description {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+}
+.goods-img-content {
+  background: #fff;
+  box-sizing: border-box;
+  height: 230px;
+  position: relative;
+  padding: 10px;
+  width: 220px;
+}
+.homepage-wrapper-content {
+  margin: 0 auto;
+  position: relative;
+  width: 1190px;
+  margin-bottom: 30px;
+}
+
+.product-items .goods-title {
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #666;
+  display: -webkit-box;
+  font-size: 14px;
+  height: 42px;
+  margin-top: 6px;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+.icon-XY {
+  background-image: url(https://cdn.superbuy.com/starit-superbuy/dist/img/homepage/icon/XY.png);
+}
+.goods-title.icon-common {
+  background-repeat: no-repeat;
+  text-indent: 26px;
+}
+.product-items .goods-price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+.goods-price .price-content-icon {
+  float: right;
+  cursor: pointer;
+}
+span.discount-price {
+  font-size: 18px;
+  font-weight: 800;
+}
+.price-content-icon i {
+  font-size: 20px;
+  color: #0083ef;
+}

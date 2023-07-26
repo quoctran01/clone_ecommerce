@@ -1,0 +1,90 @@
+.m-buy {
+  background-color: #f5f5f5;
+  position: relative;
+}
+.buy-wrap {
+  margin: 0 auto;
+  padding: 31px 0 100px;
+  position: relative;
+  width: 1200px;
+}
+.buy-main {
+  width: 1190px;
+}
+.buy-main .goods-info_container {
+  margin-bottom: 10px;
+  min-height: 582px;
+  padding-bottom: 0;
+  width: 1000px;
+}
+.card-wrap {
+  background: #fff;
+  padding: 20px;
+}
+.buy-preview {
+  float: left;
+  position: sticky;
+  top: 0;
+  width: 380px;
+  z-index: 1;
+}
+.preview-window {
+  border: 1px solid #eee;
+}
+.preview-list ul {
+  padding: 0;
+  margin: 0;
+  min-width: 380px;
+}
+.buy-preview .preview-list ul li {
+  align-items: center;
+  background: 50% center / contain no-repeat;
+  border: 1px solid rgb(238, 238, 238);
+  display: flex;
+  float: left;
+  height: 60px;
+  justify-content: center;
+  margin-top: 15px;
+  transition: all 0.1s linear 0s;
+  width: 60px;
+  cursor: pointer !important;
+  list-style: none;
+}
+.buy-preview .preview-list ul li:not(:last-child) {
+  margin-right: 20px;
+}
+.buy-preview .preview-list ul li img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.buy-preview .preview-list ul li:hover {
+  border-color: #ccc;
+}
+.buy-preview .preview-list ul li.active {
+  border: 4px solid #333;
+  cursor: default;
+  position: relative;
+}
+.preview-toolbar li span {
+  margin: 0 3px;
+  color: rgb(153, 153, 153);
+  font-size: 12px;
+}
+.preview-toolbar li i {
+  color: rgb(153, 153, 153);
+  font-size: 20px;
+  position: relative;
+  top: 6px;
+}
+.preview-toolbar li:last-child {
+  cursor: pointer;
+  color: #4498dc;
+}
+.buy-info {
+  color: rgb(102, 102, 102);
+  display: flex;
+  flex-direction: column;
+  float: right;
+  margin-left: 20px;
+  width: 560px;
+}

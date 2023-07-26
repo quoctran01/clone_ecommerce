@@ -1,0 +1,52 @@
+.swiperImg-dot {
+  display: flex;
+}
+.swiperImg-container {
+  position: relative;
+}
+.swiperImg-slider {
+  position: relative;
+}
+.swiperImg-dot__item {
+  padding: 2px;
+  position: relative;
+  margin: 6px;
+  background: #fff;
+  width: 20px;
+  height: 4px;
+  bottom: 25px;
+}
+.swiperImg-dot__item:hover {
+  background: #0083ef;
+  cursor: pointer;
+}
+.swiperImg-switch .swiperImg-switch__pre {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
+  background-color: #fff;
+  border-radius: 35px;
+}
+.swiperImg-switch .swiperImg-switch__pre:hover,
+.swiperImg-switch .swiperImg-switch__next:hover {
+  color: #464646;
+}
+.swiperImg-switch .swiperImg-switch__next {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
+  background-color: #fff;
+  border-radius: 35px;
+}
+
+.layout .banner-container .banner-steps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px 26px;
+}
+.banner-container .banner-steps ul {
+  display: flex;
+}

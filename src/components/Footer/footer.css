@@ -1,0 +1,36 @@
+.footer {
+  background: #f5f5f5;
+  padding-top: 60px;
+}
+.footer__color {
+  color: rgba(10, 7, 7, 0.735);
+}
+.footer__text {
+  line-height: 30px;
+  color: #333;
+  font-size: 0.9rem;
+}
+.quick__links-title {
+  font-size: 13px;
+  font-weight: 700;
+}
+.footer__quick-links ul li {
+  background: transparent !important;
+}
+.footer__quick-links ul li a {
+  text-decoration: none;
+  color: rgba(10, 7, 7, 0.735);
+  font-size: 0.9rem;
+}
+
+.footer__text-contact {
+  font-size: 0.9rem;
+  color: rgba(10, 7, 7, 0.735);
+}
+.footer__copyright {
+  color: rgba(10, 7, 7, 0.735);
+  font-size: 0.9rem;
+  margin-top: 50px;
+}
+@media only screen and (max-width: 768px) {
+}
