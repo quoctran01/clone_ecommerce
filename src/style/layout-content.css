@@ -28,7 +28,7 @@
   top: -0.9px;
 }
 .shoppingAgent-rank__title--right a:hover {
-  color: #4498dc;
+  color: var(--primary-color);
 }
 .shoppingAgent-rank__slider {
   padding: 0 24px;

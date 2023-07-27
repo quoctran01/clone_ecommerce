@@ -86,7 +86,7 @@
 }
 .operation-list_item .host-class li:hover {
   cursor: pointer;
-  color: #0083ef;
+  color: var(--primary-color);
 }
 .operation-list_item input {
   margin-right: 6px;
