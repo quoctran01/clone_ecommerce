@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../../style/home-page-content.css";
+import CalculatorTool from "../CalculatorTool/CalculatorTool";
 const imageSlider = [
   "https://img1.superbuy.com/images/daigou-admin/2022/11/17/1f7157b4-f928-4a38-8916-c9cdc5c923b8.png",
   "https://img1.superbuy.com/images/daigou-admin/2022/11/16/7d5fce1e-2527-4766-a2eb-6cf372fe15ca.png",
@@ -82,7 +83,7 @@ const HompageContent = () => {
             </div>
           </div>
         </div>
-        <h1>Shipping Calculator</h1>
+        <CalculatorTool />
       </div>
     </>
   );
