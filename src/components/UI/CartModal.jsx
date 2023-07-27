@@ -1,31 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../style/cartModal.css";
-import { cartActions } from "../../redux/slices/cartSlice";
-import { useDispatch } from "react-redux";
-import { toast } from "react-toastify";
+import useHandleQuantity from "../../const/handleQuantity";
 
 const CartModal = ({ setOpenModal, productModal }) => {
-  const dispatch = useDispatch();
-  const [quantity, setQuantity] = useState(1);
-  const handleDecrease = () => {
-    setQuantity(quantity + 1);
-  };
-  const handleIncrease = () => {
-    if (Number(quantity) <= 1) {
-      return;
-    }
-    setQuantity(quantity - 1);
-  };
-  const addToCart = () => {
-    dispatch(
-      cartActions.addItem({
-        ...productModal,
-        quantity: quantity,
-      })
-    );
-    setOpenModal(false);
-    toast.success("Product added successfully");
-  };
+  const { quantity, handleDecrease, handleIncrease, addToCart } =
+    useHandleQuantity(productModal, setOpenModal);
   return (
     <>
       <div className='good-to-cart-pick'>
@@ -112,7 +91,10 @@ const CartModal = ({ setOpenModal, productModal }) => {
                   </div>
                 </p>
                 <p class='operation-button'>
-                  <button type='button' class='ant-btn add-cart button' onClick={addToCart}>
+                  <button
+                    type='button'
+                    class='ant-btn add-cart button'
+                    onClick={addToCart}>
                     <span>Add to cart</span>
                   </button>
                   <button class='buy-now'>Buy Now</button>

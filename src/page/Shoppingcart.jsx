@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "../style/cart.css";
 import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../redux/slices/cartSlice";
@@ -17,12 +17,12 @@ const Shoppingcart = () => {
   const handleDecreaseQuantity = (id) => {
     dispatch(cartActions.decreaseQuantity({ id }));
   };
-  const openDialog=(id)=>{
-    setSelectedProductId(id)
-  }
-  const handlecloseDialog =()=>{
-    setSelectedProductId(null)
-  }
+  const openDialog = (id) => {
+    setSelectedProductId(id);
+  };
+  const handlecloseDialog = () => {
+    setSelectedProductId(null);
+  };
   return (
     <>
       <div className='shopping-cart'>
@@ -96,9 +96,7 @@ const Shoppingcart = () => {
                         <div class='total-price' id='goodsPricedaigou0Goods0'>
                           US ${item.totalPrice}
                         </div>
-                        <div
-                          class='remove'
-                          onClick={ ()=> openDialog(item.id)}>
+                        <div class='remove' onClick={() => openDialog(item.id)}>
                           Delete
                         </div>
                       </div>
@@ -167,9 +165,14 @@ const Shoppingcart = () => {
           )}
         </div>
       </div>
-      {
-          selectedProductId && createPortal(<DialogMask productId={selectedProductId} onClose={handlecloseDialog} />, document.body)
-      }
+      {selectedProductId &&
+        createPortal(
+          <DialogMask
+            productId={selectedProductId}
+            onClose={handlecloseDialog}
+          />,
+          document.body
+        )}
     </>
   );
 };

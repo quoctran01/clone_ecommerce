@@ -1,5 +1,6 @@
 import React from "react";
 import "./productCard.css";
+import { Link } from "react-router-dom";
 
 const ProductCard = ({ item, setOpenModal, handleOpenModal }) => {
   const handleAddToCart = () => {
@@ -31,16 +32,18 @@ const ProductCard = ({ item, setOpenModal, handleOpenModal }) => {
               />
             </div>
           </div>
-          <div className='goods-img-content'>
-            <div className='common-img-wrap'>
-              <img
-                src={item.imgUrl}
-                alt='common-img'
-                draggable='false'
-                class='common-img'
-              />
+          <Link to={`/shop/${item.id}`}>
+            <div className='goods-img-content'>
+              <div className='common-img-wrap'>
+                <img
+                  src={item.imgUrl}
+                  alt='common-img'
+                  draggable='false'
+                  class='common-img'
+                />
+              </div>
             </div>
-          </div>
+          </Link>
           <div className='goods-title icon-XY icon-common'>
             {item.shortDesc}
           </div>
