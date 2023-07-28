@@ -75,3 +75,22 @@ export const sliderAgent = [
     key: 4,
   },
 ];
+
+export const sliderFreight = [
+  {
+    src: "https://img1.superbuy.com/images/daigou-admin/2022/11/17/df6a4cef-777a-4550-a15c-87e9ba25f068.png",
+    key: 1,
+  },
+  {
+    src: "https://img1.superbuy.com/images/daigou-admin/2022/11/03/9600101d-467c-4316-8d40-48b0797d2b4b.jpg",
+    key: 2,
+  },
+  {
+    src: "https://img1.superbuy.com/images/daigou-admin/2023/07/20/0de31d83-f9c5-4e04-a633-f23839df6729.jpg",
+    key: 3,
+  },
+  {
+    src: "https://img1.superbuy.com/images/daigou-admin/2023/07/11/aebcab1c-fb0a-4ddf-a09d-ca895070100e.png",
+    key: 4,
+  },
+];
