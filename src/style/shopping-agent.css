@@ -3,7 +3,6 @@
   min-height: 100%;
   padding-bottom: 573px;
 }
-
 .layout {
   display: flex;
   flex-direction: column;
@@ -48,7 +47,7 @@
 }
 .title-content__icon_en .icon-item:hover {
   cursor: pointer;
-  color: #0083ef;
+  color: var(--primary-color);
 }
 .title-content__icon_en .icon-item span {
   font-size: 24px;
@@ -92,7 +91,7 @@
   box-shadow: 0 0 0 0 transparent;
   height: 60px;
   width: 80px;
-  background-color: #0083ef;
+  background-color: var(--primary-color);
   border: 0;
   border-radius: 33px;
   box-shadow: 0 0 40px 0 rgba(0, 35, 100, 0.4);
@@ -115,7 +114,7 @@
 }
 .shoppingagent-search-wrapper .shoppingagent-searchBox-recommend .title:hover {
   cursor: pointer;
-  color: #0083ef;
+  color: var(--primary-color);
 }
 .shoppingagent-searchBox-recommend li a {
   text-decoration: none;
@@ -128,8 +127,7 @@
 .layout .shadow-content {
   box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
 }
-*/ .layout .banner-container {
-  /* height: 520px; */
+.layout .banner-container {
   width: 1190px;
   position: relative;
 }
@@ -148,6 +146,9 @@
   justify-content: space-between;
   margin-top: -10px;
   padding: 0 40px 26px;
+}
+.swiperImg-container {
+  position: relative;
 }
 .layout .banner-container .banner-steps ul {
   display: flex;
@@ -207,7 +208,7 @@
 }
 .banner-steps__btn button:hover {
   cursor: pointer;
-  color: #0083ef;
+  color: var(--primary-color);
 }
 .layout-header .Ads {
   display: flex;

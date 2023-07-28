@@ -94,7 +94,7 @@
   width: 100%;
 }
 .loginMsg input:focus {
-  outline: 1px solid #5ba0ff;
+  outline: 1px solid var(--primary-color);
 }
 .loading-box {
   margin: 0 auto;
@@ -189,7 +189,7 @@
   width: 280px;
 }
 .mainBox .go-register a {
-  color: #1268bb;
+  color: var(--primary-color);
   text-decoration: none;
 }
 .footer-bottom {
@@ -243,7 +243,7 @@
   color: #999;
 }
 .protocol .protocol-content a {
-  color: #1268bb;
+  color: var(--primary-color);
   cursor: pointer;
   font-size: 12px;
   text-decoration: none;
@@ -256,7 +256,7 @@
   cursor: pointer;
 }
 .ant-checkbox input:focus {
-  border: 1px solid #5ba0ff;
+  border: 1px solid var(--primary-color);
 }
 input.verCode-input {
   width: 172px;

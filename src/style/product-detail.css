@@ -78,7 +78,7 @@
 }
 .preview-toolbar li:last-child {
   cursor: pointer;
-  color: #4498dc;
+  color: var(--primary-color);
 }
 .buy-info {
   color: rgb(102, 102, 102);
@@ -91,7 +91,7 @@
 .popBox-help.popBox-tag {
   background: #eef5ff;
   border-radius: 10px;
-  color: #0083ef;
+  color: var(--primary-color);
   cursor: help;
   font-size: 12px;
   height: 23px;
@@ -172,7 +172,7 @@
   background: none !important;
 }
 .new-goods-options-content > .label.label-one:before {
-  background: #0083ef;
+  background: var(--primary-color);
   border-radius: 50%;
   bottom: 0;
   color: #fff;
@@ -197,7 +197,7 @@
   top: 31px;
 }
 .new-goods-options-content > .label.label-tow:before {
-  background: #0083ef;
+  background: var(--primary-color);
   border-radius: 50%;
   bottom: 0;
   color: #fff;
@@ -248,7 +248,7 @@
 .country-select-search {
   width: 140px;
   margin-right: 6px;
-  border-color: 1px solid #1890ff;
+  border-color: 1px solid var(--primary-color);
 }
 
 .country-select-search select {
@@ -261,10 +261,10 @@
 }
 .country-select-search select:focus-visible {
   outline: none;
-  border: 1px solid #1890ff;
+  border: 1px solid var(--primary-color);
 }
 .country-select > span.line-number {
-  color: #0083ef;
+  color: var(--primary-color);
   font-weight: 700;
   margin-right: 8px;
 }
@@ -301,7 +301,7 @@
   height: 100%;
 }
 .goods-options-tags li.active {
-  border: 1px solid #0083ef;
+  border: 1px solid var(--primary-color);
 }
 .shopping-tools {
   background: #eef5ff;
@@ -368,11 +368,7 @@
   min-width: 65px;
   padding-right: 8px;
   text-transform: capitalize;
-}
-/* .support-pay-list dl .pay-icon.paypal {
-  background-image: url(https://cdn.superbuy.com/starit-superbuy/dist/img/buy/payList/paypal.png);
-  background-repeat: no-repeat;
-} */
+} 
 .support-pay-list dl .pay-icon {
   margin-right: 10px;
 }
@@ -439,7 +435,7 @@
   font-size: 12px;
 }
 .buy-shopBox .shopBox-body > span em {
-  color: #0083ef;
+  color: var(--primary-color);
   font-size: 30px;
   font-weight: 100;
   line-height: 30px;
@@ -468,7 +464,7 @@
   width: 100%;
 }
 .goods-disclaimer_container h3 {
-  color: #0083ef;
+  color: var(--primary-color);
   font-size: 14px;
   font-weight: 700;
   margin-bottom: 8px;

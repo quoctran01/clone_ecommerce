@@ -1,4 +1,4 @@
-.swiperImg-dot {
+/* .swiperImg-dot {
   display: flex;
 }
 .swiperImg-container {
@@ -17,7 +17,7 @@
   bottom: 25px;
 }
 .swiperImg-dot__item:hover {
-  background: #0083ef;
+  background: var(--primary-color);
   cursor: pointer;
 }
 .swiperImg-switch .swiperImg-switch__pre {
@@ -49,4 +49,4 @@
 }
 .banner-container .banner-steps ul {
   display: flex;
-}
+} */

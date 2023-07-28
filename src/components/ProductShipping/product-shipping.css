@@ -1,0 +1,109 @@
+.package-item_container {
+  border-radius: 10px;
+  box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  float: left;
+  height: 244px;
+  padding: 14px !important;
+  width: 201px;
+  margin-right: 10px;
+  z-index: 1000;
+}
+
+.package-item_container .package-header {
+  height: 12px;
+  margin-bottom: 12px;
+  color: #333333;
+  font-size: 12px;
+}
+.package-header i {
+  font-size: 18px;
+}
+.package-goods .common-img-wrap {
+  height: 80px;
+  width: 80px;
+}
+.package-info h3 {
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  color: #333;
+  display: -webkit-box;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  margin-top: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+.express-price {
+  margin-top: 12px;
+}
+.express-price span:first-child {
+  color: #0083ef;
+  font-family: muliBlack;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-right: 24px;
+}
+.express-price i {
+  font-style: normal;
+}
+.express-price span:last-child {
+  color: #999;
+  font-size: 12px;
+  line-height: 24px;
+}
+.express-description {
+  margin-bottom: 6px;
+  margin-top: 6px;
+}
+.package-info .express-description {
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  align-items: center;
+  color: #333;
+  display: -webkit-box;
+  display: flex;
+  max-width: 190px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+.express-description .common-img-wrap {
+  background: none !important;
+  display: inline-block;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  border-radius: 6px;
+}
+.express-description .common-img-wrap {
+  border-radius: 2px;
+  margin-left: 5px;
+  width: 30px;
+  height: 23px;
+  margin-right: 4px;
+}
+.express-description .common-img-wrap img {
+  width: 30px;
+  height: 18px;
+  position: relative;
+  top: -2px;
+}
+.package-description {
+  color: #999;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+.package-info .package-description {
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  color: #999;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}

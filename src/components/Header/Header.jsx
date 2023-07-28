@@ -4,42 +4,6 @@ import { populate } from "../../assets/data/populate";
 import PopulateList from "../PopulateList/PopulateList";
 import { NavLink, useNavigate, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-
-const nav_link = [
-  {
-    path: "home",
-    display: "Home",
-  },
-  {
-    path: "shoppingagent",
-    display: "SHOPPING AGENT",
-  },
-  {
-    path: "forward",
-    display: "FORWARDING",
-  },
-  {
-    path: "logictics",
-    display: "LOGISTICS",
-  },
-  {
-    path: "bss",
-    display: "BBS",
-  },
-  {
-    path: "business",
-    display: "BUSINESS",
-  },
-  {
-    path: "affiliates",
-    display: "AFFILIATES",
-  },
-  {
-    path: "customerService",
-    display: "CUSTOMER SERVICE",
-  },
-];
-
 const Header = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
   const navigate = useNavigate();
@@ -146,11 +110,48 @@ const Header = () => {
               </div>
             </Link>
             <ul className='header-nav'>
-              {nav_link.map((item, index) => (
-                <li className='nav-item' key={index}>
-                  <NavLink to={item.path}>{item.display}</NavLink>
-                </li>
-              ))}
+              <li className='nav-item'>
+                <NavLink to='home'>Home</NavLink>
+              </li>
+              <li className='nav-item'>
+                <NavLink to='shoppingagent'>SHOPPING AGENT</NavLink>
+              </li>
+              <li className='nav-item'>
+                <NavLink to='forward'>FORWARDING</NavLink>
+              </li>
+              <li className='nav-item'>
+                <NavLink to='freight'>LOGISTICS</NavLink>
+                <i class='ri-arrow-down-s-line'></i>
+                <ul class='sub-nav-logistics m-0 p-0'>
+                  <li class='sub-nav-item'>
+                    <Link to='freight' class='nav-text'>
+                      Shipping Calculator
+                    </Link>
+                  </li>
+                  <li class='sub-nav-item'>
+                    <Link to='tracking' class='nav-text'>
+                      Parcel Tracking
+                    </Link>
+                  </li>
+                  <li class='sub-nav-item'>
+                    <Link to='customization' class='nav-text'>
+                      Customized Logistics
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+              <li className='nav-item'>
+                <NavLink to='bbs'>BBS</NavLink>
+              </li>
+              <li className='nav-item'>
+                <NavLink to='busniess'>BUSINESS</NavLink>
+              </li>
+              <li className='nav-item'>
+                <NavLink to='afiliates'>AFFILIATES</NavLink>
+              </li>
+              <li className='nav-item'>
+                <NavLink to='customer'>CUSTOMER SERVICE</NavLink>
+              </li>
             </ul>
           </div>
         </div>

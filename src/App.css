@@ -7,6 +7,7 @@
 }
 :root {
   --small-text-color: #666;
+  --primary-color: #0686ef;
 }
 body {
   font-family: "Mulish", sans-serif;

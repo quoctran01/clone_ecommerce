@@ -52,14 +52,12 @@
 .steps-list_container ul li {
   display: flex;
   position: relative;
-}
-.steps-list_container ul li p {
-}
+} 
 .steps-list_container ul li > span {
   margin-right: 6px;
   font-size: 13px;
   font-weight: 600;
-  color: #0083ef;
+  color: var(--primary-color);
 }
 
 .list-content p span:first-child {
@@ -94,7 +92,7 @@
   line-height: 12px;
 }
 .good-detail-content .good-url span:last-child {
-  color: #0083ef;
+  color: var(--primary-color);
   cursor: pointer;
 }
 .good-detail-content .good-url span:nth-child(2) {
@@ -178,7 +176,7 @@
   .props-list
   .props-select
   li.selected {
-  border: 3px solid #0083ef;
+  border: 3px solid var(--primary-color);
   padding: 3px 8px;
   text-decoration: none;
 }
@@ -225,13 +223,13 @@
 .operation-button .ant-btn {
   background: #eef5ff;
   border: 1px solid #bed5f5;
-  color: #0382f0;
+  color: var(--primary-color);
   font-size: 14px;
   font-weight: 600;
   margin-right: 30px;
 }
 .operation-button .buy-now {
-  background: #0083ef;
+  background: var(--primary-color);
   color: #fff;
 }
 .operation-button button:hover {

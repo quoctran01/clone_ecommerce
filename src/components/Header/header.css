@@ -62,8 +62,8 @@
 }
 .translate-drop-down dd.active {
   background: #f8fbfd;
-  border-color: #0083ef !important;
-  color: #0083ef;
+  border-color: var(--primary-color) !important;
+  color: var(--primary-color);
 }
 
 .translate-drop-down dt {
@@ -82,7 +82,7 @@
   background: none;
   border: 1px solid #e5e5e5;
   border-radius: 15px;
-  color: #0083ef;
+  color: var(--primary-color);
   cursor: pointer;
   float: right;
   font-size: 14px;
@@ -95,7 +95,7 @@
   left: 9px;
 }
 .translate-drop-down button:hover {
-  background: #0083ef;
+  background: var(--primary-color);
   color: #fff;
 }
 .fl {
@@ -117,7 +117,7 @@
 }
 .register .new-gift {
   width: 88px;
-  color: #0083ef;
+  color: var(--primary-color);
   background-color: #fff;
   border-radius: 10px;
   font-size: 12px;
@@ -132,7 +132,7 @@
 }
 .fr .login a:hover {
   cursor: pointer;
-  color: #0083ef;
+  color: var(--primary-color);
 }
 .fr .login a {
   text-decoration: none;
@@ -140,7 +140,7 @@
 }
 .register a:hover {
   cursor: pointer;
-  color: #0083ef;
+  color: var(--primary-color);
 }
 .header-icon {
   padding: 0 6px 0 10px;
@@ -159,10 +159,10 @@
 }
 .header-icon span:hover {
   cursor: pointer;
-  color: #0083ef;
+  color: var(--primary-color);
 }
 .header-special:hover {
-  color: #0083ef;
+  color: var(--primary-color);
   cursor: pointer;
   background: #ffff;
 }
@@ -213,7 +213,7 @@
 .special-drop-down ul a .icon-outer {
   background: #dbefff;
   border-radius: 100px;
-  color: #0083ef;
+  color: var(--primary-color);
   height: 30px;
   line-height: 30px;
   text-align: center;
@@ -229,7 +229,7 @@
 .special-drop-down ul a span:hover {
   animation: fadeIn 0.2s ease;
   cursor: pointer;
-  color: #0083ef;
+  color: var(--primary-color);
 }
 .notice-wrap {
   border-top: 1px solid #ccc;
@@ -281,7 +281,39 @@
 }
 .nav-item a:hover {
   cursor: pointer;
-  color: #0083ef;
+  color: var(--primary-color);
+}
+.header-nav .nav-item:nth-child(4):hover .sub-nav-logistics {
+  display: block;
+}
+.nav-item i.ri-arrow-down-s-line {
+  position: relative;
+  font-size: 18px;
+  top: 3px;
+  left: 2px;
+}
+.nav-item i.ri-arrow-down-s-line:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+.sub-nav-logistics {
+  display: none;
+  position: absolute;
+  width: 250px;
+  background: #fff;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.15);
+  z-index: 99999;
+}
+.sub-nav-item {
+  height: 30px;
+  line-height: 30px;
+}
+.nav-text {
+  font-size: 14px;
+  padding: 0 20px;
+}
+.sub-nav-item:hover {
+  background: #f5f5f5;
 }
 .header-middle .header-nav .nav-item:nth-child(-n + 7):after {
   color: rgba(0, 0, 0, 0.15);
@@ -295,7 +327,7 @@
   top: 50%;
 }
 .header-middle .header-nav .nav-item .active:before {
-  background: #0083ef;
+  background: var(--primary-color);
   bottom: 9px;
   content: "";
   display: block;
@@ -304,6 +336,10 @@
   margin-left: -8px;
   position: absolute;
   width: 16px;
+}
+.header-middle .header-nav .nav-item .active {
+  color: #333;
+  font-weight: 600;
 }
 .header-middle .header-nav .nav-item .shoppingagent:before {
   border-left: 1px solid #333;

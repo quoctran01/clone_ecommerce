@@ -44,37 +44,41 @@ const ImageSlider = ({ slides }) => {
   };
   return (
     <>
-      <section className='swiperImg-wrapper'>
+      <section className="swiperImg-wrapper">
         <section
-          className='swiperImg'
-          style={{ width: "1190px", height: "520px" }}>
-          <div className='swiperImg-container'>
-            <div className='swiperImg-switch'>
+          className="swiperImg"
+          style={{ width: "1190px", height: "520px" }}
+        >
+          <div className="swiperImg-container">
+            <div className="swiperImg-switch">
               <div
                 onClick={goToPrevious}
-                className='swiperImg-switch__pre'
-                style={leftArrowStyles}>
+                className="swiperImg-switch__pre"
+                style={leftArrowStyles}
+              >
                 ❰
               </div>
               <div
                 onClick={goToNext}
-                className='swiperImg-switch__next'
-                style={rightArrowStyles}>
+                className="swiperImg-switch__next"
+                style={rightArrowStyles}
+              >
                 ❱
               </div>
             </div>
             <img
               src={slides[currentIndex].url}
-              alt='image slider'
-              className='swiperImg-slider'
+              alt="image slider"
+              className="swiperImg-slider"
             />
             <div style={dotsContainerStyles}>
-              <ul className='swiperImg-dot'>
+              <ul className="swiperImg-dot">
                 {slides.map((slide, slideIndex) => (
                   <li
-                    className='swiperImg-dot__item'
+                    className="swiperImg-dot__item"
                     key={slideIndex}
-                    onClick={() => goToSlide(slideIndex)}></li>
+                    onClick={() => goToSlide(slideIndex)}
+                  ></li>
                 ))}
               </ul>
             </div>
