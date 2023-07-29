@@ -1,15 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./header.css";
 import { populate } from "../../assets/data/populate";
 import PopulateList from "../PopulateList/PopulateList";
 import { NavLink, useNavigate, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import moment from "moment";
+import "moment-timezone";
+
 const Header = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
   const navigate = useNavigate();
   const handleRedirect = () => {
     navigate("/shoppingcart");
   };
+  const [beijingTime, setBeijingTime] = useState(null);
+
+  useEffect(() => {
+    const getBeijingTime = () => {
+      const beijingTimezone = "Asia/Shanghai";
+      const nowInBeijing = moment().tz(beijingTimezone);
+      setBeijingTime(nowInBeijing);
+    };
+    getBeijingTime();
+    const interval = setInterval(() => {
+      getBeijingTime();
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <>
       <header className='header'>
@@ -18,8 +35,14 @@ const Header = () => {
             <div className='fl'>
               <div className='beijing-time'>
                 <span>Beijing Time</span>
-                <span>{new Date().toLocaleDateString("en-GB")}</span>
-                <span></span>
+                <span>
+                  {beijingTime
+                    ? `${beijingTime.format("YYYY")}/${beijingTime.format(
+                        "MM"
+                      )}/${beijingTime.format("DD")}`
+                    : ""}
+                </span>
+                <span>{beijingTime ? beijingTime.format("HH:mm:ss") : ""}</span>
                 <span>PM</span>
               </div>
               <div className='translate'>
@@ -66,7 +89,7 @@ const Header = () => {
                   </div>
                   <div className='header-special-text'>Popular</div>
                   <div className='header-icon'>
-                    <span>
+                    <span className='icon-dropdown'>
                       <i class='ri-arrow-drop-up-line'></i>
                     </span>
                   </div>
@@ -79,19 +102,21 @@ const Header = () => {
                         <div className='notice-header--left'>Announcement</div>
                         <div className='notice-header--right'>More</div>
                       </div>
-                      {/* <div className='notice-header-text'>
-                        <ul className='notice-list'>
-                          <li className='waring-notice'>
-                            <a>WOW! SUPERBUY Shopping Guide Mall Live NOW!</a>
+                      <div className='notice-header-text'>
+                        <ul className='notice-list m-0 p-0 d-flex flex-column position-relative'>
+                          <li className='waring-notice d-flex align-items-center'>
+                            <span>
+                              WOW! SUPERBUY Shopping Guide Mall Live NOW!
+                            </span>
                           </li>
-                          <li>
-                            <a>
+                          <li className='d-flex align-items-center'>
+                            <span>
                               【Superbuy X Bilibili】Exclusive 10% discount on
                               popular items!
-                            </a>
+                            </span>
                           </li>
                         </ul>
-                      </div> */}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -115,26 +140,27 @@ const Header = () => {
               </li>
               <li className='nav-item'>
                 <NavLink to='shoppingagent'>SHOPPING AGENT</NavLink>
+                <i class='ri-arrow-down-s-line'></i>
               </li>
               <li className='nav-item'>
                 <NavLink to='forward'>FORWARDING</NavLink>
               </li>
               <li className='nav-item'>
-                <NavLink to='freight'>LOGISTICS</NavLink>
+                <NavLink to='logistic'>LOGISTICS</NavLink>
                 <i class='ri-arrow-down-s-line'></i>
                 <ul class='sub-nav-logistics m-0 p-0'>
                   <li class='sub-nav-item'>
-                    <Link to='freight' class='nav-text'>
+                    <Link to='logistic/freight' class='nav-text'>
                       Shipping Calculator
                     </Link>
                   </li>
                   <li class='sub-nav-item'>
-                    <Link to='tracking' class='nav-text'>
+                    <Link to='logistic/tracking' class='nav-text'>
                       Parcel Tracking
                     </Link>
                   </li>
                   <li class='sub-nav-item'>
-                    <Link to='customization' class='nav-text'>
+                    <Link to='logistic/customization' class='nav-text'>
                       Customized Logistics
                     </Link>
                   </li>
@@ -144,13 +170,89 @@ const Header = () => {
                 <NavLink to='bbs'>BBS</NavLink>
               </li>
               <li className='nav-item'>
-                <NavLink to='busniess'>BUSINESS</NavLink>
+                <NavLink to='business'>BUSINESS</NavLink>
+                <i class='ri-arrow-down-s-line'></i>
+                <ul class='sub-nav-business m-0 p-0'>
+                  <li class='sub-nav-item'>
+                    <a href='https://www.buckydrop.com/cn/' class='nav-text'>
+                      Buckydrop
+                    </a>
+                  </li>
+                  <li class='sub-nav-item'>
+                    <Link class='nav-text'>Channel Cooperation</Link>
+                  </li>
+                  <li class='sub-nav-item'>
+                    <Link class='nav-text'>Business Cooperation</Link>
+                  </li>
+                  <li class='sub-nav-item'>
+                    <Link to='business/buckydrop' class='nav-text'>
+                      Shopping Agent
+                    </Link>
+                  </li>
+                </ul>
               </li>
               <li className='nav-item'>
-                <NavLink to='afiliates'>AFFILIATES</NavLink>
+                <NavLink to='affilates'>AFFILIATES</NavLink>
               </li>
               <li className='nav-item'>
                 <NavLink to='customer'>CUSTOMER SERVICE</NavLink>
+                <i class='ri-arrow-down-s-line'></i>
+                <ul class='sub-nav-customer p-0 m-0'>
+                  <li class='sub-nav-item'>
+                    <Link
+                      rel='noreferrer'
+                      href='/en/page/help/'
+                      target='_self'
+                      class='nav-text'>
+                      Help Center
+                    </Link>
+                  </li>
+                  <li class='sub-nav-item'>
+                    <Link
+                      rel='noreferrer'
+                      href='/en/page/customservice/'
+                      target='_self'
+                      class='nav-text'>
+                      Customer Service
+                    </Link>
+                  </li>
+                  <li class='sub-nav-item'>
+                    <Link
+                      rel='noreferrer'
+                      href='/en/page/shippinghacks/'
+                      target='_self'
+                      class='nav-text'>
+                      Shipping Hacks
+                    </Link>
+                  </li>
+                  <li class='sub-nav-item'>
+                    <Link
+                      rel='noreferrer'
+                      href='/en/page/noviceguide/'
+                      target='_self'
+                      class='nav-text'>
+                      User Guidance
+                    </Link>
+                  </li>
+                  <li class='sub-nav-item'>
+                    <Link
+                      rel='noreferrer'
+                      href='/en/page/about/contactus/'
+                      target='_self'
+                      class='nav-text'>
+                      Contact Us
+                    </Link>
+                  </li>
+                  <li class='sub-nav-item'>
+                    <Link
+                      rel='noreferrer'
+                      href='/en/page/about/aboutus/'
+                      target='_self'
+                      class='nav-text'>
+                      About Us
+                    </Link>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>

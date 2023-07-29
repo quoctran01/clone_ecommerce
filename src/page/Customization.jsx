@@ -1,6 +1,8 @@
 import React from "react";
+import "../style/customization.css";
 
 const Customization = () => {
-  return <h1>Customization</h1>;
+  return <div>Customization</div>;
 };
+
 export default Customization;

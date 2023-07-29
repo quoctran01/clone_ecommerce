@@ -1,0 +1,581 @@
+.partner-intro {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/about/affiliate/fixed_bg.png)
+    center 2045px no-repeat;
+}
+.partner-intro .banner {
+  height: 574px;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+}
+.partner-intro .banner.inactive {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/about/affiliate/banner.jpg)
+    50% no-repeat;
+}
+.partner-intro .viewport {
+  margin: 0 auto;
+  position: relative;
+  width: 990px;
+}
+.banner .inactive {
+  padding-top: 30px;
+}
+.banner .pic .banner_txt {
+  margin-top: 20px;
+}
+.banner .tip {
+  letter-spacing: 0;
+  margin: 10px auto 0;
+  padding-left: 0;
+  word-spacing: 0;
+  color: #fff;
+  font-size: 16px;
+}
+.banner .btnJoin {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/about/affiliate/sprite.png) -1px -274px
+    no-repeat;
+  cursor: pointer;
+  display: inline-block;
+  height: 50px;
+  margin: 80px 20px auto 0;
+  overflow: hidden;
+  width: 180px;
+}
+.banner .btnJoin a {
+  border: none;
+  color: #161130;
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 37px;
+  outline: 0;
+}
+.banner .btnJoinNew {
+  border: 1px solid #fbff18;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+  height: 48px;
+  margin: 80px 15px auto 0;
+  overflow: hidden;
+  width: 178px;
+}
+.banner .btnJoinNew a {
+  border: none;
+  color: #b4f611;
+  display: block;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 37px;
+  outline: 0;
+  text-decoration: none;
+}
+.partner-intro .wrap-bg {
+  background: #fff;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 35px;
+  width: 1200px;
+}
+.partner-intro .intro-box {
+  margin-top: 30px;
+}
+.intro-box .tit {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/about/affiliate/intro.png)
+    50% no-repeat;
+  height: 114px;
+  position: relative;
+  text-align: center;
+}
+.intro-box h3 {
+  position: relative;
+  top: 9px;
+  font-size: 26px;
+  font-weight: 600;
+}
+.intro-box .tit .intro-txt {
+  color: #999;
+  font-size: 16px;
+  margin-top: 5px;
+}
+.intro-box .intro-txt {
+  margin-top: 6px;
+}
+.intro-box .tit .rule {
+  background: #132571;
+  border: 1px solid #1e7c81;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  bottom: -8px;
+  color: #f6fa1c;
+  cursor: pointer;
+  height: 30px;
+  left: 50%;
+  line-height: 30px;
+  padding: 0 22px;
+  position: absolute;
+  transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -o-transform: translate(-50%);
+}
+a {
+  text-decoration: none;
+}
+.intro-box .cont {
+  margin-top: 30px;
+  position: relative;
+}
+.intro-box .cont .top-cont {
+  color: #999;
+  margin-bottom: 10px;
+}
+.cont .center-cont-affiliate {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/about/affiliate/intro_cont2.jpg?v=1)
+    50% no-repeat;
+  height: 274px;
+  position: relative;
+  text-align: center;
+}
+.center-cont-affiliate__text {
+  width: 305px;
+  margin: auto;
+  top: 106px;
+  position: relative;
+}
+.center-cont-affiliate .center-t-txt {
+  color: #999;
+  font-size: 15px;
+}
+.center-cont-affiliate__text p:first-child em {
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cont .center-cont-affiliate .center-t-txt:first-child a {
+  color: #fe1c1c;
+  margin-left: 6px;
+  text-decoration: underline;
+}
+.cont .center-cont-affiliate .name {
+  color: #fff;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 22px;
+}
+.cont .name1 {
+  font-size: 18px !important;
+  position: relative;
+  top: 80px;
+  left: 81px;
+}
+.cont .name2 {
+  position: relative;
+  top: 42px;
+  right: 114px;
+}
+.center-cont-affiliate .name1 .link {
+  color: #fcff00;
+  font-size: 12px;
+  line-height: 12px;
+  position: relative;
+  left: 60px;
+  text-decoration: underline;
+}
+.bottom-l-txt {
+  color: #666;
+  font-size: 15px;
+  text-align: center;
+  width: 190px;
+  margin-left: 10px;
+  margin-left: 94px;
+  margin-top: 10px;
+}
+.share-data .tit {
+  text-align: center;
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/about/affiliate/share_en.png)
+    50% no-repeat;
+  font-weight: 600;
+  font-size: 24px;
+}
+.share-data .tip {
+  color: #999;
+  font-size: 24px;
+  margin: 50px 0 25px;
+  text-align: center;
+}
+.share-data .detail-data {
+  background-color: #0193ef;
+  height: 130px;
+  overflow: hidden;
+}
+.detail-data li:nth-child(odd) {
+  color: #fff;
+  text-align: center;
+  width: 320px;
+}
+.detail-data li:nth-child(2n) {
+  background-color: #3ba7f8;
+  height: 50px;
+  margin-top: 40px;
+  width: 2px;
+}
+.detail-data li:nth-child(odd) p:first-child {
+  font-size: 48px;
+  font-weight: 300;
+  margin-top: 15px;
+}
+.detail-data li:nth-child(odd) p:nth-child(2) {
+  color: #d4e3fc;
+  font-size: 18px;
+}
+.detail-data li:nth-child(odd) span {
+  font-size: 24px;
+}
+.share-data .chart {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/about/affiliate/chart1808.jpg)
+    50% no-repeat;
+  height: 423px;
+  margin: 60px 0 40px;
+}
+.share-data .promote li {
+  border: 1px solid #d9f5ff;
+  border-radius: 4px;
+  box-shadow: 0 8px 18px #c7e0fa;
+  float: left;
+  height: 280px;
+  margin-right: 15px;
+  position: relative;
+  text-align: center;
+  width: 150px;
+}
+.promote li.text-en p:first-child {
+  color: #03a9f5 !important;
+  font-size: 48px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+.promote li.text-en p:nth-child(2) {
+  color: #333;
+}
+.promote li div {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/about/affiliate/icon2.jpg)
+    bottom no-repeat;
+  bottom: 5px;
+  height: 143px;
+  margin: 0 auto;
+  position: absolute;
+  width: 150px;
+}
+.share-data .map {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/about/affiliate/map2.jpg)
+    50% no-repeat;
+  height: 730px;
+}
+.partner-intro .how-box {
+  margin-top: 80px;
+}
+.how-box .tit {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/about/affiliate/how_tit.png)
+    50% no-repeat;
+  height: 33px;
+  position: relative;
+}
+.how-box .tit h3 {
+  position: relative;
+  top: -15px;
+  width: 221px;
+  line-height: 32px;
+  left: 401px;
+  text-align: center;
+}
+.how-box .tip {
+  margin-top: 30px;
+  padding-left: 15px;
+  text-align: center;
+  color: #999999;
+}
+.how-box .cont {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/about/affiliate/how_cont.png)
+    50% no-repeat;
+  height: 243px;
+  margin-top: 45px;
+  position: relative;
+}
+.partner-intro .how-box .cont .item {
+  height: 236px;
+  position: absolute;
+  width: 236px;
+}
+.how-box .cont .item.item1 {
+  left: 21px;
+  top: 5px;
+}
+.how-box .cont .item dl {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.how-box .cont .item dl dt {
+  margin-top: 155px;
+  padding: 0 26px;
+}
+.cont .item dl dt p {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: #7c7171;
+}
+.how-box .cont .item dl dd {
+  background: #fff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  height: 233px;
+  left: 0;
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 233px;
+  z-index: 1;
+}
+.how-box .cont .item dl:hover dd {
+  display: block;
+}
+.cont .item dl em {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/about/affiliate/sprite.png)
+    no-repeat;
+  display: inline-block;
+  height: 62px;
+  width: 62px;
+}
+.partner-intro .how-box .cont .item.item1 em {
+  background-position: 0 -410px;
+}
+.how-box .cont .item dl .name {
+  color: #3ec77e;
+  height: 30px;
+  margin-top: 53px;
+  margin-bottom: 13px;
+  padding: 0 30px;
+}
+.cont .item dl .txt {
+  color: #999;
+  padding: 0 35px;
+}
+.cont .item.item2 {
+  left: 379px;
+  top: 5px;
+}
+.cont .item.item3 {
+  left: 737px;
+  top: 5px;
+}
+.how-box .share {
+  margin-top: 50px;
+}
+.how-box .share dt {
+  color: #999;
+}
+.how-box .share dd {
+  color: #999;
+  height: 26px;
+  line-height: 26px;
+  margin-top: 15px;
+}
+.how-box .share dd em {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/about/affiliate/sprite.png)
+    no-repeat;
+  background-position: 1px 1px;
+  color: #fff;
+  display: inline-block;
+  font-style: normal;
+  height: 26px;
+  line-height: 26px;
+  margin-right: 10px;
+  text-align: center;
+  width: 26px;
+}
+.share dd .share-ico {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/about/affiliate/sprite.png)
+    no-repeat;
+  background-position: 0 -184px;
+  display: inline-block;
+  height: 20px;
+  vertical-align: middle;
+  width: 140px;
+}
+.make-money {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/about/affiliate/make_money.png)
+    50% no-repeat;
+  height: 692px;
+  margin-top: 100px;
+}
+.make-money .tit {
+  width: 100%;
+  text-align: center !important;
+}
+.make-money h3 {
+  position: relative;
+  top: -11px;
+  line-height: 30px;
+  width: 230px;
+  left: 376px;
+}
+.make-money .rule {
+  color: #999;
+  margin-top: 5px;
+  text-align: center;
+}
+.make-money .rule .rule-btn {
+  background: #132571;
+  border: 1px solid #1e7c81;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  color: #f6fa1c;
+  cursor: pointer;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 5px;
+  padding: 0 22px;
+  text-decoration: none;
+}
+.make-money .cont {
+  margin: 0 auto;
+  width: 930px;
+}
+.make-money .cont .tip {
+  color: #666;
+  line-height: 25px;
+  margin-top: 10px;
+}
+.cont table {
+  margin-top: 10px;
+  width: 100%;
+}
+.make-money .cont table thead th,
+.cont table tbody th {
+  background: #1268bb;
+  color: #f1f41e;
+  font-size: 16px;
+  font-weight: 400;
+}
+.cont table thead td {
+  background: #d8e5f0;
+  color: #1268bb;
+  text-align: center;
+}
+.cont table tbody td {
+  color: #999999;
+}
+.cont table td,
+.cont table th {
+  border: 1px solid #0d33d3;
+  height: 60px;
+  width: 120px;
+  text-align: center;
+}
+.money-rec .pic {
+  top: 40px;
+  position: relative;
+}
+.partner-intro .service {
+  margin-top: 60px;
+}
+.service ul li p {
+  margin: 0;
+}
+.service .tit {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/about/affiliate/service_tit.png)
+    50% no-repeat;
+  height: 30px;
+  margin: 100px 0 50px;
+  text-align: center;
+}
+.service .tit h3 {
+  font-size: 26px;
+  font-weight: 600;
+
+  position: relative;
+  left: 10px;
+}
+.service .cont {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/about/affiliate/service_cont.png)
+    center 0 no-repeat;
+  height: 452px;
+  overflow: hidden;
+}
+.service .cont .list1 {
+  margin: 155px 40px 0;
+}
+.service .cont .list1 li,
+.service .cont .list2 li {
+  float: left;
+  text-align: center;
+  width: 25%;
+  color: #999999;
+}
+.clearfix:before {
+  content: "";
+  display: table;
+}
+.service .cont .list2 {
+  margin: 195px 40px 0;
+}
+.partner-intro .join-box {
+  background: #091445;
+  border-top: 3px solid #3ec77e;
+  bottom: 0;
+  height: 97px;
+  left: 0;
+  width: 100%;
+  z-index: 1001;
+}
+.partner-intro .join-box .txt {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  height: 97px;
+  line-height: 97px;
+  position: absolute;
+  right: 420px;
+  top: 0;
+}
+.join-box .btn {
+  height: 78px;
+  position: absolute;
+  right: 60px;
+  text-align: left;
+  top: 18px;
+  width: 258px;
+}
+.join-box .btn a {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/about/affiliate/sprite.png)
+    no-repeat;
+  background-position: 0 -274px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  color: #091445;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 25px;
+  font-weight: 700;
+  height: 50px;
+  line-height: 50px;
+  margin-left: 2px;
+  text-align: center;
+  text-decoration: none;
+  width: 180px;
+}

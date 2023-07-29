@@ -8,6 +8,8 @@ import Forwarding from "../page/Forwarding";
 import Freight from "../page/Freight";
 import Tracking from "../page/Tracking";
 import Customization from "../page/Customization";
+import Affilate from "../page/Affilate";
+import Buckydrop from "../page/Buckydrop";
 
 const Routers = () => {
   return (
@@ -20,9 +22,11 @@ const Routers = () => {
         <Route path='/shoppingcart' element={<Shoppingcart />} />
         <Route path='/forward' element={<Forwarding />} />
         <Route path='/shop/:id' element={<ProductDetail />} />
-        <Route path='/freight' element={<Freight />} />
-        <Route path='/tracking' element={<Tracking />} />
-        <Route path='/customization' element={<Customization />} />
+        <Route path='/logistic/freight' element={<Freight />} />
+        <Route path='/logistic/tracking' element={<Tracking />} />
+        <Route path='/affilates' element={<Affilate />} />
+        <Route path='/logistic/customization' element={<Customization />} />
+        <Route path='/business/buckydrop' element={<Buckydrop />} />
       </Routes>
     </>
   );

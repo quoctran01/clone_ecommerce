@@ -2,7 +2,7 @@ import React from "react";
 import "./productCard.css";
 import { Link } from "react-router-dom";
 
-const ProductCard = ({ item, setOpenModal, handleOpenModal }) => {
+const ProductCard = ({ item, setOpenModal = null, handleOpenModal = null }) => {
   const handleAddToCart = () => {
     setOpenModal(true);
     handleOpenModal({
