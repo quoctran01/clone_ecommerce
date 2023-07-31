@@ -3,10 +3,14 @@ import { useParams } from "react-router-dom";
 import "../style/product-detail.css";
 import products from "../assets/data/product";
 import useHandleQuantity from "../const/handleQuantity";
+import ProductRecomList from "../components/ProductRecom/ProductRecomList";
 
 const ProductDetail = () => {
   const { id } = useParams();
   const product = products.find((item) => item.id === id);
+  const productRecomend = products.filter(
+    (item) => item.category === product.category
+  );
   const { quantity, handleDecrease, handleIncrease, addToCart } =
     useHandleQuantity(product);
   return (
@@ -280,6 +284,120 @@ const ProductDetail = () => {
                 </p>
               </div>
             </div>
+            <div class='goods-remark_container card-wrap'>
+              <div class='buy-reasons'>
+                <div class='buy-reasons-title'>
+                  SUPERBUY 10's SHOPPING AGENTLEADING POSITION
+                </div>
+                <dl class='d-flex alidn-items-center justify-content-between mt-3'>
+                  <dd>
+                    <p>Covers All Chinese E-Commerce Platforms</p>
+                  </dd>
+                  <dd>
+                    <p>0 Service Fee</p>
+                  </dd>
+                  <dd>
+                    <p>Free Storage</p>
+                  </dd>
+                  <dd>
+                    <p>Enrich Logistics Routes</p>
+                  </dd>
+                  <dd>
+                    <p>7x9h Quality Customer Service</p>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <section className='goods-detail_container d-flex'>
+              <section className='goods-detail_left d-flex flex-column'>
+                <div class='buy-activities'>
+                  <h2>Hot Topics</h2>
+                  <a
+                    class='buy-activities-img'
+                    href='https://www.superbuy.com/en/page/subject/?id=21964&amp;htag=18pc-sx1'>
+                    <img
+                      src='https://img1.superbuy.com/images/daigou-admin/2023/06/15/083cb9a7-88fa-4403-82bf-a7d29a716c55.png?x-oss-process=image/resize,w_200/format,jpg'
+                      alt=''
+                    />
+                  </a>
+                  <a
+                    class='buy-activities-img'
+                    href='https://www.superbuy.com/en/page/subject/?id=20915&amp;htag=18pc-sx1'>
+                    <img
+                      src='https://img1.superbuy.com/images/daigou-admin/2022/03/24/078d9205-44e8-4a5c-9527-e8eee43e0884.png?x-oss-process=image/resize,w_200/format,jpg'
+                      alt=''
+                    />
+                  </a>
+                  <a
+                    class='buy-activities-img'
+                    href='https://www.superbuy.com/en/page/subject/?id=21786&amp;htag=18pc-sx5en'>
+                    <img
+                      src='https://img1.superbuy.com/images/daigou-admin/2022/06/20/ce1b7bd0-d774-40cc-b8eb-19c5bca1cb9c.png?x-oss-process=image/resize,w_200/format,jpg'
+                      alt=''
+                    />
+                  </a>
+                </div>
+                <section className='recommend-container'>
+                  <h2
+                    className='d-flex align-items-center justify-content-between'
+                    style={{ background: "#fff" }}>
+                    <a class='title' href='/en/page/subject/?id=21683'>
+                      <span>Popular </span>
+                    </a>
+                    <a href='/en/page/subject/?id=21683'>More &gt;</a>
+                  </h2>
+                  <ProductRecomList data={productRecomend} />
+                </section>
+              </section>
+              <section className='goods-detail_right'>
+                <div class='buy-toolbar clearfix'>
+                  <div class='d-flex'>
+                    <nav class='toolbar-btns '>
+                      <a class='active'>
+                        Product Details<i></i>
+                      </a>
+                      <a>
+                        Shopping Agent Notes<i></i>
+                      </a>
+                      <a>
+                        After Sales Service<i></i>
+                      </a>
+                      <a>
+                        CEO tips<i></i>
+                      </a>
+                    </nav>
+                    {/* <button class=' toolbar-addGoods'>Add To Cart</button> */}
+                  </div>
+                </div>
+                <div className='buy-detailContent'>
+                  <div style={{ height: "10px" }}></div>
+                  <div className='card-wrap' id='goods-detail'>
+                    <div className='detail-box'>
+                      <div className='detail-goodsDetail'>
+                        <p>
+                          <img src='https://img.alicdn.com/imgextra/i4/1981978776/O1CN01IPHB0z2EhSW0SYTTe_!!1981978776.jpg' />
+                          <img src='https://img.alicdn.com/imgextra/i2/1981978776/O1CN01opv19r2EhSVzP9UBT_!!1981978776.jpg' />
+                          <img src='https://img.alicdn.com/imgextra/i1/1981978776/O1CN015nh0L32EhSW077PmG_!!1981978776.jpg' />
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div style={{ height: "20px" }}></div>
+                  <div className='card-wrap'>
+                    <div className='detail-box goods-note-content'>
+                      <div class='detail-title' id='aDgxz'>
+                        <h3>Shopping Agent Notes</h3>
+                      </div>
+                      <p>
+                        <a class='detail-subTitle'>
+                          Prohibited and limited items
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </section>
           </div>
         </div>
       </div>

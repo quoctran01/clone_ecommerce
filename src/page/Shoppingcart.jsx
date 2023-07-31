@@ -1,16 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../style/cart.css";
 import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../redux/slices/cartSlice";
 import { Link } from "react-router-dom";
 import DialogMask from "../components/UI/DialogMask";
 import { createPortal } from "react-dom";
+import ProductRecomList from "../components/ProductRecom/ProductRecomList";
+import products from "../assets/data/product";
 
 const Shoppingcart = () => {
   const [selectedProductId, setSelectedProductId] = useState(null);
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.cartItems);
   const totalAmount = useSelector((state) => state.cart.totalAmount);
+  const [product, setProduct] = useState(cartItems);
   const handleIncreaseQuantity = (id) => {
     dispatch(cartActions.increaseQuantity({ id }));
   };
@@ -23,15 +26,38 @@ const Shoppingcart = () => {
   const handlecloseDialog = () => {
     setSelectedProductId(null);
   };
+  const handleChangeInput = (e) => {
+    const { checked, name } = e.target;
+    if (name === "allSelect") {
+      const tempProduct = product.map((item) => {
+        return { ...item, isChecked: checked };
+      });
+      setProduct(tempProduct);
+    } else {
+      const tempProduct = product.map((item) =>
+        item.productName === name ? { ...item, isChecked: checked } : item
+      );
+      setProduct(tempProduct);
+    }
+  };
+  const handleDeleteItems = () => {
+    const productIds = product
+      .filter((item) => item.isChecked === true)
+      .map((item) => item.id);
+    setSelectedProductId(productIds);
+  };
+  useEffect(() => {
+    setProduct(cartItems);
+  }, [cartItems]);
   return (
     <>
       <div className='shopping-cart'>
         <div className='tab'>
-          <span class='tab-active'>Cart({cartItems.length})</span>
+          <span class='tab-active'>Cart({product?.length})</span>
           <p class='tab-border tab-border-en'></p>
         </div>
         <div>
-          {cartItems.length === 0 ? (
+          {product.length === 0 ? (
             <div class='empty'>
               <p>
                 Shopping cart is empty.
@@ -41,8 +67,13 @@ const Shoppingcart = () => {
           ) : (
             <div className='daigou'>
               <div class='all-select-top'>
-                <span class='select-input-false'></span>
-                <span>Select All</span>
+                <input
+                  type='checkbox'
+                  name='allSelect'
+                  onChange={handleChangeInput}
+                  checked={!product.some((item) => item?.isChecked !== true)}
+                />
+                <span>Select all</span>
                 <span>Item Name </span>
                 <span>Remark</span>
                 <span>Price</span>
@@ -50,31 +81,32 @@ const Shoppingcart = () => {
                 <span>Amount</span>
                 <span>Edit</span>
               </div>
-              {cartItems.map((item, index) => (
+              {product.map((item, index) => (
                 <div className='shop-item' key={index}>
                   <div className='shop-msg'>
-                    <span className='select-input-false'></span>
+                    {/* <input type='checkbox' /> */}
                     <img
                       class='shop-img'
                       src='https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/shoppingcart/icon-default.png'
                     />
-                    <a href=''>
-                      ND's original wig shop where I don't need a trim
-                    </a>
+                    <a href='#'>{item.shortDesc}</a>
                   </div>
                   <div className='shop-goods'>
                     <div>
                       <div className='goods-item'>
-                        <span class='select-input-false'></span>
+                        <input
+                          type='checkbox'
+                          name={item.productName}
+                          checked={item?.isChecked || false}
+                          onChange={handleChangeInput}
+                        />
                         <div class='goods-img-box'>
                           <div>
                             <img src={item.imgUrl} />
                           </div>
                         </div>
                         <div class='goods-name'>
-                          <a
-                            href='//www.superbuy.com/en/page/buy/?url=https%3A%2F%2Fitem.taobao.com%2Fitem.htm%3Fid%3D704085956017&amp;nTag=Cart-product'
-                            target='_blank'>
+                          <a href='//www.superbuy.com/en/page/buy/?url=https%3A%2F%2Fitem.taobao.com%2Fitem.htm%3Fid%3D704085956017&amp;nTag=Cart-product'>
                             <p class='title'>{item.productName}</p>
                           </a>
                         </div>
@@ -116,15 +148,35 @@ const Shoppingcart = () => {
                   </div>
                 </div>
               ))}
-
               <div className='all-select-bottom'>
                 <span class='select-input-false'></span>
+                <input
+                  type='checkbox'
+                  name='allSelect'
+                  onChange={handleChangeInput}
+                  checked={!product.some((item) => item?.isChecked !== true)}
+                />
                 <span style={{ color: "#0083ef" }}>Select All</span>
-                <span class='gray-color'>Delete Selected Item(s)</span>
+                <span
+                  class={`gray-color ${
+                    product?.filter((item) => item.isChecked === true).length >
+                    0
+                      ? "isActive"
+                      : ""
+                  }`}
+                  onClick={handleDeleteItems}>
+                  Delete Selected Item(s)
+                </span>
                 <span class='gray-color'>Remove Invalid Item(s) </span>
                 <div class='shops-total-price'>
                   <p>
-                    Selected<b>0</b>
+                    Selected
+                    <b>
+                      {
+                        product?.filter((item) => item.isChecked === true)
+                          .length
+                      }
+                    </b>
                     <i>Item(s)</i>
                   </p>
                   <p>
@@ -157,13 +209,21 @@ const Shoppingcart = () => {
                     }}>
                     (￥0.00)
                   </i>
-
                   <div class='account-btn-gray'>Submit</div>
                 </div>
               </div>
             </div>
           )}
         </div>
+        <section className='recommend-goods-container'>
+          <h2>
+            <a class='title' href='/en/page/subject/?id=21683'>
+              <span>Popular Products Recommendation</span>
+            </a>
+            <a href='/en/page/subject/?id=21683'>More &gt;</a>
+          </h2>
+          <ProductRecomList data={products.slice(0, 12)} />
+        </section>
       </div>
       {selectedProductId &&
         createPortal(

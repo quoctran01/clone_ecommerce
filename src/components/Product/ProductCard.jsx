@@ -10,6 +10,7 @@ const ProductCard = ({ item, setOpenModal = null, handleOpenModal = null }) => {
       productName: item.productName,
       imgUrl: item.imgUrl,
       price: item.price,
+      shortDesc: item.shortDesc,
     });
   };
   return (
