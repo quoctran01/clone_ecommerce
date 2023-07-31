@@ -56,29 +56,29 @@
   font-weight: 700;
   line-height: 36px;
 }
-.shopping-cart .select-input-false {
+.shopping-cart input[type="checkbox"] {
   height: 14px;
   width: 14px;
   border: 1px solid #ccc;
   cursor: pointer;
   margin: 10px;
 }
-.all-select-top span:nth-of-type(2) {
+.all-select-top span:nth-of-type(1) {
   margin-right: 86px;
 }
-.all-select-top span:nth-of-type(3) {
+.all-select-top span:nth-of-type(2) {
   margin-right: 273px;
 }
-.all-select-top span:nth-of-type(4) {
+.all-select-top span:nth-of-type(3) {
   margin-right: 164px;
 }
-.all-select-top span:nth-of-type(5) {
+.all-select-top span:nth-of-type(4) {
   margin-right: 135px;
 }
-.all-select-top span:nth-of-type(6) {
+.all-select-top span:nth-of-type(5) {
   margin-right: 54px;
 }
-.all-select-top span:nth-of-type(7) {
+.all-select-top span:nth-of-type(6) {
   margin-right: 56px;
 }
 .shop-item .shop-msg {
@@ -148,14 +148,15 @@
   color: #666;
   font-size: 12px;
   margin-right: 20px;
-  width: 200px;
+  width: 185px;
+  margin-left: 0 !important;
 }
 .unit-price-box {
   width: 160px;
 }
 .goods-item .number {
   color: #555;
-  margin-right: 45px;
+  margin-right: 37px;
 }
 .goods-item .number span {
   background-color: #f0f0f0;
@@ -225,6 +226,10 @@
   font-size: 14px;
   font-weight: 400;
 }
+.all-select-bottom .isActive {
+  color: #1268bb;
+  cursor: pointer;
+}
 .all-select-bottom > span {
   margin-right: 10px;
 }
@@ -256,4 +261,34 @@
   margin-top: -1px;
   text-align: center;
   width: 120px;
+}
+.recommend-goods-container {
+  margin: 40px 0;
+}
+.recommend-goods-container h2 {
+  align-items: center;
+  background: #f5f3f6;
+  border: 1px solid #f0eff1;
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+}
+.recommend-goods-container h2 a.title {
+  background: #fff;
+  border-top: 1px solid #ff4256;
+  line-height: 50px;
+  margin-top: -1px;
+  padding: 0 20px;
+  color: #333333;
+  text-decoration: none;
+  font-weight: 600;
+}
+.recommend-goods-container h2 span {
+  font-size: 20px;
+}
+.recommend-goods-container h2 a:last-child {
+  margin-right: 14px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #666666;
 }

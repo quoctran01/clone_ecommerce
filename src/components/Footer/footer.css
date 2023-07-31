@@ -1,36 +1,102 @@
-.footer {
+.footer-wrap {
   background: #f5f5f5;
-  padding-top: 60px;
+  color: #959595;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 30px 0 0;
+  position: relative;
+  width: 100%;
 }
-.footer__color {
-  color: rgba(10, 7, 7, 0.735);
+.footer-wrap .footer-top,
+.footer-wrap > .footer-middel {
+  margin: 0 auto;
+  width: 1190px;
 }
-.footer__text {
-  line-height: 30px;
+.footer-wrap dl dt {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 24px;
+  margin-bottom: 38px;
+  white-space: nowrap;
+}
+.footer-wrap dl dt {
   color: #333;
-  font-size: 0.9rem;
 }
-.quick__links-title {
-  font-size: 13px;
-  font-weight: 700;
-}
-.footer__quick-links ul li {
-  background: transparent !important;
-}
-.footer__quick-links ul li a {
+.footer-wrap a {
   text-decoration: none;
-  color: rgba(10, 7, 7, 0.735);
-  font-size: 0.9rem;
+}
+.footer-wrap dl dd {
+  margin-bottom: 19px;
+}
+.footer-wrap dl dd a {
+  color: #666;
+  font-size: 12px;
+}
+.footer-wrap .footer-middel {
+  margin-top: 28px;
+}
+.footer-wrap .footer-top .footer-dls {
+  border-bottom: 1px solid #ddd;
+}
+.footer-payment .footer-payment-list-item a {
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+}
+.footer-payment-list-item a {
+  color: #000 !important;
+  font-weight: 500;
+}
+.footer-payment-list-item em {
+  margin: 0 4px;
+}
+.footer-payment p {
+  color: #333 !important;
+}
+.footer-payment p a {
+  color: #333 !important;
+  text-decoration: underline;
+}
+.footer-contact p {
+  margin-bottom: 10px;
+}
+.footer-contact span {
+  color: #999;
+}
+.footer-middel .footer-contact a {
+  color: #333;
+}
+.footer-sns {
+  margin-top: 16px;
 }
 
-.footer__text-contact {
-  font-size: 0.9rem;
-  color: rgba(10, 7, 7, 0.735);
+.footer-sns li {
+  margin-right: 20px;
+  font-size: 26px;
 }
-.footer__copyright {
-  color: rgba(10, 7, 7, 0.735);
-  font-size: 0.9rem;
+.footer-sns li i {
+  color: #333333;
+}
+.footer-bottom {
+  background: #f5f5f5;
+  border-top: none;
+  height: 108px;
+  line-height: 24px;
   margin-top: 50px;
 }
-@media only screen and (max-width: 768px) {
+.footer-bottom-wrap {
+  margin: 0 auto 15px;
+  padding-top: 26px;
+  width: 1190px;
+}
+.footer-bottom li a {
+  color: #888;
+  font-size: 14px !important;
+}
+.footer-bottom p {
+  font-size: 14px !important;
+  line-height: 16px;
+  margin-top: 9px;
 }

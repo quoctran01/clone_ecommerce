@@ -1,0 +1,113 @@
+.buckydrop-marketing .header-outer {
+  background: linear-gradient(180deg, #020203 681px, #fff 0);
+  position: relative;
+  width: 100%;
+  z-index: 11;
+}
+.buckydrop-marketing.en .header {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/img/buckydrop/header-en.png?x-oss-process=image/format,webp)
+    no-repeat;
+  background-position: 50%;
+  background-size: cover;
+}
+.buckydrop-marketing .header {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/img/buckydrop/header.png?x-oss-process=image/format,webp)
+    no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  height: 986px;
+  margin: 0 auto;
+  max-width: 1920px;
+  position: relative;
+  width: 100%;
+  z-index: 11;
+}
+.buckydrop-marketing .header-content {
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  width: 1190px;
+}
+.buckydrop-marketing.en .header button {
+  left: -5px;
+  top: 483px;
+}
+.buckydrop-marketing .header button {
+  background: #fff;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  height: 42px;
+  left: -6px;
+  opacity: 0;
+  position: absolute;
+  top: 473px;
+  transition: all 0.3s linear;
+  width: 160px;
+}
+.buckydrop-marketing.en .content {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/img/buckydrop/content-en.png?x-oss-process=image/format,webp)
+    no-repeat;
+  background-position: 50%;
+  background-size: cover;
+}
+.buckydrop-marketing .content {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/img/buckydrop/content.png?x-oss-process=image/format,webp)
+    no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  height: 1232px;
+  margin: 0 auto;
+  max-width: 1920px;
+  width: 100%;
+}
+.buckydrop-marketing.en .footer {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/img/buckydrop/footer-en.png?x-oss-process=image/format,webp)
+    no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  height: 1318px;
+  margin-bottom: 20px;
+}
+.buckydrop-marketing .footer {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/img/buckydrop/footer.png?x-oss-process=image/format,webp)
+    no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  height: 1188px;
+  margin: 0 auto;
+  max-width: 1920px;
+  width: 100%;
+}
+.buckydrop-marketing .fixed-register {
+  align-items: center;
+  background: #f74b51;
+  color: #fff;
+  display: flex;
+  height: 100px;
+  transition: all 0.3s linear;
+}
+.buckydrop-marketing .fixed-register-content {
+  align-items: center;
+  cursor: default;
+  display: flex;
+  margin: 0 auto;
+  width: 1200px;
+}
+.buckydrop-marketing .fixed-register-content button {
+  border: none;
+  border-radius: 20px;
+  color: #000;
+  cursor: pointer;
+  font-size: 18px;
+  height: 42px;
+  margin-left: auto;
+  transition: all 0.3s linear;
+  width: 160px;
+}
+.buckydrop-marketing .fixed-register-content h2 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}

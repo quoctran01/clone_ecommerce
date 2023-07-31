@@ -279,7 +279,7 @@
   display: flex;
   flex-direction: column;
   height: 71px;
-  margin-top: 28px;
+  margin-top: 10px;
   position: static;
 }
 .operation-group .tools-btn {
