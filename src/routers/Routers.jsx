@@ -10,6 +10,7 @@ import Tracking from "../page/Tracking";
 import Customization from "../page/Customization";
 import Affilate from "../page/Affilate";
 import Buckydrop from "../page/Buckydrop";
+import CustomService from "../page/CustomService";
 
 const Routers = () => {
   return (
@@ -27,6 +28,7 @@ const Routers = () => {
         <Route path='/affilates' element={<Affilate />} />
         <Route path='/logistic/customization' element={<Customization />} />
         <Route path='/business/buckydrop' element={<Buckydrop />} />
+        <Route path='/customservice' element={<CustomService />} />
       </Routes>
     </>
   );

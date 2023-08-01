@@ -51,7 +51,7 @@
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
   max-height: 410px;
   overflow: hidden;
-  padding: 20px;
+  padding: 10px;
   min-width: 230px;
 }
 .main-tools_container .tools-express h2 {
@@ -197,6 +197,9 @@
   box-shadow: 0 0 2px 2px rgba(24, 144, 255, 0.3);
   border-right-width: 1px;
 }
+.express-list .express-tips {
+  margin-bottom: 4px;
+}
 .express-tips em {
   color: var(--primary-color);
   font-weight: 700;
@@ -218,7 +221,6 @@
 .express-list {
   padding-top: 4px;
   position: relative;
-  /* left: -9px; */
 }
 .express-list ul {
   border-bottom: 2px solid #dff1ff;

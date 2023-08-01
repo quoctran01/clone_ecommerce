@@ -8,12 +8,11 @@ const DialogMask = ({ productId, onClose }) => {
   const handleRemoveProductCart = () => {
     dispatch(cartActions.deleteItem(productId));
     onClose();
-    toast.success("You have removed the product from the cart");
+    toast.success("Delete product cart successfully");
   };
   if (!Array.isArray(productId)) {
     productId = Array.of(productId);
   }
-  console.log("rerender");
   return (
     <>
       <div className='dialog-mask'>
