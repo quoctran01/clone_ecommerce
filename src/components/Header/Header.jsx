@@ -167,7 +167,7 @@ const Header = () => {
                 </ul>
               </li>
               <li className='nav-item'>
-                <NavLink to='bbs'>BBS</NavLink>
+                <a href='https://bbs.superbuy.com/forum.php'>BBS</a>
               </li>
               <li className='nav-item'>
                 <NavLink to='business'>BUSINESS</NavLink>
@@ -195,7 +195,7 @@ const Header = () => {
                 <NavLink to='affilates'>AFFILIATES</NavLink>
               </li>
               <li className='nav-item'>
-                <NavLink to='customer'>CUSTOMER SERVICE</NavLink>
+                <NavLink to='customservice'>CUSTOMER SERVICE</NavLink>
                 <i class='ri-arrow-down-s-line'></i>
                 <ul class='sub-nav-customer p-0 m-0'>
                   <li class='sub-nav-item'>

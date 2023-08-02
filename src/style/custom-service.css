@@ -1,0 +1,99 @@
+.custom-service .hd {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  height: 50px;
+  width: 100%;
+}
+.custom-service .hd h1 {
+  font-size: 18px;
+  line-height: 50px;
+  margin: 0 auto;
+  width: 1200px;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 500;
+}
+.custom-service .bd {
+  margin-bottom: 200px;
+  padding-top: 100px;
+}
+.custom-service .bd .inner-wrap {
+  margin: 0 auto;
+  width: 1200px;
+}
+.custom-service .bd ul {
+  margin-left: -25px;
+}
+.custom-service .bd li {
+  background: #fff;
+  border: 1px solid #eee;
+  box-sizing: content-box;
+  float: left;
+  height: 293px;
+  margin-left: 50px;
+  text-align: center;
+  width: 248px;
+}
+.bd li .txt-box {
+  height: 235px;
+  overflow: hidden;
+}
+.bd li .ico {
+  height: 42px;
+  margin: 30px 0 20px;
+}
+.bd li.order-item em {
+  background-position: 6px 0;
+}
+.custom-service .bd li em {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/customservice/sprite.png)
+    0 0 no-repeat;
+  display: inline-block;
+  height: 42px;
+  width: 52px;
+}
+.custom-service .bd li h3 {
+  font-size: 16px;
+  height: 20px;
+  line-height: 20px;
+}
+.mt30 {
+  margin-top: 30px;
+}
+.bd li .tip {
+  overflow: hidden;
+}
+.custom-service.en .bd li .tip p {
+  line-height: 16px;
+  margin-bottom: 10px;
+  color: #666;
+}
+.mt20 {
+  margin-top: 20px;
+}
+.custom-service .bd li .btn {
+  background: #1268bb;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  color: #fff;
+  display: inline-block;
+  height: 40px;
+  line-height: 27px;
+  text-decoration: none;
+  width: 180px;
+}
+.sp-tooltip {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  color: #666;
+  line-height: 24px;
+  min-width: 130px;
+  padding: 10px;
+  z-index: 1001;
+}
+.bd li:hover {
+  border: 5px solid #1268bb;
+  height: 285px;
+  width: 240px;
+}

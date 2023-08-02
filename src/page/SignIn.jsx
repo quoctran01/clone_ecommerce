@@ -1,15 +1,37 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../style/signin.css";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 const SignIn = () => {
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+    },
+    validationSchema: Yup.object({
+      email: Yup.string()
+        .email("Invalid Email")
+        .required("You must fill in this section!"),
+      password: Yup.string()
+        .min(8, "Your password must be at least 8 characters")
+        .required("You must fill in this section!"),
+    }),
+    onSubmit: (values) => {
+      console.log(values);
+    },
+  });
   return (
     <>
       <div className='login-layout'>
         <header class='logo'>
           <div class='logo-cont'>
             <Link to='/home'>
-              <img src='https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/login/logo.png' />
+              <img
+                src='https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/login/logo.png'
+                alt=''
+              />
             </Link>
             <p>Global Leading Cross-border Integrated Service Platform</p>
           </div>
@@ -18,40 +40,60 @@ const SignIn = () => {
           <div className='center-cont'>
             <a
               class='login-adhref'
-              href='https://www.superbuy.com/en/page/marketing/share/?htag=log&amp;nTag=en_login_banner'
-              target='_blank'></a>
+              href='https://www.superbuy.com/en/page/marketing/share/?htag=log&amp;nTag=en_login_banner'></a>
             <div className='mainBox'>
               <div className='login-page loginBox-active'>
-                <h6 class='title'>Sign In </h6>
-                <div class='loginMsg emailAuto'>
-                  <input
-                    type='email'
-                    id='email'
-                    list='loginList'
-                    class='inputS'
-                    placeholder='E-mail'
-                    value=''
-                  />
-                </div>
-                <div class='loginMsg forgotPsw'>
-                  <input
-                    name='password'
-                    type='password'
-                    class='inputS'
-                    placeholder='Password'
-                    value=''
-                  />
-                </div>
-                <div className='loading-box'>
-                  <input type='button' class='btnS' value='Sign In' />
-                </div>
+                <form onSubmit={formik.handleSubmit}>
+                  <h6 class='title'>Sign In </h6>
+                  <div class='loginMsg emailAuto'>
+                    <input
+                      type='text'
+                      id='email'
+                      class='inputS'
+                      placeholder={
+                        formik.errors.email && formik.touched.email
+                          ? formik.errors.email
+                          : "E-mail"
+                      }
+                      value={formik.values.email}
+                      onChange={formik.handleChange}
+                      style={{
+                        border:
+                          formik.errors.email && formik.touched.email
+                            ? "1px solid red"
+                            : "",
+                      }}
+                    />
+                  </div>
+                  <div class='loginMsg forgotPsw'>
+                    <input
+                      name='password'
+                      type='password'
+                      class='inputS'
+                      placeholder={
+                        formik.errors.password && formik.touched.password
+                          ? formik.errors.password
+                          : "Password"
+                      }
+                      value={formik.values.password}
+                      onChange={formik.handleChange}
+                      style={{
+                        border:
+                          formik.errors.password && formik.touched.password
+                            ? "1px solid red"
+                            : "",
+                      }}
+                    />
+                  </div>
+                  <div className='loading-box'>
+                    <input type='submit' class='btnS' value='Sign In' />
+                  </div>
+                </form>
                 <section class='otherWay'>
                   <span>You can sign in with third-party accounts</span>
                   <div class='list'>
-                    <a
-                      class='weibo'
-                      href='//www.superbuy.com/connect/weibo'></a>
-                    <a class='qq' href='//www.superbuy.com/connect/qq'></a>
+                    <a class='weibo' href='hihi.com'></a>
+                    <a class='qq' href='hah.com'></a>
                     <a
                       class='weixin'
                       href='//www.superbuy.com/connect/wechat'></a>

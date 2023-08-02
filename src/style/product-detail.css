@@ -588,7 +588,7 @@
 .buy-toolbar {
   background-color: #fff;
   height: 54px;
-  position: relative;
+  position: sticky;
 }
 .buy-toolbar .toolbar-btns {
   box-sizing: border-box;
@@ -599,7 +599,7 @@
 .goods-detail_right {
   margin-top: 10px;
 }
-.buy-toolbar .toolbar-btns a {
+.buy-toolbar .toolbar-btns p {
   color: #333;
   cursor: pointer;
   display: block;
@@ -614,10 +614,10 @@
   text-align: center;
   text-decoration: none;
 }
-.buy-toolbar .toolbar-btns a.active {
+.buy-toolbar .toolbar-btns p.active {
   color: #0083ef;
 }
-.buy-toolbar .toolbar-btns a:after {
+.buy-toolbar .toolbar-btns p:after {
   background: #0083ef;
   bottom: 0;
   content: "";
@@ -630,8 +630,12 @@
   width: 30px;
   width: 0;
 }
-.buy-toolbar .toolbar-btns a.active:after {
+.buy-toolbar .toolbar-btns p.active:after {
   width: 30px;
+}
+.buy-toolbar .haha {
+  position: sticky;
+  top: 0;
 }
 .detail-goodsDetail {
   margin-right: -10px;
@@ -665,4 +669,230 @@
   height: 4px;
   margin-right: 8px;
   width: 4px;
+}
+.detail-forbidden {
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.detail-forbidden li em {
+  font-weight: 700;
+  margin-left: 10px;
+}
+.detail-forbidden em {
+  color: #ff1733;
+  font-style: normal;
+}
+.detail-forbidden li .detail-forbidden-icon {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/img/buy/icon_forbidden.png)
+    0 0 no-repeat;
+  display: block;
+  height: 80px;
+  margin-top: 16px;
+  width: 590px;
+}
+.detail-forbidden li:nth-of-type(2) {
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+.detail-forbidden li:nth-of-type(3) .detail-forbidden-icon {
+  background-position: 0 -200px;
+}
+.detail-subTitle {
+  align-items: center;
+  color: #0083ef !important;
+  cursor: default;
+  display: flex;
+  font-weight: 700;
+  margin-bottom: 14px;
+  text-decoration: none;
+}
+.detail-expressTable {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.detail-expressTable tr {
+  color: #333;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+.detail-expressTable th {
+  background: #eee;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}
+.detail-expressTable tr:nth-of-type(2n) {
+  background: #f9f9f9;
+}
+.detail-expressTable tr {
+  color: #333;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+.detail-expressTable td:first-child {
+  border-left: none;
+  font-weight: 700;
+  text-align: left;
+  text-indent: 20px;
+  width: 320px;
+}
+.detail-expressTable td {
+  border: 1px solid #fff;
+  border-bottom: 0;
+  border-top: 0;
+  width: 149px;
+}
+.detail-expressTable td:nth-of-type(2) {
+  width: 160px;
+}
+.detail-expressTable td .ok {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/img/buy/ok.png)
+    0 0 no-repeat;
+  display: inline-block;
+  height: 14px;
+  width: 18px;
+}
+.detail-expressTable td {
+  border: 1px solid #fff;
+  border-bottom: 0;
+  border-top: 0;
+  width: 149px;
+}
+.detail-expressTable td:last-child {
+  border-right: none;
+}
+.detail-expressVolume dl {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/img/buy/icon_express.png)
+    20px 20px no-repeat;
+  background-color: #f5f5f5;
+  box-sizing: border-box;
+  float: left;
+  margin-bottom: 10px;
+  padding: 10px 10px 10px 70px;
+  width: 100%;
+}
+.detail-expressVolume dt {
+  color: #333;
+  font-size: 12px;
+  font-weight: 700;
+}
+.detail-expressVolume dd {
+  color: #666;
+  font-size: 12px;
+  margin-top: 6px;
+}
+.detail-expressVolume dl:nth-of-type(2) {
+  background-position-y: -86px;
+}
+.detail-expressVolume dl:nth-of-type(3) {
+  background-position-y: -186px;
+}
+.detail-expressVolume dl:nth-of-type(4) {
+  background-position-y: -288px;
+}
+.detail-expressVolume.detail-expressVolume-en dl {
+  margin: 10px 0 30px;
+}
+.after-sale-service {
+  padding: 18px 18px 22px;
+}
+.after-sale-service .detail-afterSales > div > p {
+  color: #0083ef;
+  font-size: 12px;
+  font-weight: 700;
+}
+.detail-afterSales > div nav {
+  color: #333;
+}
+.detail-afterSales nav {
+  margin-top: 10px;
+}
+.detail-afterSales > div nav p {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+.detail-afterSales nav p:before {
+  color: #333;
+  content: "\B7 ";
+  margin-right: 4px;
+}
+.detail-afterSales nav p a {
+  color: #333;
+}
+.detail-afterSales nav a {
+  text-decoration: none;
+  line-height: 28px;
+}
+.buy-detailContent a {
+  font-weight: 700;
+}
+.shopping-agent-flow {
+  padding: 18px;
+}
+.buy-delivery-title {
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+}
+.buy-detailContent .shopping-agent-flow .content.en {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/img/buy/flow-en.png) -4px
+    4px no-repeat;
+}
+.buy-detailContent .shopping-agent-flow .content {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/img/buy/flow-cn.png) -4px
+    4px no-repeat;
+  height: 180px;
+}
+.promise-service_list {
+  background: #fff;
+  padding: 20px;
+  width: 100%;
+}
+.promise-service_list h4 {
+  color: #000;
+  font-weight: 700;
+  font-size: 14px;
+}
+.promise-service_list .warning-tips_list li {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding-left: 12px;
+  position: relative;
+}
+.warning-tips_list li:first-child {
+  margin-top: 12px;
+}
+.warning-tips_list li .waring-title {
+  color: #000;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 12px;
+  margin-bottom: 6px;
+}
+.warning-tips_list li .warning-content {
+  color: #666;
+  font-size: 12px;
+  line-height: 20px;
+}
+.warning-tips_list li:after {
+  background: #0083ef;
+  border-radius: 10px;
+  content: "";
+  height: 7px;
+  left: 0;
+  position: absolute;
+  top: 2px;
+  width: 7px;
+}
+.detail-header p {
+  color: #666;
+  text-align: justify;
+}
+.detail-header p a {
+  text-decoration: none;
+  font-size: 14px;
 }

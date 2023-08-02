@@ -10,6 +10,7 @@ import Tracking from "../page/Tracking";
 import Customization from "../page/Customization";
 import Affilate from "../page/Affilate";
 import Buckydrop from "../page/Buckydrop";
+import CustomService from "../page/CustomService";
 
 const Routers = () => {
   return (
@@ -19,7 +20,6 @@ const Routers = () => {
         <Route path='/home' element={<Home />} />
         <Route path='/shoppingagent' element={<Shoppingagent />} />
         <Route path='/shoppingcart' element={<Shoppingcart />} />
-        <Route path='/shoppingcart' element={<Shoppingcart />} />
         <Route path='/forward' element={<Forwarding />} />
         <Route path='/shop/:id' element={<ProductDetail />} />
         <Route path='/logistic/freight' element={<Freight />} />
@@ -27,9 +27,9 @@ const Routers = () => {
         <Route path='/affilates' element={<Affilate />} />
         <Route path='/logistic/customization' element={<Customization />} />
         <Route path='/business/buckydrop' element={<Buckydrop />} />
+        <Route path='/customservice' element={<CustomService />} />
       </Routes>
     </>
   );
 };
-
 export default Routers;

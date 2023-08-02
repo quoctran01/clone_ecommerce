@@ -1,0 +1,12 @@
+/* CustomScrollbar.css */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px; /* chiều rộng của thanh cuộn */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1); /* màu của phần nút cuộn */
+  border-radius: 6px; /* góc bo tròn */
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}

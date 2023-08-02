@@ -1,18 +1,67 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 import "../style/product-detail.css";
 import products from "../assets/data/product";
 import useHandleQuantity from "../const/handleQuantity";
 import ProductRecomList from "../components/ProductRecom/ProductRecomList";
 
+const toolbarBtn = [
+  { name: "Product Details", value: "productDetail" },
+  { name: "Shopping Agent Notes", value: "shoppingAgent" },
+  { name: "After Sales Service", value: "saleService" },
+  { name: "CEO tips", value: "ceoTip" },
+];
+
 const ProductDetail = () => {
   const { id } = useParams();
+  const [selected, setSelected] = useState(0);
+  const [imageDetail, setImageDetail] = useState(0);
+  const productDetail = useRef(null);
+  const shoppingAgent = useRef(null);
+  const saleService = useRef(null);
+  const ceoTip = useRef(null);
   const product = products.find((item) => item.id === id);
   const productRecomend = products.filter(
     (item) => item.category === product.category
   );
   const { quantity, handleDecrease, handleIncrease, addToCart } =
     useHandleQuantity(product);
+  const handleActive = (id) => {
+    setSelected(id);
+  };
+  const scrollToSection = (elementRef) => {
+    if (elementRef && elementRef.current) {
+      window.scrollTo({
+        top: elementRef.current.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
+  const productImage = [
+    {
+      image: product.imgUrl,
+      productName: product.productName,
+    },
+    {
+      image: product.imgUrl,
+      productName: product.productName,
+    },
+    {
+      image: product.imgUrl,
+      productName: product.productName,
+    },
+    {
+      image: product.imgUrl,
+      productName: product.productName,
+    },
+    {
+      image: product.imgUrl,
+      productName: product.productName,
+    },
+  ];
+  const handleMouseImgae = (id) => {
+    setImageDetail(id);
+  };
   return (
     <>
       <div className='m-buy'>
@@ -22,25 +71,22 @@ const ProductDetail = () => {
               <div className='goods-info_container card-wrap'>
                 <div className='buy-preview'>
                   <div className='preview-window'>
-                    <img class='goods-img_preview' src={product.imgUrl} />
+                    <img
+                      src={productImage[imageDetail].image}
+                      alt={productImage[imageDetail].productName}
+                      class='goods-img_preview'
+                    />
                   </div>
                   <div className='preview-list'>
                     <ul className='clearfix'>
-                      <li class='active'>
-                        <img src={product.imgUrl} />
-                      </li>
-                      <li class=''>
-                        <img src={product.imgUrl} />
-                      </li>
-                      <li class=''>
-                        <img src={product.imgUrl} />
-                      </li>
-                      <li class=''>
-                        <img src={product.imgUrl} />
-                      </li>
-                      <li class=''>
-                        <img src={product.imgUrl} />
-                      </li>
+                      {productImage.map((item, index) => (
+                        <li
+                          key={index}
+                          className={imageDetail === index ? "active" : ""}
+                          onMouseEnter={() => handleMouseImgae(index)}>
+                          <img src={item.image} alt={item.productName} />
+                        </li>
+                      ))}
                     </ul>
                   </div>
                   <div className='share'>
@@ -243,7 +289,7 @@ const ProductDetail = () => {
                   </p>
                   <div class='shopBox-body'>
                     <span>
-                      <em class=''>---</em>Overall
+                      <em class=''>{product.avgRating}</em>Overall
                     </span>
                     <ul
                       class='shop-score'
@@ -351,27 +397,44 @@ const ProductDetail = () => {
               </section>
               <section className='goods-detail_right'>
                 <div class='buy-toolbar clearfix'>
-                  <div class='d-flex'>
-                    <nav class='toolbar-btns '>
-                      <a class='active'>
-                        Product Details<i></i>
-                      </a>
-                      <a>
-                        Shopping Agent Notes<i></i>
-                      </a>
-                      <a>
-                        After Sales Service<i></i>
-                      </a>
-                      <a>
-                        CEO tips<i></i>
-                      </a>
+                  <div className='haha'>
+                    <nav class='toolbar-btns'>
+                      {toolbarBtn.map((item, index) => (
+                        <p
+                          key={index}
+                          onClick={() => {
+                            handleActive(index);
+                            switch (item.value) {
+                              case "productDetail":
+                                scrollToSection(productDetail);
+                                break;
+                              case "shoppingAgent":
+                                scrollToSection(shoppingAgent);
+                                break;
+                              case "saleService":
+                                scrollToSection(saleService);
+                                break;
+                              case "ceoTip":
+                                scrollToSection(ceoTip);
+                                break;
+                              default:
+                                break;
+                            }
+                          }}
+                          className={selected === index ? "active" : ""}>
+                          {item.name}
+                        </p>
+                      ))}
                     </nav>
                     {/* <button class=' toolbar-addGoods'>Add To Cart</button> */}
                   </div>
                 </div>
                 <div className='buy-detailContent'>
                   <div style={{ height: "10px" }}></div>
-                  <div className='card-wrap' id='goods-detail'>
+                  <div
+                    ref={productDetail}
+                    className='card-wrap'
+                    id='goods-detail'>
                     <div className='detail-box'>
                       <div className='detail-goodsDetail'>
                         <p>
@@ -383,7 +446,7 @@ const ProductDetail = () => {
                     </div>
                   </div>
                   <div style={{ height: "20px" }}></div>
-                  <div className='card-wrap'>
+                  <div ref={shoppingAgent} className='card-wrap'>
                     <div className='detail-box goods-note-content'>
                       <div class='detail-title' id='aDgxz'>
                         <h3>Shopping Agent Notes</h3>
@@ -391,6 +454,379 @@ const ProductDetail = () => {
                       <p>
                         <a class='detail-subTitle'>
                           Prohibited and limited items
+                        </a>
+                      </p>
+                      <ul className='detail-forbidden clearfix p-0'>
+                        <li>
+                          <div className='d-flex'>
+                            <span>· Cigarette, alcohol, Contraband</span>
+                            <em>Do not accept</em>
+                          </div>
+                          <i class='detail-forbidden-icon'></i>
+                        </li>
+                        <li>
+                          <p>
+                            · Liquid, cream or cosmetics items are quantity
+                            limited in shopping agent service.','Liquid, cream
+                            or cosmetics items are quantity limited in shopping
+                            agent service.<em>Do not accept</em>
+                          </p>
+                          <i class='detail-forbidden-icon'></i>
+                        </li>
+                        <li>
+                          <p>
+                            · Chinese medicine is limited to ship by Chinese
+                            exporting goods.
+                          </p>
+                          <i class='detail-forbidden-icon'></i>
+                        </li>
+                      </ul>
+                      <a class='detail-subTitle'>
+                        Limitation for different logistics company
+                      </a>
+                      <table class='detail-expressTable'>
+                        <tbody>
+                          <tr>
+                            <th></th>
+                            <th>Duty-Free Air Express</th>
+                            <th>EMS</th>
+                            <th>DHL</th>
+                            <th>EUB</th>
+                          </tr>
+                          <tr>
+                            <td>A small amount of liquid</td>
+                            <td class=''>
+                              <i class='ok'></i>
+                            </td>
+                            <td class=''>
+                              <i class='ok'></i>
+                            </td>
+                            <td class='disabled'>- -</td>
+                            <td class=''>
+                              <i class='ok'></i>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Perfume</td>
+                            <td class='disabled'>- -</td>
+                            <td class='disabled'>- -</td>
+                            <td class='disabled'>- -</td>
+                            <td class='disabled'>- -</td>
+                          </tr>
+                          <tr>
+                            <td>Gas</td>
+                            <td class='disabled'>- -</td>
+                            <td class='disabled'>- -</td>
+                            <td class='disabled'>- -</td>
+                            <td class='disabled'>- -</td>
+                          </tr>
+                          <tr>
+                            <td>CDs</td>
+                            <td class=''>
+                              <i class='ok'></i>
+                            </td>
+                            <td class=''>
+                              <i class='ok'></i>
+                            </td>
+                            <td class=''>
+                              <i class='ok'></i>
+                            </td>
+                            <td class=''>
+                              <i class='ok'></i>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Brands</td>
+                            <td class=''>
+                              <i class='ok'></i>
+                            </td>
+                            <td class=''>
+                              <i class='ok'></i>
+                            </td>
+                            <td class=''>
+                              <i class='ok'></i>
+                            </td>
+                            <td class=''>
+                              <i class='ok'></i>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Medicine</td>
+                            <td class=''>
+                              <i class='ok'></i>
+                            </td>
+                            <td class=''>
+                              <i class='ok'></i>
+                            </td>
+                            <td class='disabled'>- -</td>
+                            <td class=''>
+                              <i class='ok'></i>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Health care</td>
+                            <td class=''>
+                              <i class='ok'></i>
+                            </td>
+                            <td class=''>
+                              <i class='ok'></i>
+                            </td>
+                            <td class='disabled'>- -</td>
+                            <td class=''>
+                              <i class='ok'></i>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Batteries</td>
+                            <td class=''>
+                              <i class='ok'></i>
+                            </td>
+                            <td class='disabled'>- -</td>
+                            <td class='disabled'>- -</td>
+                            <td class='disabled'>- -</td>
+                          </tr>
+                          <tr>
+                            <td>Electronic products(without batteries)</td>
+                            <td class=''>
+                              <i class='ok'></i>
+                            </td>
+                            <td class=''>
+                              <i class='ok'></i>
+                            </td>
+                            <td class=''>
+                              <i class='ok'></i>
+                            </td>
+                            <td class=''>
+                              <i class='ok'></i>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <a class='detail-subTitle'>
+                        volumetric weight limitation
+                      </a>
+                      <div className='detail-expressVolume clearfix detail-expressVolume-en'>
+                        <dl>
+                          <dt>
+                            Overlength/overweight charges are incurred if any
+                            side of the parcel &gt; 120cm or the actual weight
+                            of a single shipment ＞70kg; parcels cannot be sent
+                            if the longest side＞270cm or the second longest
+                            side ＞160cm.
+                          </dt>
+                          <dd>Length cm * width cm * height cm/5000</dd>
+                        </dl>
+                        <dl>
+                          <dt>
+                            Fees are charged based on the greater of the actual
+                            weight and the volume weight if any side of the
+                            parcel ≥ 60cm; volume weight (kg)= length (cm)
+                            ×width (cm) × height (cm) /6,000; fees are charged
+                            by the actual weight if each of the three sides &lt;
+                            60cm.
+                          </dt>
+                          <dd></dd>
+                        </dl>
+                        <dl>
+                          <dt>
+                            Parcels cannot be sent if any side &gt; 120cm.
+                          </dt>
+                          <dd>
+                            Fees are charged based on the greater of the actual
+                            weight and the volume weight.
+                          </dd>
+                        </dl>
+                        <dl>
+                          <dt>
+                            The parcel cannot be shipped if the side length is
+                            over 60 cm.
+                          </dt>
+                          <dd>According to the actual weight (kg) </dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                  <div style={{ height: "20px" }}></div>
+                  <div ref={saleService} class='card-wrap after-sale-service'>
+                    <div class='detail-box detail-afterSales'>
+                      <div class='detail-title' id='aShfw'>
+                        <h3>After Sales Service</h3>
+                        <i></i>
+                      </div>
+                      <div>
+                        <p>Logistics Query</p>
+                        <nav>
+                          <p>
+                            <a href='//www.superbuy.com/en/page/help/#p4_53_helpId2'>
+                              Parcels receiving Notices
+                            </a>
+                          </p>
+                          <p>
+                            <a href='//www.superbuy.com/en/page/help/#p4_53_helpId49'>
+                              What does 'Not yet delivered' mean?
+                            </a>
+                          </p>
+                          <p>
+                            <a href='//www.superbuy.com/en/page/help/#p4_53_helpId90'>
+                              'How to find the parcel logistic information after
+                              it has been sent out from warehouse?
+                            </a>
+                          </p>
+                          <p>
+                            <a href='//www.superbuy.com/en/page/help/#p4_53_helpId8'>
+                              How to track my parcel after it has been sent out
+                              from warehouse?
+                            </a>
+                          </p>
+                        </nav>
+                        <div style={{ height: "30px" }}></div>
+                      </div>
+                      <div>
+                        <p>Products Abnormal</p>
+                        <nav>
+                          <p>
+                            <a href='//www.superbuy.com/en/page/help/#p4_54_helpId79'>
+                              About the packaging details
+                            </a>
+                          </p>
+                          <p>
+                            <a href='//www.superbuy.com/en/page/help/#p4_54_helpId31'>
+                              What do I do if there is a product issue after I
+                              received it?
+                            </a>
+                          </p>
+                          <p>
+                            <a href='//www.superbuy.com/en/page/help/#p4_54_helpId16'>
+                              What do I do if my fragile products have been
+                              damaged?
+                            </a>
+                          </p>
+                          <p>
+                            <a href='//www.superbuy.com/en/page/help/#p2_14_helpId178'>
+                              Can the Shopping Agent orders be cancelled or
+                              refunded?
+                            </a>
+                          </p>
+                        </nav>
+                        <div style={{ height: "30px" }}></div>
+                      </div>
+                      <div>
+                        <p>Parcel lost</p>
+                        <nav>
+                          <p>
+                            <a href='//www.superbuy.com/en/page/help/#p4_55_helpId148'>
+                              Insurance and compensation
+                            </a>
+                          </p>
+                          <p>
+                            <a href='//www.superbuy.com/en/page/help/#search_helpId1172'>
+                              The inspection rules of the Shopping Agent Service
+                            </a>
+                          </p>
+                          <p>
+                            <a href='//www.superbuy.com/en/page/help/#p4_55_helpId14'>
+                              Websites says items in stock, but why Superbuy
+                              says out of stock?
+                            </a>
+                          </p>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                  <div style={{ height: "20px" }}></div>
+                  <div class='card-wrap shopping-agent-flow'>
+                    <div></div>
+                    <h3 class='buy-delivery-title'>Shopping Agent Process</h3>
+                    <div class='content en'></div>
+                  </div>
+                  <div class='promise-service_list goods-options' id='aZysx'>
+                    <h4>Note</h4>
+                    <ul
+                      class='warning-tips_list p-0'
+                      id='step3-service-promise'>
+                      <li>
+                        <p class='waring-title'>deliver risk of food</p>
+                        <p class='warning-content'>
+                          Those products are restricted by the customs and they
+                          can only be shipped by selected logistics providers.
+                          Also, there is a possibility that the parcel will be
+                          confiscated, inspected, or destroyed by the customs.
+                          Please select sealed products products that will not
+                          expire in 30 days and could be stored at room
+                          temperature since the parcel might get wet or be
+                          damaged during the transportation. If you insist on
+                          ordering such products, the logistics provider and the
+                          seller will not be responsible for any consequences.
+                        </p>
+                      </li>
+                      <li>
+                        <p class='waring-title'>Un-returnable Service </p>
+                        <p class='warning-content'>
+                          This product does not accept return/exchange according
+                          to the seller store policy,the return request will be
+                          declined after it is purchased, we are not responsible
+                          for any consequences if you insist on ordering such
+                          product
+                        </p>
+                      </li>
+                      <li>
+                        <p class='waring-title'>Detailed Inspection</p>
+                        <p class='warning-content'>
+                          <span>
+                            Check product details including quantity, color, and
+                            size.
+                          </span>
+                          <a
+                            target='_blank'
+                            href='/en/page/help/#search_helpId1172'>
+                            View details&gt;
+                          </a>
+                        </p>
+                      </li>
+                      <li>
+                        <p class='waring-title'>Pack with care</p>
+                        <p class='warning-content'>
+                          <span></span>
+                        </p>
+                      </li>
+                      <li>
+                        <p class='waring-title'>Lower exchange loss</p>
+                        <p class='warning-content'>
+                          <span></span>
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div style={{ height: "10px" }}></div>
+                  <div ref={ceoTip} class='card-wrap' id='aCeots'>
+                    <div class='detail-header'>
+                      <div class='detail-title'>
+                        <h3>CEO tips</h3>
+                      </div>
+                      <p>
+                        1. [About Customs] due to the differences of countries
+                        customs policies, some items are sensitive. So that
+                        prohibited items, limited items, limited logistics, and
+                        limited weight and volume are existed. To read more,
+                        please click
+                        <a href=' '>【Shopping Agent Notes】</a>
+                      </p>
+                      <p style={{ marginTop: " 12px" }}>
+                        2. [About after-sales] if you have any enquires
+                        regarding to the items, packaging, and logistics, please
+                        contact our online customer services or telephone
+                        customer services in +86-755-33085566. We will answer
+                        your question as soon as possible. To read more, please
+                        click<a href=' '>【After Sales Service】</a>
+                      </p>
+                      <p style={{ marginTop: " 12px" }}>
+                        3.[About items] If you choose the items because of
+                        quality is too poor, the price is too high, no time to
+                        choose or do not know how to buy and other issues, you
+                        can try expert services to solve your shopping
+                        problems.To read more, please click
+                        <a href='//www.superbuy.com/en/page/eptpurchase/'>
+                          【Expert services】
                         </a>
                       </p>
                     </div>
