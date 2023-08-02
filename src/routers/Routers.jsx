@@ -20,7 +20,6 @@ const Routers = () => {
         <Route path='/home' element={<Home />} />
         <Route path='/shoppingagent' element={<Shoppingagent />} />
         <Route path='/shoppingcart' element={<Shoppingcart />} />
-        <Route path='/shoppingcart' element={<Shoppingcart />} />
         <Route path='/forward' element={<Forwarding />} />
         <Route path='/shop/:id' element={<ProductDetail />} />
         <Route path='/logistic/freight' element={<Freight />} />
@@ -33,5 +32,4 @@ const Routers = () => {
     </>
   );
 };
-
 export default Routers;

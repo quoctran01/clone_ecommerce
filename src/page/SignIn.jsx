@@ -14,10 +14,9 @@ const SignIn = () => {
       email: Yup.string()
         .email("Invalid Email")
         .required("You must fill in this section!"),
-      password: Yup.string().min(
-        8,
-        "Your password must be at least 8 characters"
-      ),
+      password: Yup.string()
+        .min(8, "Your password must be at least 8 characters")
+        .required("You must fill in this section!"),
     }),
     onSubmit: (values) => {
       console.log(values);
@@ -29,7 +28,10 @@ const SignIn = () => {
         <header class='logo'>
           <div class='logo-cont'>
             <Link to='/home'>
-              <img src='https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/login/logo.png' />
+              <img
+                src='https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/login/logo.png'
+                alt=''
+              />
             </Link>
             <p>Global Leading Cross-border Integrated Service Platform</p>
           </div>
