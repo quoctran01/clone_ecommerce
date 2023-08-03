@@ -1,11 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import "../style/forwarding.css";
+import "../style/custom-scrollbar.css";
 import TransportBanner from "../components/UI/TransportBanner";
 import { bannerSlider } from "../assets/data/bannerSlider";
 import CalculatorTool from "../components/CalculatorTool/CalculatorTool";
 import ProductShipping from "../components/ProductShipping/ProductShipping";
 
+const warehouse = ["Guangdong Warehouse", "HongKong Warehouse"];
+const informationShip = [
+  " Deppon Express",
+  "Zto Express ",
+  "Fedex",
+  "Yunda Express",
+  "Yto Express",
+  "Sto Express ",
+  " EMS",
+  " Other ",
+  "JingDong",
+  "JITU Express ",
+  " ZJS Express ",
+  "Best Express",
+  "SF Express",
+];
+
 const Forwarding = () => {
+  const [isShow, setIsShow] = useState(false);
+  const [isShowInf, setIsShowInf] = useState(false);
+  const [onSelect, setOnSelect] = useState(0);
+  const [itemSelected, setItemSelected] = useState("Guangdong Warehouse");
+  const [itemSelectedShip, setIsShowInfShip] = useState(
+    "Choose logistics company"
+  );
+  const [inputValue, setInputValue] = useState(1);
+  const handleSelect = (index, item) => {
+    setOnSelect(index);
+    setIsShow(false);
+    setItemSelected(item);
+  };
+  const handleSelectShip = (index, item) => {
+    setIsShowInfShip(item);
+    setOnSelect(index);
+    setIsShowInf(false);
+  };
+  const handleChangeInput = (type) => {
+    if (type === "reduce") {
+      if (inputValue <= 1) return;
+      setInputValue(inputValue - 1);
+    }
+    if (type === "add-on") {
+      setInputValue(inputValue + 1);
+    }
+  };
   return (
     <>
       <section className='transport transport-container'>
@@ -54,9 +99,9 @@ const Forwarding = () => {
                 Select the warehouse to ship your forwarding items
               </span>
               <p class='select-tips m-0' style={{ color: "#999999" }}>
-                Notice:The South China Warehouse does not accept packages from
-                Tmall Global and overseas markets (including Hong Kong, Macao
-                and Taiwan) to Mainland China.
+                {itemSelected === "Guangdong Warehouse"
+                  ? "Notice:The South China Warehouse does not accept packages from Tmall Global and overseas markets (including Hong Kong, Macao and Taiwan) to Mainland China."
+                  : "Notice:Superbuy Hong Kong Warehouse only accepts parcels that are shipped to countries and regions (Hong Kong, Macau, and Taiwan) other than Mainland China."}
               </p>
             </h2>
             <div class='warehouse-select-area'>
@@ -70,15 +115,30 @@ const Forwarding = () => {
                     aria-haspopup='true'
                     aria-controls='7d2e75b0-4d79-4ec0-ff03-47be029cf4e1'
                     aria-expanded='false'
-                    tabindex='0'>
+                    tabindex='0'
+                    onClick={() => setIsShow(!isShow)}>
                     <div class='ant-select-selection__rendered'>
                       <div
                         class='ant-select-selection-selected-value'
                         title='Guangdong Warehouse'>
-                        Guangdong Warehouse
+                        {itemSelected}
                       </div>
+                      {isShow && (
+                        <ul className='p-0 ant-select-selection__items'>
+                          {warehouse.map((item, index) => (
+                            <li
+                              key={index}
+                              className={`${onSelect === index && "active"}`}
+                              onClick={() => handleSelect(index, item)}>
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
-                    <span class='ant-select-arrow' unselectable='on'>
+                    <span
+                      class='ant-select-arrow ant-select-arrow__forward'
+                      unselectable='on'>
                       <i class='ri-arrow-drop-down-line'></i>
                     </span>
                   </div>
@@ -86,6 +146,52 @@ const Forwarding = () => {
                 <p class='copy-btn mb-0'>1 click copy all</p>
                 <p class='show-warehouse-address mb-0'>
                   view the warehouse address
+                  <div
+                    className='show-warehouse-address--active'
+                    style={{
+                      position: "absolute",
+                      width: "100%",
+                      background: "#fff !important",
+                      top: "-104px",
+                      left: "-332px",
+                    }}>
+                    <div class='ant-tooltip-content '>
+                      <div
+                        class='ant-tooltip-inner'
+                        style={{ color: "#333" }}
+                        role='tooltip'>
+                        <div class='warehouse-info'>
+                          <div class='info-row d-flex justify-content-between'>
+                            <p>
+                              <span>Recipient</span>
+                              <span>黄伟军(0)</span>
+                            </p>
+                            <p>
+                              <span>Cellphone</span>
+                              <span>13352789806</span>
+                            </p>
+                            <p>
+                              <span>Telephone</span>
+                              <span>0752 3312969</span>
+                            </p>
+                            <p>
+                              <span>Zip code</span>
+                              <span>516000</span>
+                            </p>
+                          </div>
+                          <div class='info-row'>
+                            <p>
+                              <span>Address</span>
+                              <span>
+                                广东省 惠州 惠城区
+                                水口街道东江高新科技产业园兴运东路1号鼎晟盛威智慧科技园3栋4楼
+                              </span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </p>
               </div>
             </div>
@@ -114,15 +220,30 @@ const Forwarding = () => {
                       aria-haspopup='true'
                       aria-controls='7d2e75b0-4d79-4ec0-ff03-47be029cf4e1'
                       aria-expanded='false'
-                      tabindex='0'>
+                      tabindex='0'
+                      onClick={() => setIsShowInf(!isShowInf)}>
                       <div class='ant-select-selection__rendered'>
                         <div
                           class='ant-select-selection-selected-value'
-                          title='Guangdong Warehouse'>
-                          Guangdong Warehouse
+                          title='Choose logistics company'>
+                          {itemSelectedShip}
                         </div>
+                        {isShowInf && (
+                          <ul className='p-0 ant-select-selection__items custom-scrollbar'>
+                            {informationShip.map((item, index) => (
+                              <li
+                                key={index}
+                                onClick={() => handleSelectShip(index, item)}
+                                className={`${onSelect === index && "active"}`}>
+                                {item}
+                              </li>
+                            ))}
+                          </ul>
+                        )}
                       </div>
-                      <span class='ant-select-arrow' unselectable='on'>
+                      <span
+                        class='ant-select-arrow ant-select-arrow__forward'
+                        unselectable='on'>
                         <i class='ri-arrow-drop-down-line'></i>
                       </span>
                     </div>
@@ -180,9 +301,13 @@ const Forwarding = () => {
                       <i class='ri-arrow-drop-down-line'></i>
                     </div>
                     <div className='operation-reduce-and-add d-flex ms-2'>
-                      <span class='reduce'></span>
-                      <input type='text' class='pronumb' value='1' />
-                      <span class='add-on'></span>
+                      <span
+                        class='reduce'
+                        onClick={() => handleChangeInput("reduce")}></span>
+                      <input type='text' class='pronumb' value={inputValue} />
+                      <span
+                        class='add-on'
+                        onClick={() => handleChangeInput("add-on")}></span>
                     </div>
                     <div class='transport-price'>
                       <em>¥ </em>
