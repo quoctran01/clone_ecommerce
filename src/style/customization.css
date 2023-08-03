@@ -198,36 +198,9 @@
 .address-select .ant-select-lg .ant-select-selection__rendered {
   line-height: 42px;
 }
-/* .address-select
-  .ant-select
-  .ant-select-selection__rendered
-  .ant-select-selection-selected-value {
-  font-size: 14px;
-  line-height: 42px;
-}
-.address-select .operationInputAddress {
-  display: flex;
-  flex-direction: column;
-}
-.address-select .operationInputAddress label.autoRequired {
-  line-height: 40px;
-  margin: 0;
-  width: 94px;
-}
-.address-select .operationInputAddress .form-item-container {
-  display: flex;
-  margin-bottom: 24px;
-}
-.address-select .operationInputAddress .form-item-container:last-child {
-  margin-bottom: 0;
-}
-.address-select .operationInputAddress .form-item {
-  align-items: center;
-  display: flex;
-} */
 .select-country {
   width: 198px;
-  height: 226px;
+  max-height: 226px;
   overflow-y: auto;
   position: absolute;
   top: 41px;

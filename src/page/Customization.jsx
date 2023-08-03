@@ -3,18 +3,44 @@ import "../style/customization.css";
 import "../style/custom-scrollbar.css";
 
 const Customization = () => {
+  const [inputCount, setInputCount] = useState(1);
   const [listCountry, setListCountry] = useState([]);
+  const [filterCountry, setFilterCountry] = useState([]);
   const [country, setCountry] = useState("");
   const [isActive, setActive] = useState();
+  const [focusInput, setFocusInput] = useState(false);
+  const [selectedValue, setSelectedValue] = useState("");
   useEffect(() => {
     fetch("https://restcountries.com/v2/all")
       .then((res) => res.json())
-      .then((data) => setListCountry(data))
+      .then((data) => {
+        setListCountry(data);
+        setFilterCountry(data);
+      })
       .catch((err) => console.log(err));
   }, []);
   const handleSetCountry = (id, country) => {
     setActive(id);
     setCountry(country);
+    setSelectedValue("");
+    setFocusInput(false);
+  };
+  const handleChangeInput = (e) => {
+    const inputValue = e.target.value;
+    setSelectedValue(inputValue);
+    if (!focusInput) {
+      setFocusInput(true);
+      setFilterCountry(listCountry);
+    } else {
+      const filteredCountries = listCountry?.filter((data) =>
+        data.name.toLowerCase().includes(inputValue.toLowerCase())
+      );
+      setFilterCountry(filteredCountries);
+    }
+    setCountry("");
+  };
+  const handleAddInputs = () => {
+    setInputCount(inputCount + 1);
   };
   return (
     <>
@@ -208,7 +234,7 @@ const Customization = () => {
                           aria-expanded='false'
                           tabindex='0'>
                           <div class='ant-select-selection__rendered'>
-                            {country ? (
+                            {country || selectedValue ? (
                               " "
                             ) : (
                               <div
@@ -217,28 +243,30 @@ const Customization = () => {
                                 Country
                               </div>
                             )}
-                            <ul
-                              className='p-0 select-country custom-scrollbar'
-                              style={{ display: "none" }}>
-                              {listCountry?.map((data, index) => (
-                                <li
-                                  className={`select-country__item ${
-                                    isActive === index ? "active" : ""
-                                  }`}
-                                  key={index}
-                                  onClick={() =>
-                                    handleSetCountry(index, data.name)
-                                  }>
-                                  {data.name}
-                                </li>
-                              ))}
-                            </ul>
+                            {focusInput && (
+                              <ul className='p-0 select-country custom-scrollbar'>
+                                {filterCountry?.map((data, index) => (
+                                  <li
+                                    className={`select-country__item ${
+                                      isActive === index ? "active" : ""
+                                    }`}
+                                    key={index}
+                                    onClick={() =>
+                                      handleSetCountry(index, data.name)
+                                    }>
+                                    {data.name}
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
                             <div class='ant-select-search ant-select-search--inline'>
                               <div class='ant-select-search__field__wrap'>
                                 <input
                                   autocomplete='off'
                                   class='ant-select-search__field'
-                                  value={country}
+                                  value={country || selectedValue}
+                                  onClick={() => setFocusInput(!focusInput)}
+                                  onChange={handleChangeInput}
                                 />
                                 <span class='ant-select-search__field__mirror'>
                                   &nbsp;
@@ -246,7 +274,10 @@ const Customization = () => {
                               </div>
                             </div>
                           </div>
-                          <span class='ant-select-arrow' unselectable='on'>
+                          <span
+                            class='ant-select-arrow'
+                            unselectable='on'
+                            onClick={() => setFocusInput(!focusInput)}>
                             <i
                               aria-label='icon: down'
                               class='anticon anticon-down ant-select-arrow-icon'>
@@ -421,62 +452,67 @@ const Customization = () => {
                     </label>
                   </span>
                 </div>
-                <div className='cargo-list-container'>
-                  <div className='cargo-item-container'>
-                    <input
-                      placeholder='Please fill in product name or URL, or Superbuy order ID'
-                      type='text'
-                      className='ant-input'
-                      style={{ width: "270px", height: "46px" }}
-                    />
-                    <input
-                      maxLength='10'
-                      type='text'
-                      className='ant-input'
-                      style={{ width: "50px", height: "46px" }}
-                    />
-                    <input
-                      maxLength='100'
-                      type='text'
-                      className='ant-input'
-                      style={{ width: "170px", height: "46px" }}
-                    />
-                    <input
-                      maxLength='16'
-                      type='text'
-                      className='ant-input'
-                      style={{ width: "120px", height: "46px" }}
-                    />
-                    <div
-                      className='ant-input-group ant-input-group-compact'
-                      style={{ width: "300px", height: "46px" }}>
+                {Array.from({ length: inputCount }).map((_, index) => (
+                  <div className='cargo-list-container' key={index}>
+                    <div className='cargo-item-container'>
                       <input
-                        maxLength='10'
-                        placeholder='Length'
+                        placeholder='Please fill in product name or URL, or Superbuy order ID'
                         type='text'
                         className='ant-input'
-                        style={{ width: "33%", height: "46px" }}
+                        style={{ width: "270px", height: "46px" }}
                       />
                       <input
                         maxLength='10'
-                        placeholder='Width'
                         type='text'
                         className='ant-input'
-                        style={{ width: "33%", height: "46px" }}
+                        style={{ width: "50px", height: "46px" }}
                       />
                       <input
-                        maxLength='10'
-                        placeholder='Height'
+                        maxLength='100'
                         type='text'
                         className='ant-input'
-                        style={{ width: "33%", height: "46px" }}
+                        style={{ width: "170px", height: "46px" }}
                       />
-                    </div>
-                    <div className='operation-btn'>
-                      <button type='button' className='add'></button>
+                      <input
+                        maxLength='16'
+                        type='text'
+                        className='ant-input'
+                        style={{ width: "120px", height: "46px" }}
+                      />
+                      <div
+                        className='ant-input-group ant-input-group-compact'
+                        style={{ width: "300px", height: "46px" }}>
+                        <input
+                          maxLength='10'
+                          placeholder='Length'
+                          type='text'
+                          className='ant-input'
+                          style={{ width: "33%", height: "46px" }}
+                        />
+                        <input
+                          maxLength='10'
+                          placeholder='Width'
+                          type='text'
+                          className='ant-input'
+                          style={{ width: "33%", height: "46px" }}
+                        />
+                        <input
+                          maxLength='10'
+                          placeholder='Height'
+                          type='text'
+                          className='ant-input'
+                          style={{ width: "33%", height: "46px" }}
+                        />
+                      </div>
+                      <div className='operation-btn'>
+                        <button
+                          type='button'
+                          className='add'
+                          onClick={handleAddInputs}></button>
+                      </div>
                     </div>
                   </div>
-                </div>
+                ))}
               </div>
             </div>
             <div class='section-content'>

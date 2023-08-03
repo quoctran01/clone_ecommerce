@@ -137,6 +137,15 @@
   padding: 0;
   margin: 0;
 }
+.country-list li:hover {
+  color: var(--primary-color);
+}
+.goods-type-list > li:hover {
+  color: var(--primary-color);
+}
+.goods-type-list__children .goods-type-list--item:hover {
+  color: red;
+}
 .form-item .pick-container ul li {
   cursor: pointer;
   font-size: 12px;

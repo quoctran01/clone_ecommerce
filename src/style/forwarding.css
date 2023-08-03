@@ -28,17 +28,7 @@
   height: 100%;
   position: absolute;
   transition: all 1s;
-  z-index: 9;
 }
-/* .common-img-wrap {
-  background: none !important;
-  display: inline-block;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  border-radius: 6px;
-} */
 .transport-information {
   display: grid;
   grid-template-columns: 293px 877px;
@@ -131,19 +121,42 @@
   border: none;
   cursor: pointer;
 }
-
 .ant-select-selection-selected-value {
-  color: #333;
-  font-weight: 800;
+  color: #242121;
+  font-weight: 700;
   line-height: 30px;
   margin-left: 10px;
-}
-.ant-select-arrow {
-  font-size: 27px;
-  color: #999999;
-  margin-right: 4px;
+  font-size: 13px;
   position: relative;
-  top: 2px;
+}
+.ant-select-selection__items {
+  position: absolute;
+  top: 32px;
+  background: #fff;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  width: 198px;
+  left: -10px;
+  border-radius: 4px;
+  max-height: 198px;
+  overflow-y: auto;
+}
+.ant-select-selection__items li {
+  padding: 6px 18px;
+  line-height: 24px;
+  font-size: 12px;
+}
+.ant-select-selection__items li:hover {
+  background: rgb(230, 245, 250);
+}
+.ant-select-selection__items li.active {
+  font-size: 13px;
+  font-weight: 700;
+}
+.ant-select-arrow__forward i {
+  font-size: 27px !important;
+  position: relative;
+  top: -6px;
+  right: -10px;
 }
 .warehouse-select-area .copy-btn {
   color: #0382f0;
@@ -154,7 +167,37 @@
   color: #999999;
   cursor: pointer;
   margin-left: 20px;
+  position: relative;
 }
+.warehouse-info {
+  /* background: url(https://cdn.superbuy.com/starit-superbuy/dist/img/location-1.png)
+    20px no-repeat; */
+  padding: 20px 20px 6px 90px;
+  box-shadow: 10px 5px 20px 1px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  width: 750px;
+  background: #fff;
+}
+.warehouse-info .info-row p span {
+  font-size: 14px;
+  line-height: 14px;
+}
+.warehouse-info .info-row p span:first-child {
+  color: #999;
+  margin-right: 20px;
+  font-size: 14px;
+}
+.warehouse-info .info-row p span:last-child {
+  color: #333;
+  font-weight: 700;
+}
+.show-warehouse-address--active {
+  display: none;
+}
+.show-warehouse-address:hover .show-warehouse-address--active {
+  display: block;
+}
+
 .transport-express-information {
   margin-top: 20px;
 }

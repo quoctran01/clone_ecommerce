@@ -1,6 +1,77 @@
-import React from "react";
+import React, { useState } from "react";
 
+const listCountry = [
+  "All",
+  "USA",
+  "Canada",
+  "UK",
+  "Germany",
+  "Australia",
+  "France",
+  "Japan",
+  "Other",
+];
+const commontItems = [
+  {
+    title: "Textiles/Leather Items",
+    subtitle: ["World-Wide Famous Brand", "Common Brand", "No Brand"],
+  },
+  {
+    title: "Liquid/Powder",
+    subtitle: [
+      "Liquid below 10ML",
+      "Paste, cosmetic powder, 10ML ≥ liquid ≤ 50ML",
+      "Non-cosmetic powder, 50ML＞liquid ≤ 500ML",
+    ],
+  },
+  {
+    title: "Digital/Electrical",
+    subtitle: ["Appliances", "Built-in battery", "Battery", "Battery(1 piece)"],
+  },
+  {
+    title: "Foods/Medicine",
+    subtitle: [
+      "Meat products",
+      "Foodstuff",
+      "Medicine",
+      "Liquid below 10ML",
+      "Paste, cosmetic powder, 10ML ≥ liquid ≤ 50ML",
+      "Non-cosmetic powder, 50ML＞liquid ≤ 500ML",
+    ],
+  },
+  {
+    title: "Others",
+    subtitle: [
+      "Medical Consumable",
+      "Personal Protective Equipment",
+      "Other restrictions",
+      "Special commodity",
+      "artifical wooden products",
+      "Glasses",
+      "Adult products",
+    ],
+  },
+  {
+    title: "Common Items",
+    subtitle: ["Common Items"],
+  },
+];
 const CalculatorTool = () => {
+  const [openCountry, setOpenCountry] = useState(false);
+  const [openCommon, setOpenCommon] = useState(false);
+  const [option, setOption] = useState("USA");
+  const [expandedItemIndex, setExpandedItemIndex] = useState(null);
+  const onSelecOption = (item) => {
+    setOption(item);
+    setOpenCountry(false);
+  };
+  const handleItemToggle = (index) => {
+    if (expandedItemIndex === index) {
+      setExpandedItemIndex(null);
+    } else {
+      setExpandedItemIndex(index);
+    }
+  };
   return (
     <>
       <div className='main-tools_container'>
@@ -8,21 +79,26 @@ const CalculatorTool = () => {
           <h2>Shipping Calculator</h2>
           <div className='form-item'>
             <div className='input-wrap country-select active'>
-              <input type='text' placeholder='' readonly='' value='USA' />
-              <span>
+              <input
+                type='text'
+                placeholder=''
+                readonly=''
+                value={option}
+                onClick={() => setOpenCountry(!openCountry)}
+              />
+              <span onClick={() => setOpenCountry(!openCountry)}>
                 <i class='ri-arrow-drop-down-line'></i>
               </span>
-              <section class='pick-container country-pick'>
+              <section
+                class={`pick-container country-pick ${
+                  openCountry && "active"
+                }`}>
                 <ul class='country-list d-flex flex-wrap position-relative'>
-                  <li>All</li>
-                  <li>USA</li>
-                  <li>Canada</li>
-                  <li>UK</li>
-                  <li>Germany</li>
-                  <li>Australia</li>
-                  <li>France</li>
-                  <li>Japan</li>
-                  <li>Other</li>
+                  {listCountry.map((item, index) => (
+                    <li key={index} onClick={() => onSelecOption(item)}>
+                      {item}
+                    </li>
+                  ))}
                 </ul>
               </section>
               <div class='input-wrap weight-input'>
@@ -37,19 +113,35 @@ const CalculatorTool = () => {
             </div>
           </div>
           <div className='form-item product-type-select'>
-            <input type='text' title='Common Items...' />
+            <input
+              type='text'
+              title='Common Items...'
+              onClick={() => setOpenCommon(!openCommon)}
+            />
             <span class='input-des' title='Common Items...'>
               Common Items...
             </span>
             <button>Search</button>
-            <section class='pick-container goods-type-pick'>
+            <section
+              class={`pick-container goods-type-pick ${
+                openCommon && "active"
+              }`}>
               <ul class='goods-type-list p-0 m-0'>
-                <li>Textiles/Leather Items</li>
-                <li>Liquid/Powder</li>
-                <li>Digital/Electrical</li>
-                <li>Foods/Medicine</li>
-                <li>Others</li>
-                <li>Common Items</li>
+                {commontItems.map((item, index) => (
+                  <li
+                    key={index}
+                    onClick={() => handleItemToggle(index)}
+                    className='goods-type-list--item'>
+                    {item.title}
+                    {expandedItemIndex === index && (
+                      <ul className='p-0 mb-0 mt-2 goods-type-list__children'>
+                        {item.subtitle.map((item, index) => (
+                          <li key={index}>{item}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
+                ))}
               </ul>
             </section>
           </div>
