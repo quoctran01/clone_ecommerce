@@ -95,7 +95,7 @@
 }
 .input-wrap span i {
   position: relative;
-  left: -84px;
+  left: -91px;
   top: 4px;
   font-size: 17px;
   cursor: pointer;
@@ -127,6 +127,8 @@
   transition: opacity 0.3s linear;
   visibility: hidden;
   width: 190px;
+  max-height: 200px;
+  overflow-y: auto;
   z-index: 2;
 }
 .pick-container.active {
@@ -142,9 +144,6 @@
 }
 .goods-type-list > li:hover {
   color: var(--primary-color);
-}
-.goods-type-list__children .goods-type-list--item:hover {
-  color: red;
 }
 .form-item .pick-container ul li {
   cursor: pointer;

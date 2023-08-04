@@ -28,6 +28,7 @@
   background: none !important;
   transition: all 0.3s linear;
   object-fit: cover;
+  width: 100%;
 }
 .carousel__item .carousel__title {
   color: #333;

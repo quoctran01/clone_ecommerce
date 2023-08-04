@@ -2,6 +2,7 @@ import React from "react";
 import ProductRecom from "./ProductRecom";
 import "./product-recomend.css";
 import "../../style/custom-scrollbar.css";
+
 const ProductRecomList = ({ data }) => {
   return (
     <>

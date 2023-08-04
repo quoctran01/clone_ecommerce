@@ -192,13 +192,13 @@
   color: var(--primary-color);
   text-decoration: none;
 }
-.footer-bottom {
+.login-layout .footer-bottom {
   font-size: 12px;
   line-height: 24px;
   margin: 30px auto;
   width: 1200px;
 }
-.footer-bottom ul {
+.login-layout .footer-bottom ul {
   padding: 0;
   margin: 0;
 }
@@ -228,7 +228,6 @@
 .protocol {
   color: #999;
   margin: 10px auto 0;
-  overflow: hidden;
   text-align: left;
   width: 280px;
 }

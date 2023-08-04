@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import "../style/home.css";
 import ShoppingGuide from "../components/UI/ShoppingGuide";
 import ProductList from "../components/Product/ProductList";
@@ -15,24 +15,25 @@ const categoryData = [
   "mobile",
   "watch",
 ];
-// const countriesData = [
-//   "All",
-//   "USA",
-//   "Canada",
-//   "UK",
-//   "Germany",
-//   "Australia",
-//   "France",
-//   "Japan",
-// ];
+const countriesData = [
+  "All",
+  "USA",
+  "Canada",
+  "UK",
+  "Germany",
+  "Australia",
+  "France",
+  "Japan",
+];
 
 const Home = () => {
   const [categories, setCategories] = useState("Everything");
+  const [openCategory, setOpenCategory] = useState(false);
+  const [openCountry, setOpenCountry] = useState(false);
   const [countries, setCountries] = useState("Recommend");
   const [openModal, setOpenModal] = useState(false);
   const [productModal, setProductModal] = useState();
   const [productsData, setProductsData] = useState(products);
-  const [openCategory, setOpenCategory] = useState(false);
   const handleOpenModal = (data) => {
     setProductModal(data);
   };
@@ -86,12 +87,14 @@ const Home = () => {
               <div className='fixed-operation'>
                 <div>
                   <div className='goods-waterfall-operation'>
-                    <ul
-                      className='operation-list'
-                      onClick={() => setOpenCategory(!openCategory)}>
-                      <li className='operation-list_item'>
+                    <ul className='operation-list'>
+                      <li
+                        className='operation-list_item'
+                        onMouseEnter={() => setOpenCategory(true)}
+                        onMouseLeave={() => setOpenCategory(false)}>
                         <span>Top Categories</span>
                         <span className='operation-items'>{categories}</span>
+                        <i class='ri-arrow-down-s-line'></i>
                         {openCategory && (
                           <ul className='host-class'>
                             {categoryData.map((categories, index) => (
@@ -104,18 +107,24 @@ const Home = () => {
                           </ul>
                         )}
                       </li>
-                      <li className='operation-list_item'>
+                      <li
+                        className='operation-list_item'
+                        onMouseEnter={() => setOpenCountry(true)}
+                        onMouseLeave={() => setOpenCountry(false)}>
                         <span>Popular Countries</span>
                         <span className='operation-items'>{countries}</span>
-                        {/* <ul className='host-class '>
-                          {countriesData.map((countrie, index) => (
-                            <li
-                              key={index}
-                              onClick={() => setCountries(countrie)}>
-                              {countrie}
-                            </li>
-                          ))}
-                        </ul> */}
+                        <i class='ri-arrow-down-s-line'></i>
+                        {openCountry && (
+                          <ul className='host-class'>
+                            {countriesData.map((countrie, index) => (
+                              <li
+                                key={index}
+                                onClick={() => setCountries(countrie)}>
+                                {countrie}
+                              </li>
+                            ))}
+                          </ul>
+                        )}
                       </li>
                       <li className='operation-list_item'>
                         <label htmlFor='' className='ant-checkbox-wrapper'>

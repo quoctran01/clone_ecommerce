@@ -1,0 +1,927 @@
+.guide-banner {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/newguide/shoppingagent/guide-banner.png)
+    50% no-repeat;
+  background-size: cover;
+  height: 110px;
+}
+.guide-banner .banner-title {
+  color: #fff;
+  font-family: muliBold;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 30px;
+  padding-top: 25px;
+  text-align: center;
+}
+.guide-banner .banner-title-en {
+  font-family: muliBlack;
+}
+.guide-banner .banner-subtitle {
+  color: #fff;
+  margin-top: 10px;
+  text-align: center;
+}
+.guide-banner .banner-subtitle.en,
+.guide-banner .banner-subtitle.ph {
+  font-size: 20px;
+}
+
+.ant-tabs-nav-container {
+  zoom: 1;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: -1px;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  background: #f5f5f5;
+}
+.ant-tabs .ant-tabs-nav-wrap {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.ant-tabs-nav {
+  box-sizing: border-box;
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.ant-tabs-bar {
+  border-bottom: 1px solid #e8e8e8;
+  margin: 0 0 16px;
+  outline: none;
+}
+.ant-tabs .ant-tabs-tab.ant-tabs-tab-active {
+  background: #fff;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  color: #000;
+  position: relative;
+}
+.ant-tabs .ant-tabs-tab {
+  background: #f5f5f5;
+  box-sizing: border-box;
+  color: #000;
+  height: 50px;
+  line-height: 30px;
+  text-align: center;
+  transition: all 0.3s linear;
+  width: 200px;
+  font-size: 16px;
+}
+.ant-tabs-tab-active {
+  color: #1890ff;
+  font-weight: 500;
+}
+.ant-tabs-nav .ant-tabs-tab {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  height: 100%;
+  margin: 0 32px 0 0;
+  padding: 12px 16px;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.ant-tabs-ink-bar {
+  background-color: #1890ff;
+  bottom: 1px;
+  box-sizing: border-box;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transform-origin: 0 0;
+  width: 0;
+  z-index: 1;
+}
+.ant-tabs-top .ant-tabs-ink-bar-animated {
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
+    width 0.2s cubic-bezier(0.645, 0.045, 0.355, 1),
+    left 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.business-service-container .sbs-intro {
+  background: #fff;
+  padding: 80px 0 50px;
+}
+.sbs-component {
+  width: 100%;
+}
+.business-service-container .sbs-section-title {
+  margin: 0 auto;
+  text-align: center;
+  width: 1200px;
+}
+.sbs-section-title h3 {
+  color: #333;
+  font-size: 32px;
+  font-weight: 700;
+}
+.sbs-section-title p {
+  box-sizing: border-box;
+  font-size: 18px;
+  margin-top: 45px;
+  padding: 0 188px;
+}
+.sbs-intro .sbs-component-content {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 80px;
+}
+.sbs-component .sbs-component-content {
+  margin: 0 auto;
+  width: 1200px;
+}
+.sbs-intro .sbs-intro-item {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+}
+.sbs-intro .sbs-intro-item img {
+  height: 70px;
+  object-fit: contain;
+}
+.business-service-container .sbs-intro .sbs-intro-item > p {
+  color: #333;
+  font-size: 14px;
+  margin-top: 32px;
+}
+.sbs-service .sbs-component-content {
+  margin-top: 50px !important;
+}
+.sbs-component .sbs-component-content {
+  margin: 0 auto;
+  width: 1200px;
+}
+.sbs-service .sbs-component-content .sbs-service-item {
+  display: flex;
+  justify-content: space-between;
+}
+.sbs-service-item .sbs-service-img {
+  position: relative;
+}
+.sbs-service-item .sbs-service-img > img {
+  height: 400px;
+  width: 700px;
+}
+.sbs-service-item .sbs-service-img-inset {
+  align-items: center;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+  color: #ccc;
+  display: flex;
+  flex-direction: column;
+  height: 174px;
+  justify-content: center;
+  margin-top: -87px;
+  position: absolute;
+  right: -51px;
+  top: 50%;
+  width: 174px;
+  object-fit: contain;
+}
+.sbs-service-item .sbs-service-img-inset p {
+  font-size: 16px;
+  margin-top: 25px;
+}
+.business-service-container .sbs-service {
+  background: #f9f9f9;
+  padding: 50px 0 56px;
+}
+.business-service-container
+  .sbs-service
+  .sbs-component-content
+  .sbs-service-item
+  ul
+  p {
+  color: #333;
+  font-size: 32px;
+  font-weight: 700;
+}
+.sbs-service-item ul p:after {
+  background: #0084f3;
+  content: "";
+  display: block;
+  height: 8px;
+  margin: 21px 0 30px;
+  width: 30px;
+}
+.sbs-service-item ul li {
+  color: #333;
+  font-size: 14px;
+  line-height: 24px;
+  padding-left: 15px;
+  position: relative;
+}
+.sbs-service-item ul li:before {
+  background: #0084f3;
+  border-radius: 50%;
+  content: "";
+  display: inline-block;
+  height: 6px;
+  left: 0;
+  position: absolute;
+  top: 10px;
+  width: 6px;
+}
+.sbs-component-content .sbs-service-item > ul {
+  width: 415px;
+}
+.sbs-service-item:last-child {
+  flex-direction: row-reverse;
+  margin-top: 75px;
+}
+.sbs-service-item:last-child .sbs-service-img-inset {
+  left: -88px;
+  right: unset;
+  top: 189px;
+}
+
+.business-service-container .sbs-plan {
+  background: #000
+    url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/plan_bg.png)
+    100% 0 no-repeat;
+  overflow: hidden;
+  padding: 50px 0;
+}
+.sbs-plan .sbs-plan-content {
+  margin: 0 auto;
+  position: relative;
+  width: 1200px;
+}
+.sbs-plan .sbs-plan-content .tabs-title {
+  align-content: center;
+  display: flex;
+  justify-content: space-between;
+}
+.sbs-plan .sbs-plan-content .tabs-title li.active {
+  color: #fff;
+  font-weight: 700;
+}
+.sbs-plan .sbs-plan-content .tabs-title li.active:after {
+  background: #eee;
+  border-radius: 2px;
+  content: "";
+  display: block;
+  height: 4px;
+  margin: 20px auto 0;
+  width: 50%;
+}
+.sbs-plan .sbs-plan-content .tabs-title li {
+  color: #898989;
+  cursor: pointer;
+  font-size: 26px;
+  margin-top: 65px;
+}
+.tabs-content-wrap .tabs-content-item .content-wrap p {
+  font-size: 12px !important;
+}
+.business-service-container .sbs-plan .sbs-plan-content .tabs-content-wrap {
+  margin-top: 60px;
+  overflow: hidden;
+  width: 100vw;
+}
+.business-service-container
+  .sbs-plan
+  .sbs-plan-content
+  .tabs-content-wrap
+  .tabs-content {
+  transform: translateZ(0);
+  transition: all 0.3s;
+}
+.business-service-container .sbs-plan .sbs-plan-content .tabs-content-wrap ul {
+  height: 403px;
+  width: 6000px;
+}
+.business-service-container
+  .sbs-plan
+  .sbs-plan-content
+  .tabs-content-wrap
+  .tabs-content-item {
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  height: 403px;
+  margin-right: 75px;
+  overflow: hidden;
+  transform: translateZ(0);
+  transition: all 0.3s;
+  width: 1050px;
+}
+.business-service-container
+  .sbs-plan
+  .sbs-plan-content
+  .tabs-content-wrap
+  .tabs-content-item
+  > * {
+  vertical-align: top;
+}
+.business-service-container
+  .sbs-plan
+  .sbs-plan-content
+  .tabs-content-wrap
+  .tabs-content-item
+  img {
+  display: inline-block;
+  height: auto;
+  width: 400px;
+}
+.business-service-container
+  .sbs-plan
+  .sbs-plan-content
+  .tabs-content-wrap
+  .tabs-content-item
+  .content-wrap {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 100%;
+  padding: 40px 30px;
+  width: 650px;
+}
+.business-service-container
+  .sbs-plan
+  .sbs-plan-content
+  .tabs-content-wrap
+  .tabs-content-item
+  .content-wrap
+  > h4 {
+  color: #333;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 35px;
+}
+.business-service-container
+  .sbs-plan
+  .sbs-plan-content
+  .tabs-content-wrap
+  .tabs-content-item
+  .content-wrap
+  > p {
+  color: #333;
+  font-size: 14px;
+  line-height: 24px;
+}
+.business-service-container
+  .sbs-plan
+  .sbs-plan-content
+  .tabs-content-wrap
+  .tabs-content-item
+  .content-wrap
+  .subtitle {
+  font-weight: 700;
+  margin: 20px 0 14px;
+}
+.business-service-container
+  .sbs-plan
+  .sbs-plan-content
+  .tabs-content-wrap
+  .tabs-content-item.en.tabs-content-item.ph,
+.business-service-container
+  .sbs-plan
+  .sbs-plan-content
+  .tabs-content-wrap
+  .tabs-content.en,
+.business-service-container
+  .sbs-plan
+  .sbs-plan-content
+  .tabs-content-wrap
+  .tabs-content.ph {
+  height: 500px;
+}
+.business-service-container
+  .sbs-plan
+  .sbs-plan-content
+  .tabs-content-wrap
+  .tabs-content-item.cn
+  > img {
+  margin-top: -50px;
+}
+.business-service-container
+  .sbs-plan
+  .sbs-plan-content
+  .tabs-content-wrap
+  .tabs-content-item.kr
+  .content-wrap {
+  padding-top: 14px;
+}
+.business-service-container
+  .sbs-plan
+  .sbs-plan-content
+  .tabs-content-wrap
+  .tabs-content-item.kr
+  .content-wrap
+  h4 {
+  margin-bottom: 20px;
+}
+.business-service-container
+  .sbs-plan
+  .sbs-plan-content
+  .tabs-content-wrap
+  .tabs-content-item.dark {
+  opacity: 0.5;
+}
+.business-service-container
+  .sbs-plan
+  .sbs-plan-content
+  .tabs-content-wrap
+  .control {
+  position: absolute;
+  top: 350px;
+}
+.business-service-container
+  .sbs-plan
+  .sbs-plan-content
+  .tabs-content-wrap
+  .control-left {
+  left: -10px;
+}
+.business-service-container
+  .sbs-plan
+  .sbs-plan-content
+  .tabs-content-wrap
+  .control-right {
+  right: -65px;
+}
+.business-service-container .sbs-case {
+  padding: 87px 0 51px;
+}
+.sbs-case .sbs-component-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.sbs-case .sbs-component-content > li {
+  box-sizing: border-box;
+  color: #fff;
+  height: 280px;
+  padding: 33px 20px;
+  width: 382px;
+}
+.sbs-component-content .case-0 {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/case_0.png)
+    no-repeat;
+}
+.sbs-case .sbs-component-content .case-1 {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/case_1.png)
+    no-repeat;
+}
+.sbs-case .sbs-component-content .case-2 {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/case_2.png)
+    no-repeat;
+}
+.sbs-component-content > li > p {
+  font-size: 18px;
+  font-weight: 500;
+}
+.sbs-case .sbs-component-content > li > ul {
+  margin-top: 22px;
+}
+.sbs-case .sbs-component-content > li > ul > li {
+  font-size: 14px;
+  line-height: 28px;
+  padding-left: 9px;
+  position: relative;
+}
+.sbs-case .sbs-component-content > li > ul > li:before {
+  background: #fff;
+  border-radius: 50%;
+  content: "";
+  display: inline-block;
+  height: 4px;
+  left: 0;
+  position: absolute;
+  top: 12px;
+  width: 4px;
+}
+.business-service-container .sbs-more {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/middle_banner.png)
+    50% no-repeat;
+  background-size: cover;
+  height: 285px;
+  padding-top: 77px;
+  text-align: center;
+  width: 100%;
+}
+.sbs-more > p {
+  color: #fff;
+  font-size: 28px;
+}
+.sbs-more > a {
+  background: #0084f3;
+  border-radius: 30px;
+  color: #fff;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  height: 60px;
+  line-height: 60px;
+  margin-top: 45px;
+  width: 218px;
+}
+.sbs-partners {
+  padding: 80px 0 45px;
+  text-align: center;
+}
+.sbs-component-content {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 41px !important;
+}
+.sbs-partners .sbs-component-content p {
+  color: #333;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.sbs-rank {
+  background: #f9f9f9;
+  padding: 49px 0;
+}
+.star {
+  background: #fff;
+  padding-bottom: 50px;
+  padding-top: 89px;
+  width: 100%;
+}
+.star > div {
+  margin: 0 auto;
+  width: 1200px;
+}
+.star .text > div {
+  cursor: pointer;
+  display: inline-block;
+  height: 393px;
+  width: 699px;
+}
+.star .text .video {
+  height: 100%;
+  width: 100%;
+}
+.star .text dl {
+  display: inline-block;
+  margin-left: 43px;
+  width: 457px;
+}
+.star .text dl dt {
+  color: #333;
+  font-size: 32px;
+  font-weight: 700;
+  height: 36px;
+  line-height: 36px;
+  margin-bottom: 26px;
+}
+.star .text dl .text {
+  line-height: 24px;
+  position: relative;
+}
+.star .text dl .text:before {
+  background: #e04b46;
+  border-radius: 50%;
+  content: "";
+  display: inline-block;
+  height: 6px;
+  left: -19px;
+  margin-right: 13px;
+  position: absolute;
+  top: 10px;
+  width: 6px;
+}
+.business-service-container .star .text dl dd:last-child a {
+  background: linear-gradient(0deg, #000, #333);
+  border-radius: 30px;
+  box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.2);
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 50px;
+  text-align: center;
+  text-decoration: none;
+  width: 146px;
+}
+/* ---------------------------------------------------------- */
+.business-cooperation-outer {
+  background: #fff;
+}
+.business-cooperation-outer .inner {
+  margin: 0 auto;
+  overflow: hidden;
+  width: 1186px;
+}
+.business-cooperation-outer * {
+  color: #333;
+  cursor: default;
+}
+.business-cooperation-outer .common-title {
+  color: #333;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+}
+.business-cooperation-outer .common-title.center {
+  text-align: center;
+}
+.business-cooperation-outer .section-1 h2 {
+  margin-bottom: 67px;
+  margin-top: 86px;
+}
+.business-cooperation-outer .icon-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+}
+.business-cooperation-outer .icon-list.column span {
+  display: block;
+  margin: 0 auto;
+}
+.business-cooperation-outer .section-1 .icon-list .customer-1 {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/customer-1.png)
+    no-repeat 50%;
+}
+.business-cooperation-outer .section-1 .icon-list .icon {
+  height: 88px;
+  width: 88px;
+}
+.business-cooperation-outer .icon-list.column span:last-child {
+  margin-bottom: 50px;
+  margin-top: 29px;
+  width: 180px;
+}
+.business-cooperation-outer .section-1 .icon-list .customer-2 {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/customer-2.png)
+    no-repeat 50%;
+}
+.business-cooperation-outer .section-1 .icon-list .customer-3 {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/customer-3.png)
+    no-repeat 50%;
+}
+.business-cooperation-outer .section-1 .icon-list .customer-4 {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/customer-4.png)
+    no-repeat 50%;
+}
+.business-cooperation-outer .section-1 .icon-list .customer-5 {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/customer-5.png)
+    no-repeat 50%;
+}
+.business-cooperation-outer .section-1 .icon-list .customer-6 {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/customer-6.png)
+    no-repeat 50%;
+}
+.business-cooperation-outer .section-2 {
+  background: #000 100%
+    url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/bg-1.png);
+  background-size: cover;
+  padding-bottom: 78px;
+}
+.business-cooperation-outer .inner {
+  margin: 0 auto;
+  overflow: hidden;
+  width: 1186px;
+}
+.section-2 h2 {
+  margin-top: 99px;
+  margin-bottom: 48px;
+}
+.business-cooperation-outer .icon-list.list-3 {
+  flex-flow: row wrap;
+  text-align: left;
+}
+.business-cooperation-outer .icon-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+}
+.business-cooperation-outer .icon-list.row li {
+  background: #fff;
+  border-radius: 4px;
+}
+.business-cooperation-outer .icon-list.list-3 li {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  height: 110px;
+  justify-content: left;
+  margin-bottom: 20px;
+  padding-left: 36px;
+  width: 382px;
+}
+.section-2 .list-3 li {
+  padding-left: 42px;
+}
+.section-2 .list-3 li span:first-child {
+  margin-right: 20px;
+}
+.section-2 .list-3 li span:last-child {
+  width: 252px;
+}
+.business-cooperation-outer .icon-list span {
+  font-size: 18px;
+}
+.section-2 .icon-list .cooperations-1 {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/cooperations-1.png)
+    no-repeat 50%;
+}
+.section-2 .icon {
+  width: 88px;
+  height: 88px;
+}
+.business-cooperation-outer .section-2 .icon-list .cooperations-2 {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/cooperations-2.png)
+    no-repeat 50%;
+}
+.business-cooperation-outer .section-2 .icon-list .cooperations-3 {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/cooperations-3.png)
+    no-repeat 50%;
+}
+.business-cooperation-outer .section-2 .icon-list .cooperations-4 {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/cooperations-4.png)
+    no-repeat 50%;
+}
+.business-cooperation-outer .section-2 .icon-list .cooperations-5 {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/cooperations-5.png)
+    no-repeat 50%;
+}
+.business-cooperation-outer .section-2 .icon-list .cooperations-6 {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/cooperations-6.png)
+    no-repeat 50%;
+}
+.section-3 h2 {
+  margin-bottom: 47px;
+  margin-top: 87px;
+}
+.section-3 .icon-list li {
+  flex: 0 0 33.3%;
+}
+.section-3 .icon-list .icon {
+  height: 168px;
+  width: 168px;
+}
+.section-3 .icon-list .reason-1 {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/reason-1.png)
+    no-repeat 50%;
+}
+.section-3 .icon-list .reason-2 {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/reason-2.png)
+    no-repeat 50%;
+}
+.section-3 .icon-list .reason-3 {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/reason-3.png)
+    no-repeat 50%;
+}
+.section-3 .icon-list .reason-4 {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/reason-4.png)
+    no-repeat 50%;
+}
+.section-3 .icon-list .reason-5 {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/reason-5.png)
+    no-repeat 50%;
+}
+.section-3 .icon-list .reason-6 {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/reason-6.png)
+    no-repeat 50%;
+}
+.section-3 .icon-list li span:last-child {
+  width: 100% !important;
+}
+.business-cooperation-outer .section-4 {
+  background: #f9f9f9;
+  background-position: 82.6% 92%;
+  text-align: center;
+}
+.section-4 .inner {
+  background: #f9f9f9
+    url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/dot.png)
+    no-repeat;
+  background-position: 1023px 389px;
+  display: inline-block;
+  margin-left: 160px;
+  overflow: inherit;
+  padding-bottom: 50px;
+  padding-right: 160px;
+}
+.section-4 h2 {
+  margin-bottom: 81px;
+  margin-top: 52px;
+}
+.case-list {
+  display: flex;
+  justify-content: space-between;
+}
+.case-list li:first-child {
+  margin-right: 50px;
+}
+.business-cooperation-outer .case-list li {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 19px 1px rgba(0, 0, 0, 0.08);
+  flex: 1;
+  height: 317px;
+  padding-left: 27px;
+  padding-right: 30px;
+  position: relative;
+  text-align: left;
+}
+.case-list li .avatar {
+  background: #eee 100%
+    url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/avatar.png)
+    no-repeat;
+  background-position: -6px -6px;
+  border: 5px solid #fff;
+  border-radius: 100px;
+  height: 70px;
+  position: absolute;
+  top: -35px;
+  width: 70px;
+  left: 206px;
+}
+.case-list li span.userName {
+  font-size: 18px;
+  margin-top: 50px;
+  display: block;
+  text-align: center;
+  margin-bottom: 28px;
+}
+.case-list li span.userName em {
+  color: #999;
+  font-size: 14px;
+  margin-left: 6px;
+  font-style: normal;
+}
+.case-list li span.des {
+  font-size: 16px;
+  line-height: 40px;
+  margin-top: 34px;
+  text-align: left;
+}
+.business-cooperation-outer .section-5 {
+  background: #000 100%
+    url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/bg-2.png);
+  background-size: cover;
+  padding-bottom: 52px;
+}
+.business-cooperation-outer .section-5 h2 {
+  margin-bottom: 52px;
+  margin-top: 50px;
+}
+.section-5 .icon-list li {
+  background: #fff;
+  border-radius: 4px;
+  height: 136px;
+  padding-top: 28px;
+  width: 152px;
+}
+.section-5 .icon-list .icon {
+  height: 54px;
+  width: 54px;
+}
+.section-5 .icon-list .future-1 {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/future-1.png)
+    no-repeat 50%;
+}
+.icon-list.column span:last-child {
+  margin-bottom: 50px;
+  margin-top: 29px;
+}
+.section-5 .icon-list .future-2 {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/future-2.png)
+    no-repeat 50%;
+}
+.section-5 .icon-list .future-3 {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/future-3.png)
+    no-repeat 50%;
+}
+.section-5 .icon-list .future-4 {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/future-4.png)
+    no-repeat 50%;
+}
+.section-5 .icon-list .future-5 {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/future-5.png)
+    no-repeat 50%;
+}
+.section-5 .icon-list .future-6 {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/future-6.png)
+    no-repeat 50%;
+}
+.section-5 .icon-list .future-7 {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/future-7.png)
+    no-repeat 50%;
+}
+.section-5 .icon-list li span:last-child {
+  width: 100% !important;
+  position: relative;
+  bottom: 14px;
+}

@@ -179,7 +179,9 @@ const Header = () => {
                     </a>
                   </li>
                   <li class='sub-nav-item'>
-                    <Link class='nav-text'>Channel Cooperation</Link>
+                    <Link class='nav-text' to='/business/channel'>
+                      Channel Cooperation
+                    </Link>
                   </li>
                   <li class='sub-nav-item'>
                     <Link class='nav-text'>Business Cooperation</Link>

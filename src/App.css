@@ -32,9 +32,12 @@ a {
   text-decoration: none;
   color: unset;
 }
-img {
+.common-img-wrap img {
   width: 100%;
 }
+/* img {
+  width: 100%;
+} */
 
 @keyframes fadeIn {
   0% {

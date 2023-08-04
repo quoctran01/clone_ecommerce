@@ -27,6 +27,7 @@ const Forwarding = () => {
   const [isShow, setIsShow] = useState(false);
   const [isShowInf, setIsShowInf] = useState(false);
   const [onSelect, setOnSelect] = useState(0);
+  const [onSelectInfor, setOnselectInfor] = useState(0);
   const [itemSelected, setItemSelected] = useState("Guangdong Warehouse");
   const [itemSelectedShip, setIsShowInfShip] = useState(
     "Choose logistics company"
@@ -39,9 +40,10 @@ const Forwarding = () => {
   };
   const handleSelectShip = (index, item) => {
     setIsShowInfShip(item);
-    setOnSelect(index);
+    setOnselectInfor(index);
     setIsShowInf(false);
   };
+
   const handleChangeInput = (type) => {
     if (type === "reduce") {
       if (inputValue <= 1) return;
@@ -234,7 +236,9 @@ const Forwarding = () => {
                               <li
                                 key={index}
                                 onClick={() => handleSelectShip(index, item)}
-                                className={`${onSelect === index && "active"}`}>
+                                className={`${
+                                  onSelectInfor === index && "active"
+                                }`}>
                                 {item}
                               </li>
                             ))}
