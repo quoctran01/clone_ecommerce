@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../../style/custom-scrollbar.css";
 
 const listCountry = [
   "All",
@@ -59,7 +60,9 @@ const commontItems = [
 const CalculatorTool = () => {
   const [openCountry, setOpenCountry] = useState(false);
   const [openCommon, setOpenCommon] = useState(false);
+  const [inputValue, setInputValue] = useState(1000);
   const [option, setOption] = useState("USA");
+  const [commontData, setCommonData] = useState("Common Items...");
   const [expandedItemIndex, setExpandedItemIndex] = useState(null);
   const onSelecOption = (item) => {
     setOption(item);
@@ -71,6 +74,9 @@ const CalculatorTool = () => {
     } else {
       setExpandedItemIndex(index);
     }
+  };
+  const handleChangeInput = (e) => {
+    setInputValue(e.target.value);
   };
   return (
     <>
@@ -105,8 +111,9 @@ const CalculatorTool = () => {
                 <input
                   type='text'
                   placeholder=''
-                  value='1000'
+                  value={inputValue}
                   style={{ marginLeft: "10px" }}
+                  onChange={(e) => handleChangeInput(e)}
                 />
                 <span>g</span>
               </div>
@@ -119,13 +126,13 @@ const CalculatorTool = () => {
               onClick={() => setOpenCommon(!openCommon)}
             />
             <span class='input-des' title='Common Items...'>
-              Common Items...
+              {commontData}
             </span>
             <button>Search</button>
             <section
               class={`pick-container goods-type-pick ${
                 openCommon && "active"
-              }`}>
+              } custom-scrollbar`}>
               <ul class='goods-type-list p-0 m-0'>
                 {commontItems.map((item, index) => (
                   <li
@@ -136,7 +143,14 @@ const CalculatorTool = () => {
                     {expandedItemIndex === index && (
                       <ul className='p-0 mb-0 mt-2 goods-type-list__children'>
                         {item.subtitle.map((item, index) => (
-                          <li key={index}>{item}</li>
+                          <li
+                            key={index}
+                            onClick={() => {
+                              setCommonData(item);
+                              setOpenCommon(false);
+                            }}>
+                            {item}
+                          </li>
                         ))}
                       </ul>
                     )}
@@ -150,7 +164,7 @@ const CalculatorTool = () => {
               <p className='m-0 d-block'>
                 <em>10</em>lines available
               </p>
-              <a href=''>More</a>
+              <a href='#'>More</a>
             </p>
             <ul className='m-0 p-0'>
               <li class='header d-flex text-center'>

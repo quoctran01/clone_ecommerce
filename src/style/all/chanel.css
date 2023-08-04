@@ -1,0 +1,1832 @@
+.business-service-container * {
+    box-sizing: content-box;
+  }
+  .business-service-container .rank-list * {
+    box-sizing: border-box;
+  }
+  .business-service-container .ant-tabs {
+    background: #f5f5f5;
+    padding-top: 10px;
+  }
+  .business-service-container .ant-tabs .ant-tabs-nav-wrap {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .business-service-container .ant-tabs .ant-tabs-bar {
+    margin: 0;
+  }
+  .business-service-container .ant-tabs .ant-tabs-tab {
+    background: #f5f5f5;
+    box-sizing: border-box;
+    color: #000;
+    height: 50px;
+    line-height: 30px;
+    text-align: center;
+    transition: all 0.3s linear;
+    width: 200px;
+  }
+  .business-service-container .ant-tabs .ant-tabs-tab.ant-tabs-tab-active {
+    background: #fff;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    color: #000;
+    position: relative;
+  }
+  html[lang="en"]
+    .business-service-container
+    .businessservice-sbs.en
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .tabs-content-item
+    .content-wrap
+    > h4 {
+    margin-bottom: 10px;
+  }
+  html[lang="en"]
+    .business-service-container
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .tabs-content-item
+    .content-wrap
+    p {
+    font-size: 12px;
+  }
+  .message-box-container {
+    bottom: 30px;
+    position: fixed;
+    right: 20px;
+    z-index: 9;
+  }
+  .message-box-container * {
+    cursor: default;
+  }
+  .message-box-container .fixed-btn {
+    align-items: center;
+    background: linear-gradient(180deg, #1394ff, #0083ef);
+    border-radius: 8px;
+    box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    font-size: 18px;
+    height: 60px;
+    justify-content: center;
+    line-height: 60px;
+    opacity: 1;
+    text-align: center;
+    transition: all 0.2s linear;
+    width: 300px;
+  }
+  .message-box-container .fixed-btn.hideTop {
+    opacity: 0;
+  }
+  .message-box-container .fixed-btn * {
+    cursor: pointer;
+    user-select: none;
+  }
+  .message-box-container .fixed-btn:hover {
+    background: linear-gradient(180deg, #259dff, #0a91ff);
+  }
+  .message-box-container .fixed-btn:active {
+    transform: translate3d(0, 1px, 0);
+  }
+  .message-box-container .fixed-btn .icon {
+    background: 50%
+      url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/message.png)
+      no-repeat;
+    height: 34px;
+    width: 34px;
+  }
+  .message-box-container .fixed-btn .gap {
+    margin: 0 20px;
+  }
+  .message-box-container .fixed-btn span {
+    color: #fff;
+  }
+  .message-box-container .fixed-message {
+    background: #fff;
+    box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    height: 577px;
+    left: -100px;
+    opacity: 1;
+    padding: 55px 36px 34px;
+    position: absolute;
+    top: -590px;
+    transition: all 0.2s linear;
+    width: 337px;
+  }
+  .message-box-container .fixed-message.hideRight {
+    left: 200px;
+    opacity: 0;
+  }
+  .message-box-container .fixed-message .close {
+    background: 50%
+      url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/close.png)
+      no-repeat;
+    cursor: pointer;
+    height: 16px;
+    position: absolute;
+    right: 34px;
+    top: 26px;
+    width: 16px;
+    z-index: 9;
+  }
+  .message-box-container .fixed-message .close:hover {
+    opacity: 0.8;
+  }
+  .message-box-container .fixed-message input,
+  .message-box-container .fixed-message textarea {
+    background: #f6f6f6;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    color: #333;
+    font-size: 14px;
+    height: 48px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    position: relative;
+    transition: all 0.3s linear;
+    width: 246px;
+  }
+  .message-box-container .fixed-message input::-webkit-input-placeholder,
+  .message-box-container .fixed-message textarea::-webkit-input-placeholder {
+    color: #999;
+  }
+  .message-box-container .fixed-message input::-moz-input-placeholder,
+  .message-box-container .fixed-message textarea::-moz-input-placeholder {
+    color: #999;
+  }
+  .message-box-container .fixed-message input::-ms-input-placeholder,
+  .message-box-container .fixed-message textarea::-ms-input-placeholder {
+    color: #999;
+  }
+  .message-box-container .fixed-message input.error,
+  .message-box-container .fixed-message textarea.error {
+    border-color: #fe0000;
+  }
+  .message-box-container .fixed-message .form-item {
+    position: relative;
+  }
+  .message-box-container .fixed-message .form-item:before {
+    color: #fe0000;
+    content: "*";
+    display: inline-block;
+    left: 0;
+    left: -14px;
+    position: absolute;
+    top: 18px;
+    z-index: 9;
+  }
+  .message-box-container .fixed-message .form-item.error input {
+    border-color: #fe0000;
+  }
+  .message-box-container .fixed-message button {
+    background: linear-gradient(180deg, #1394ff, #0083ef);
+    border: none;
+    border-radius: 23px;
+    box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.2);
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    height: 45px;
+    margin: 0 auto;
+    outline: none;
+    transition: all 0.2s linear;
+    width: 266px;
+  }
+  .message-box-container .fixed-message button:hover {
+    background: linear-gradient(180deg, #259dff, #0a91ff);
+  }
+  .message-box-container .fixed-message button:active {
+    transform: translate3d(0, 1px, 0);
+  }
+  .message-box-container .fixed-message textarea {
+    box-sizing: border-box;
+    height: 109px;
+    outline: none;
+    padding-top: 20px;
+    resize: none;
+    width: 268px;
+  }
+  .message-box-container .fixed-message .tips {
+    color: #999;
+    font-family: Source Han Sans CN;
+    font-size: 14px;
+    font-weight: 500;
+    height: 14px;
+    line-height: 18px;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  .message-box-container .fixed-message .info {
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    height: 148px;
+    left: 0;
+    margin: 0 auto;
+    padding: 16px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 270px;
+    width: 208px;
+    z-index: 9;
+  }
+  .message-box-container .fixed-message .info .icon {
+    background: 50%
+      url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/success.png)
+      no-repeat;
+    height: 45px;
+    margin-bottom: 24px;
+    margin-top: 10px;
+    width: 45px;
+  }
+  .message-box-container-en .fixed-message .tips,
+  .message-box-container-ph .fixed-message .tips {
+    font-size: 12px;
+    margin-top: 14px;
+  }
+  .business-service-container .sbs-component,
+  .business-service-container .tabs-content {
+    width: 100%;
+  }
+  .business-service-container .sbs-component .sbs-component-content {
+    margin: 0 auto;
+    width: 1200px;
+  }
+  .business-service-container .sbs-section-title {
+    margin: 0 auto;
+    text-align: center;
+    width: 1200px;
+  }
+  .business-service-container .sbs-section-title h3 {
+    color: #333;
+    font-size: 32px;
+    font-weight: 700;
+  }
+  .business-service-container .sbs-section-title p {
+    box-sizing: border-box;
+    font-size: 18px;
+    margin-top: 45px;
+    padding: 0 188px;
+  }
+  .business-service-container .sbs-section-title.white h3 {
+    color: #fff;
+  }
+  .business-service-container .sbs-intro {
+    background: #fff;
+    padding: 80px 0 50px;
+  }
+  .business-service-container .sbs-intro .sbs-component-content {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 80px;
+  }
+  .business-service-container .sbs-intro .sbs-intro-item {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+  }
+  .business-service-container .sbs-intro .sbs-intro-item img {
+    height: 70px;
+  }
+  .business-service-container .sbs-intro .sbs-intro-item > p {
+    color: #333;
+    font-size: 14px;
+    margin-top: 32px;
+  }
+  .business-service-container .sbs-service {
+    background: #f9f9f9;
+    padding: 50px 0 56px;
+  }
+  .business-service-container .sbs-service .sbs-component-content {
+    margin-top: 50px;
+  }
+  .business-service-container
+    .sbs-service
+    .sbs-component-content
+    .sbs-service-item {
+    display: flex;
+    justify-content: space-between;
+  }
+  .business-service-container
+    .sbs-service
+    .sbs-component-content
+    .sbs-service-item
+    .sbs-service-img {
+    position: relative;
+  }
+  .business-service-container
+    .sbs-service
+    .sbs-component-content
+    .sbs-service-item
+    .sbs-service-img
+    > img {
+    height: 400px;
+    width: 700px;
+  }
+  .business-service-container
+    .sbs-service
+    .sbs-component-content
+    .sbs-service-item
+    .sbs-service-img-inset {
+    align-items: center;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+    color: #ccc;
+    display: flex;
+    flex-direction: column;
+    height: 174px;
+    justify-content: center;
+    margin-top: -87px;
+    position: absolute;
+    right: -51px;
+    top: 50%;
+    width: 174px;
+  }
+  .business-service-container
+    .sbs-service
+    .sbs-component-content
+    .sbs-service-item
+    .sbs-service-img-inset
+    p {
+    font-size: 16px;
+    margin-top: 25px;
+  }
+  .business-service-container
+    .sbs-service
+    .sbs-component-content
+    .sbs-service-item
+    ul {
+    width: 335px;
+  }
+  .business-service-container
+    .sbs-service
+    .sbs-component-content
+    .sbs-service-item
+    ul
+    p {
+    color: #333;
+    font-size: 32px;
+    font-weight: 700;
+  }
+  .business-service-container
+    .sbs-service
+    .sbs-component-content
+    .sbs-service-item
+    ul
+    p:after {
+    background: #0084f3;
+    content: "";
+    display: block;
+    height: 8px;
+    margin: 21px 0 30px;
+    width: 30px;
+  }
+  .business-service-container
+    .sbs-service
+    .sbs-component-content
+    .sbs-service-item
+    ul
+    li {
+    color: #333;
+    font-size: 14px;
+    line-height: 24px;
+    padding-left: 15px;
+    position: relative;
+  }
+  .business-service-container
+    .sbs-service
+    .sbs-component-content
+    .sbs-service-item
+    ul
+    li:before {
+    background: #0084f3;
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    height: 6px;
+    left: 0;
+    position: absolute;
+    top: 10px;
+    width: 6px;
+  }
+  .business-service-container
+    .sbs-service
+    .sbs-component-content
+    .sbs-service-item:last-child {
+    flex-direction: row-reverse;
+    margin-top: 75px;
+  }
+  .business-service-container
+    .sbs-service
+    .sbs-component-content
+    .sbs-service-item:last-child
+    .sbs-service-img
+    > img {
+    height: 360px;
+    width: 716px;
+  }
+  .business-service-container
+    .sbs-service
+    .sbs-component-content
+    .sbs-service-item:last-child
+    .sbs-service-img-inset {
+    left: -88px;
+    right: unset;
+    top: 189px;
+  }
+  .business-service-container
+    .sbs-service
+    .sbs-component-content
+    .sbs-service-item:last-child
+    ul {
+    padding: 79px 0 0 142px;
+  }
+  .business-service-container
+    .businessservice-sbs.en
+    .sbs-service
+    .sbs-component-content
+    .sbs-service-item:last-child
+    > ul,
+  .business-service-container
+    .businessservice-sbs.ph
+    .sbs-service
+    .sbs-component-content
+    .sbs-service-item:last-child
+    > ul {
+    padding: 63px 0 0 120px;
+  }
+  .business-service-container
+    .businessservice-sbs.en
+    .sbs-service
+    .sbs-component-content
+    .sbs-service-item
+    > ul,
+  .business-service-container
+    .businessservice-sbs.ph
+    .sbs-service
+    .sbs-component-content
+    .sbs-service-item
+    > ul {
+    width: 415px;
+  }
+  .business-service-container .sbs-plan {
+    background: #000
+      url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/plan_bg.png)
+      100% 0 no-repeat;
+    overflow: hidden;
+    padding: 50px 0;
+  }
+  .business-service-container .sbs-plan .sbs-plan-content {
+    margin: 0 auto;
+    position: relative;
+    width: 1200px;
+  }
+  .business-service-container .sbs-plan .sbs-plan-content .tabs-title {
+    align-content: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  .business-service-container .sbs-plan .sbs-plan-content .tabs-title li {
+    color: #898989;
+    cursor: pointer;
+    font-size: 26px;
+    margin-top: 65px;
+  }
+  .business-service-container .sbs-plan .sbs-plan-content .tabs-title li:after {
+    background: #eee;
+    border-radius: 2px;
+    content: "";
+    display: block;
+    height: 4px;
+    margin: 20px auto 0;
+    visibility: hidden;
+    width: 50%;
+  }
+  .business-service-container .sbs-plan .sbs-plan-content .tabs-title li.active {
+    color: #fff;
+    font-weight: 700;
+  }
+  .business-service-container
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-title
+    li.active:after {
+    visibility: visible;
+  }
+  .business-service-container .sbs-plan .sbs-plan-content .tabs-content-wrap {
+    margin-top: 60px;
+    overflow: hidden;
+    width: 100vw;
+  }
+  .business-service-container
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .tabs-content {
+    transform: translateZ(0);
+    transition: all 0.3s;
+  }
+  .business-service-container .sbs-plan .sbs-plan-content .tabs-content-wrap ul {
+    height: 403px;
+    width: 6000px;
+  }
+  .business-service-container
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .tabs-content-item {
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    height: 403px;
+    margin-right: 75px;
+    overflow: hidden;
+    transform: translateZ(0);
+    transition: all 0.3s;
+    width: 1050px;
+  }
+  .business-service-container
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .tabs-content-item
+    > * {
+    vertical-align: top;
+  }
+  .business-service-container
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .tabs-content-item
+    img {
+    display: inline-block;
+    height: auto;
+    width: 400px;
+  }
+  .business-service-container
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .tabs-content-item
+    .content-wrap {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 100%;
+    padding: 40px 30px;
+    width: 650px;
+  }
+  .business-service-container
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .tabs-content-item
+    .content-wrap
+    > h4 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 35px;
+  }
+  .business-service-container
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .tabs-content-item
+    .content-wrap
+    > p {
+    color: #333;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .business-service-container
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .tabs-content-item
+    .content-wrap
+    .subtitle {
+    font-weight: 700;
+    margin: 20px 0 14px;
+  }
+  .business-service-container
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .tabs-content-item.en.tabs-content-item.ph,
+  .business-service-container
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .tabs-content.en,
+  .business-service-container
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .tabs-content.ph {
+    height: 500px;
+  }
+  .business-service-container
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .tabs-content-item.cn
+    > img {
+    margin-top: -50px;
+  }
+  .business-service-container
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .tabs-content-item.kr
+    .content-wrap {
+    padding-top: 14px;
+  }
+  .business-service-container
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .tabs-content-item.kr
+    .content-wrap
+    h4 {
+    margin-bottom: 20px;
+  }
+  .business-service-container
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .tabs-content-item.dark {
+    opacity: 0.5;
+  }
+  .business-service-container
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .control {
+    position: absolute;
+    top: 350px;
+  }
+  .business-service-container
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .control-left {
+    left: -35px;
+  }
+  .business-service-container
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .control-right {
+    right: -35px;
+  }
+  .business-service-container
+    .businessservice-sbs.en
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .tabs-content-item:nth-child(2)
+    .content-wrap,
+  .business-service-container
+    .businessservice-sbs.ph
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .tabs-content-item:nth-child(2)
+    .content-wrap {
+    padding: 20px 22px 0;
+  }
+  .business-service-container
+    .businessservice-sbs.en
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .tabs-content-item:nth-child(2)
+    .content-wrap
+    > h4,
+  .business-service-container
+    .businessservice-sbs.ph
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .tabs-content-item:nth-child(2)
+    .content-wrap
+    > h4 {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .business-service-container
+    .businessservice-sbs.en
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .tabs-content-item:nth-child(2)
+    .content-wrap
+    .subtitle,
+  .business-service-container
+    .businessservice-sbs.ph
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .tabs-content-item:nth-child(2)
+    .content-wrap
+    .subtitle {
+    margin: 15px 0 8px;
+  }
+  .business-service-container
+    .businessservice-sbs.en
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .tabs-content-item
+    .content-wrap
+    > h4,
+  .business-service-container
+    .businessservice-sbs.ph
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .tabs-content-item
+    .content-wrap
+    > h4 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 28px;
+  }
+  .business-service-container
+    .businessservice-sbs.en
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .tabs-content-item
+    .content-wrap
+    .subtitle,
+  .business-service-container
+    .businessservice-sbs.ph
+    .sbs-plan
+    .sbs-plan-content
+    .tabs-content-wrap
+    .tabs-content-item
+    .content-wrap
+    .subtitle {
+    margin: 15px 0 12px;
+  }
+  .business-service-container .sbs-case {
+    padding: 87px 0 51px;
+  }
+  .business-service-container .sbs-case .sbs-component-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  .business-service-container .sbs-case .sbs-component-content > li {
+    box-sizing: border-box;
+    color: #fff;
+    height: 280px;
+    padding: 33px 20px;
+    width: 382px;
+  }
+  .business-service-container .sbs-case .sbs-component-content > li > p {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .business-service-container .sbs-case .sbs-component-content > li > ul {
+    margin-top: 22px;
+  }
+  .business-service-container .sbs-case .sbs-component-content > li > ul > li {
+    font-size: 14px;
+    line-height: 28px;
+    padding-left: 9px;
+    position: relative;
+  }
+  .business-service-container
+    .sbs-case
+    .sbs-component-content
+    > li
+    > ul
+    > li:before {
+    background: #fff;
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    height: 4px;
+    left: 0;
+    position: absolute;
+    top: 12px;
+    width: 4px;
+  }
+  .business-service-container .sbs-case .sbs-component-content .case-0 {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/case_0.png)
+      no-repeat;
+  }
+  .business-service-container .sbs-case .sbs-component-content .case-1 {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/case_1.png)
+      no-repeat;
+  }
+  .business-service-container .sbs-case .sbs-component-content .case-2 {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/case_2.png)
+      no-repeat;
+  }
+  .business-service-container .sbs-more {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/middle_banner.png)
+      50% no-repeat;
+    background-size: cover;
+    height: 213px;
+    padding-top: 77px;
+    text-align: center;
+    width: 100%;
+  }
+  .business-service-container .sbs-more > p {
+    color: #fff;
+    font-size: 28px;
+  }
+  .business-service-container .sbs-more > a {
+    background: #0084f3;
+    border-radius: 30px;
+    color: #fff;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    height: 60px;
+    line-height: 60px;
+    margin-top: 45px;
+    width: 218px;
+  }
+  .business-service-container .sbs-partners {
+    padding: 80px 0 45px;
+    text-align: center;
+  }
+  .business-service-container .sbs-partners .sbs-component-content {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 41px;
+  }
+  .business-service-container .sbs-partners .sbs-component-content p {
+    color: #333;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .business-service-container .sbs-rank {
+    background: #f9f9f9;
+    padding: 49px 0;
+  }
+  .business-service-container .sbs-rank .homepage-header {
+    display: none;
+  }
+  .business-service-container .sbs-rank .sbs-component-content {
+    margin-top: 50px;
+  }
+  .business-service-container .star {
+    background: #fff;
+    padding-bottom: 50px;
+    padding-top: 89px;
+    width: 100%;
+  }
+  .business-service-container .star > div {
+    margin: 0 auto;
+    width: 1200px;
+  }
+  .business-service-container .star h2 {
+    color: #333;
+    font-size: 28px;
+    padding: 20px 16px;
+    text-align: center;
+  }
+  .business-service-container .star p {
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 45px;
+    text-align: center;
+  }
+  .business-service-container .star .text > * {
+    vertical-align: top;
+  }
+  .business-service-container .star .text > div {
+    cursor: pointer;
+    display: inline-block;
+    height: 393px;
+    width: 699px;
+  }
+  .business-service-container .star .text .video {
+    height: 100%;
+    width: 100%;
+  }
+  .business-service-container .star .text dl {
+    display: inline-block;
+    margin-left: 43px;
+    width: 457px;
+  }
+  .business-service-container .star .text dl dt {
+    color: #333;
+    font-size: 32px;
+    font-weight: 700;
+    height: 36px;
+    line-height: 36px;
+    margin-bottom: 26px;
+  }
+  .business-service-container .star .text dl .text {
+    color: #333;
+    font-size: 14px;
+    line-height: 24px;
+    line-height: 38px;
+    padding-left: 23px;
+    position: relative;
+  }
+  .business-service-container .star .text dl .text:before {
+    background: #e04b46;
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    height: 6px;
+    left: 4px;
+    margin-right: 13px;
+    position: absolute;
+    top: 16px;
+    width: 6px;
+  }
+  .business-service-container .star .text dl .text span {
+    height: 24px;
+    left: 0;
+    position: absolute;
+    width: 24px;
+  }
+  .business-service-container .star .text dl dd:last-child a {
+    background: linear-gradient(0deg, #000, #333);
+    border-radius: 30px;
+    box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.2);
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 50px;
+    text-align: center;
+    text-decoration: none;
+    width: 146px;
+  }
+  .business-service-container .businessservice-sbs.en .star .text dl .text,
+  .business-service-container .businessservice-sbs.ph .star .text dl .text {
+    line-height: 24px;
+  }
+  .business-service-container .businessservice-sbs.en .star .text dl .text:before,
+  .business-service-container
+    .businessservice-sbs.ph
+    .star
+    .text
+    dl
+    .text:before {
+    left: 4px;
+    top: 9px;
+  }
+  .shadow-content {
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
+  }
+  .hover-up {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transform: translate3d(0, -2px, 0);
+  }
+  button {
+    background: none;
+    border: 1px solid #0083ef;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s linear;
+    user-select: none;
+  }
+  button:hover {
+    opacity: 0.8;
+  }
+  button:active {
+    opacity: 1;
+    transform: translate3d(0, 1px, 0);
+  }
+  button.btn {
+    height: 30px;
+    width: 100px;
+  }
+  button.btn-text {
+    border-color: #ddd;
+    color: #666;
+  }
+  button.btn-text:active {
+    box-shadow: inset 0 0 6px #ddd;
+    transition: translate3d(0, 1px, 0);
+  }
+  button.btn-primary {
+    background: #0083ef;
+    color: #fff;
+  }
+  button.btn-primary:active {
+    box-shadow: inset 0 0 15px #0565b5;
+  }
+  button.btn-withe {
+    background: #fff;
+    border: none;
+    box-shadow: 0 0 20px 0 rgba(43, 118, 255, 0.1);
+    color: #0083ef;
+  }
+  button.btn-withe:hover {
+    background: #0083ef;
+    color: #fff;
+    opacity: 1;
+  }
+  button.btn-withe:active {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  }
+  .rank-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .rank-list__item {
+    background: #fff;
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    width: 380px;
+  }
+  .rank .list-title {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+  }
+  .rank .list-title span {
+    color: #666;
+    font-size: 18px;
+  }
+  .rank .list-title a {
+    color: #666;
+  }
+  .rank .list-detail {
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: flex;
+    display: -webkit-box;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 220px;
+  }
+  .rank .list-detail__index {
+    background: #222;
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 30px;
+  }
+  .rank .list-detail__price i {
+    color: #222;
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 10px;
+  }
+  .rank .list-detail__price s {
+    color: #999;
+  }
+  .rank .list-detail__description {
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: #666;
+    display: -webkit-box;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .rank .list ul li {
+    margin-top: 30px;
+  }
+  .rank .list ul li:first-child .list-detail__index {
+    background: #0083ef;
+  }
+  .rank .list ul li:first-child i {
+    color: #0083ef;
+  }
+  .rank .list ul li .list-img {
+    height: 90px;
+    width: 90px;
+  }
+  .rank .list ul a {
+    display: flex;
+    text-decoration: none;
+  }
+  .rank .list ul a > span {
+    background: #ddd;
+    height: 90px;
+    margin-right: 20px;
+    width: 90px;
+  }
+  .homepage-wrapper .container {
+    margin: auto;
+    width: 1190px;
+  }
+  .homepage-icon {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+  }
+  .icon-24 {
+    background: transparent
+      url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/homepage/24x24.png?v=1)
+      0 0 no-repeat;
+    background-size: 216px 48px;
+    height: 24px;
+    width: 24px;
+  }
+  .icon-facebook {
+    background-position: 0 0;
+  }
+  .icon-qq {
+    background-position: -24px 0;
+  }
+  .icon-weibo {
+    background-position: -48px 0;
+  }
+  .icon-wechat {
+    background-position: -72px 0;
+  }
+  .icon-freight {
+    background-position: -96px 0;
+  }
+  .icon-package {
+    background-position: -120px 0;
+  }
+  .icon-about {
+    background-position: -144px 0;
+  }
+  .icon-arrow {
+    background-position: -192px 0;
+  }
+  .icon-20 {
+    background: transparent
+      url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/homepage/20x20.png?v=1)
+      0 0 no-repeat;
+    background-size: 478px 40px;
+    height: 20px;
+    margin: 0 5px -5px;
+    width: 20px;
+  }
+  .icon-collection {
+    background-position: -160px 0;
+  }
+  .icon-like {
+    background-position: -180px 0;
+  }
+  .icon-share {
+    background-position: -200px 0;
+  }
+  .icon-collection.active {
+    background-position: -160px -20px;
+  }
+  .icon-like.active {
+    background-position: -180px -20px;
+  }
+  .icon-hover:hover .icon-share {
+    background-position: -220px 0;
+  }
+  .icon-collection-white {
+    background-position: -240px 0;
+  }
+  .icon-like-white {
+    background-position: -260px 0;
+  }
+  .icon-collection-white.active {
+    background-position: -240px -20px;
+  }
+  .icon-like-white.active {
+    background-position: -260px -20px;
+  }
+  .icon-position {
+    background-position: -280px 0;
+  }
+  .icon-air {
+    background-position: -300px 0;
+  }
+  .icon-time {
+    background-position: -320px 0;
+  }
+  .icon-hot {
+    background-position: -340px 0;
+  }
+  .icon-64 {
+    background: transparent
+      url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/homepage/64x64.png)
+      0 0 no-repeat;
+    background-size: 256px 64px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    height: 60px;
+    width: 60px;
+  }
+  .icon-service1 {
+    background-position: -2px -2px;
+  }
+  .icon-service2 {
+    background-position: -66px -2px;
+  }
+  .icon-service3 {
+    background-position: -130px -2px;
+  }
+  .icon-service4 {
+    background-position: -194px -2px;
+  }
+  .homepage .shoppingTimes-horizontal {
+    min-height: 780px;
+  }
+  .homepage-wrapper {
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+  }
+  .homepage-wrapper * {
+    font-family: muliRegular;
+  }
+  .homepage-content {
+    margin-bottom: -60px;
+    position: relative;
+    top: -60px;
+    z-index: 50;
+  }
+  .homepage-header {
+    padding: 70px 0 40px;
+    text-align: center;
+  }
+  .homepage-header .title {
+    color: #222;
+    font-family: muliBold;
+    font-size: 32px;
+    font-weight: 700;
+  }
+  .homepage-header.daigou_rank {
+    margin-bottom: -165px;
+    margin-top: 80px;
+    padding: 0;
+    text-align: left;
+  }
+  .homepage-header.daigou_rank .title {
+    color: #222;
+    font-size: 32px;
+    font-weight: 700;
+  }
+  .layout-shoppingAgent .layout-content .rank .daigou_rank h3 {
+    text-transform: none;
+  }
+  figure {
+    margin-block-end: 0;
+    margin-block-start: 0;
+    margin-inline-end: 0;
+    margin-inline-start: 0;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  .homepage-wrapper.en,
+  .homepage-wrapper.ph {
+    font-family: muliRegular;
+  }
+  .homepage-wrapper.en .homepage-banner .banner-step .step-list,
+  .homepage-wrapper.ph .homepage-banner .banner-step .step-list {
+    margin: 0 90px 0 0;
+  }
+  .homepage-wrapper.en .homepage-banner .banner-step .step-item:nth-child(2),
+  .homepage-wrapper.ph .homepage-banner .banner-step .step-item:nth-child(2) {
+    width: 25%;
+  }
+  .homepage-wrapper.en .homepage-banner .banner-step .step-item:nth-child(3),
+  .homepage-wrapper.ph .homepage-banner .banner-step .step-item:nth-child(3) {
+    width: 23%;
+  }
+  .homepage-wrapper.en .homepage-banner .banner-step .step-text,
+  .homepage-wrapper.ph .homepage-banner .banner-step .step-text {
+    width: 68%;
+  }
+  .homepage-wrapper.en .homepage-banner .banner-step .step-more,
+  .homepage-wrapper.ph .homepage-banner .banner-step .step-more {
+    right: 35px;
+  }
+  .homepage-wrapper.en .homepage-banner .banner-text-wrapper,
+  .homepage-wrapper.ph .homepage-banner .banner-text-wrapper {
+    padding-top: 60px;
+  }
+  .homepage-wrapper.en .homepage-banner .banner-header,
+  .homepage-wrapper.ph .homepage-banner .banner-header {
+    margin-bottom: 40px;
+  }
+  .homepage-wrapper.en .homepage-banner .banner-header .title,
+  .homepage-wrapper.ph .homepage-banner .banner-header .title {
+    height: 104px;
+    text-transform: uppercase;
+  }
+  .homepage-wrapper.en .homepage-banner .banner-header .title .title-span,
+  .homepage-wrapper.ph .homepage-banner .banner-header .title .title-span {
+    display: block;
+    font-size: 42px;
+  }
+  .homepage-wrapper.en .homepage-flea .flea-right .flea-right-title,
+  .homepage-wrapper.ph .homepage-flea .flea-right .flea-right-title {
+    text-transform: uppercase;
+  }
+  .homepage-wrapper.en .homepage-announcement .anno-right .anno-right-title,
+  .homepage-wrapper.en .homepage-flea .flea-right .flea-right-title,
+  .homepage-wrapper.ph .homepage-announcement .anno-right .anno-right-title,
+  .homepage-wrapper.ph .homepage-flea .flea-right .flea-right-title {
+    font-family: muliBlack;
+    font-weight: 700;
+  }
+  .homepage-wrapper.en .shoppingTimes-horizontal h2:after,
+  .homepage-wrapper.en .shoppingTimes-horizontal h2:before,
+  .homepage-wrapper.ph .shoppingTimes-horizontal h2:after,
+  .homepage-wrapper.ph .shoppingTimes-horizontal h2:before {
+    left: 50%;
+    margin-left: -118px;
+  }
+  .homepage-wrapper.en .homepage-logistics .logistics-list .item-text-16,
+  .homepage-wrapper.ph .homepage-logistics .logistics-list .item-text-16 {
+    font-size: 15px;
+  }
+  .homepage-wrapper.en
+    .homepage-biz-service
+    .biz-service-list
+    .biz-service
+    .biz-service-desc,
+  .homepage-wrapper.ph
+    .homepage-biz-service
+    .biz-service-list
+    .biz-service
+    .biz-service-desc {
+    margin-top: 10px;
+  }
+  .homepage-wrapper.en
+    .homepage-biz-service
+    .biz-service-list
+    .biz-service
+    .biz-service-title,
+  .homepage-wrapper.ph
+    .homepage-biz-service
+    .biz-service-list
+    .biz-service
+    .biz-service-title {
+    margin-top: 20px;
+    text-transform: uppercase;
+  }
+  .homepage-wrapper.en
+    .homepage-biz-service
+    .biz-service-list
+    .biz-service:nth-child(3)
+    .biz-service-title,
+  .homepage-wrapper.ph
+    .homepage-biz-service
+    .biz-service-list
+    .biz-service:nth-child(3)
+    .biz-service-title {
+    text-transform: unset;
+  }
+  .homepage-wrapper.en .homepage-advantage .advantage-list .advantage-title,
+  .homepage-wrapper.ph .homepage-advantage .advantage-list .advantage-title {
+    text-transform: uppercase;
+  }
+  .homepage-wrapper.en .homepage-advantage .advantage-list .advantage-item,
+  .homepage-wrapper.ph .homepage-advantage .advantage-list .advantage-item {
+    min-height: 358px;
+  }
+  .homepage-wrapper.en .homepage-about .about-right,
+  .homepage-wrapper.ph .homepage-about .about-right {
+    padding-left: 28px;
+    padding-right: 5px;
+  }
+  .homepage-wrapper.en .homepage-advantage .advantage-list .advantage-item,
+  .homepage-wrapper.ph .homepage-advantage .advantage-list .advantage-item {
+    padding-right: 20px;
+  }
+  .homepage-wrapper.en .homepage-biz-service .biz-service-list .biz-service,
+  .homepage-wrapper.ph .homepage-biz-service .biz-service-list .biz-service {
+    height: 446px;
+  }
+  .homepage-wrapper.en
+    .homepage-logistics
+    .logistics-item:nth-child(2)
+    .item:nth-child(3),
+  .homepage-wrapper.en
+    .homepage-logistics
+    .logistics-item:nth-child(3)
+    .item:nth-child(3),
+  .homepage-wrapper.ph
+    .homepage-logistics
+    .logistics-item:nth-child(2)
+    .item:nth-child(3),
+  .homepage-wrapper.ph
+    .homepage-logistics
+    .logistics-item:nth-child(3)
+    .item:nth-child(3) {
+    position: relative;
+    top: -10px;
+  }
+  .homepage-wrapper.en .rank .list-title a,
+  .homepage-wrapper.ph .rank .list-title a {
+    font-weight: 700;
+  }
+  .homepage-wrapper.en .homepage-advantage .advantage-list .advantage-desc .text,
+  .homepage-wrapper.ph .homepage-advantage .advantage-list .advantage-desc .text {
+    line-height: 30px;
+  }
+  .homepage-wrapper.en .shoppingTimes-horizontal .shoppingTimes-menu a,
+  .homepage-wrapper.ph .shoppingTimes-horizontal .shoppingTimes-menu a {
+    font-family: muliBold;
+    font-weight: 700;
+  }
+  .homepage-wrapper.en .homepage-banner .banner-step .step-desc,
+  .homepage-wrapper.en .homepage-banner .banner-step .step-title,
+  .homepage-wrapper.ph .homepage-banner .banner-step .step-desc,
+  .homepage-wrapper.ph .homepage-banner .banner-step .step-title {
+    font-weight: 700;
+  }
+  .homepage-wrapper.en
+    .shoppingTimes-horizontal
+    .shoppingTimes-list
+    .goodsInfo-description
+    .description-item,
+  .homepage-wrapper.ph
+    .shoppingTimes-horizontal
+    .shoppingTimes-list
+    .goodsInfo-description
+    .description-item {
+    padding-left: 9px;
+  }
+  .homepage-wrapper.en
+    .shoppingTimes-horizontal
+    .shoppingTimes-list
+    .goodsInfo-description
+    .description-item__bottom,
+  .homepage-wrapper.ph
+    .shoppingTimes-horizontal
+    .shoppingTimes-list
+    .goodsInfo-description
+    .description-item__bottom {
+    cursor: default !important;
+    padding-top: 0;
+  }
+  .homepage-wrapper .swiperImg-wrapper .swiperImg-item {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .homepage-wrapper .swiperImg-wrapper .swiperImg-item img {
+    height: auto;
+    width: auto;
+  }
+  .show {
+    display: block;
+  }
+  .hide {
+    display: none;
+  }
+  .business-cooperation-outer {
+    background: #fff;
+  }
+  .business-cooperation-outer * {
+    color: #333;
+    cursor: default;
+  }
+  .business-cooperation-outer .inner {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 1186px;
+  }
+  .business-cooperation-outer .section-1 h2 {
+    margin-bottom: 67px;
+    margin-top: 86px;
+  }
+  .business-cooperation-outer .section-1 .icon-list .customer-1 {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/customer-1.png)
+      no-repeat 50%;
+  }
+  .business-cooperation-outer .section-1 .icon-list .customer-2 {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/customer-2.png)
+      no-repeat 50%;
+  }
+  .business-cooperation-outer .section-1 .icon-list .customer-3 {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/customer-3.png)
+      no-repeat 50%;
+  }
+  .business-cooperation-outer .section-1 .icon-list .customer-4 {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/customer-4.png)
+      no-repeat 50%;
+  }
+  .business-cooperation-outer .section-1 .icon-list .customer-5 {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/customer-5.png)
+      no-repeat 50%;
+  }
+  .business-cooperation-outer .section-1 .icon-list .customer-6 {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/customer-6.png)
+      no-repeat 50%;
+  }
+  .business-cooperation-outer .section-1 .icon-list .icon {
+    height: 88px;
+    width: 88px;
+  }
+  .business-cooperation-outer .section-1 .icon-list span {
+    font-size: 16px;
+  }
+  .business-cooperation-outer .section-2 {
+    background: #000 100%
+      url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/bg-1.png);
+    background-size: cover;
+    padding-bottom: 78px;
+  }
+  .business-cooperation-outer .section-2 h2 {
+    margin-bottom: 99px;
+    margin-top: 48px;
+  }
+  .business-cooperation-outer .section-2 .icon-list .cooperations-1 {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/cooperations-1.png)
+      no-repeat 50%;
+  }
+  .business-cooperation-outer .section-2 .icon-list .cooperations-2 {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/cooperations-2.png)
+      no-repeat 50%;
+  }
+  .business-cooperation-outer .section-2 .icon-list .cooperations-3 {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/cooperations-3.png)
+      no-repeat 50%;
+  }
+  .business-cooperation-outer .section-2 .icon-list .cooperations-4 {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/cooperations-4.png)
+      no-repeat 50%;
+  }
+  .business-cooperation-outer .section-2 .icon-list .cooperations-5 {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/cooperations-5.png)
+      no-repeat 50%;
+  }
+  .business-cooperation-outer .section-2 .icon-list .cooperations-6 {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/cooperations-6.png)
+      no-repeat 50%;
+  }
+  .business-cooperation-outer .section-2 .icon {
+    height: 60px;
+    width: 60px;
+  }
+  .business-cooperation-outer .section-3 h2 {
+    margin-bottom: 47px;
+    margin-top: 87px;
+  }
+  .business-cooperation-outer .section-3 .icon-list .reason-1 {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/reason-1.png)
+      no-repeat 50%;
+  }
+  .business-cooperation-outer .section-3 .icon-list .reason-2 {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/reason-2.png)
+      no-repeat 50%;
+  }
+  .business-cooperation-outer .section-3 .icon-list .reason-3 {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/reason-3.png)
+      no-repeat 50%;
+  }
+  .business-cooperation-outer .section-3 .icon-list .reason-4 {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/reason-4.png)
+      no-repeat 50%;
+  }
+  .business-cooperation-outer .section-3 .icon-list .reason-5 {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/reason-5.png)
+      no-repeat 50%;
+  }
+  .business-cooperation-outer .section-3 .icon-list .reason-6 {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/reason-6.png)
+      no-repeat 50%;
+  }
+  .business-cooperation-outer .section-3 .icon-list li {
+    flex: 0 0 33.3%;
+  }
+  .business-cooperation-outer .section-3 .icon-list li span:last-child {
+    margin-top: 23px;
+  }
+  .business-cooperation-outer .section-3 .icon-list .icon {
+    height: 168px;
+    width: 168px;
+  }
+  .business-cooperation-outer .section-4 {
+    background: #f9f9f9;
+    background-position: 82.6% 92%;
+    text-align: center;
+  }
+  .business-cooperation-outer .section-4 .inner {
+    background: #f9f9f9
+      url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/dot.png)
+      no-repeat;
+    background-position: 1023px 389px;
+    display: inline-block;
+    margin-left: 160px;
+    overflow: inherit;
+    padding-bottom: 50px;
+    padding-right: 160px;
+  }
+  .business-cooperation-outer .section-4 h2 {
+    margin-bottom: 81px;
+    margin-top: 52px;
+  }
+  .business-cooperation-outer .section-5 {
+    background: #000 100%
+      url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/bg-2.png);
+    background-size: cover;
+    padding-bottom: 52px;
+  }
+  .business-cooperation-outer .section-5 h2 {
+    margin-bottom: 52px;
+    margin-top: 50px;
+  }
+  .business-cooperation-outer .section-5 .icon-list .future-1 {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/future-1.png)
+      no-repeat 50%;
+  }
+  .business-cooperation-outer .section-5 .icon-list .future-2 {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/future-2.png)
+      no-repeat 50%;
+  }
+  .business-cooperation-outer .section-5 .icon-list .future-3 {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/future-3.png)
+      no-repeat 50%;
+  }
+  .business-cooperation-outer .section-5 .icon-list .future-4 {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/future-4.png)
+      no-repeat 50%;
+  }
+  .business-cooperation-outer .section-5 .icon-list .future-5 {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/future-5.png)
+      no-repeat 50%;
+  }
+  .business-cooperation-outer .section-5 .icon-list .future-6 {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/future-6.png)
+      no-repeat 50%;
+  }
+  .business-cooperation-outer .section-5 .icon-list .future-7 {
+    background: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/future-7.png)
+      no-repeat 50%;
+  }
+  .business-cooperation-outer .section-5 .icon-list li {
+    background: #fff;
+    border-radius: 4px;
+    height: 136px;
+    padding-top: 28px;
+    width: 152px;
+  }
+  .business-cooperation-outer .section-5 .icon-list li span {
+    font-size: 18px;
+  }
+  .business-cooperation-outer .section-5 .icon-list .icon {
+    height: 54px;
+    width: 54px;
+  }
+  .business-cooperation-outer .icon-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+  }
+  .business-cooperation-outer .icon-list.column span {
+    display: block;
+    margin: 0 auto;
+  }
+  .business-cooperation-outer .icon-list.column span:last-child {
+    margin-bottom: 50px;
+    margin-top: 29px;
+  }
+  .business-cooperation-outer .icon-list.row li {
+    background: #fff;
+    border-radius: 4px;
+  }
+  .business-cooperation-outer .icon-list.row span {
+    display: inline-block;
+  }
+  .business-cooperation-outer .icon-list.list-3 {
+    flex-flow: row wrap;
+    text-align: left;
+  }
+  .business-cooperation-outer .icon-list.list-3 li {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    height: 110px;
+    justify-content: left;
+    margin-bottom: 20px;
+    padding-left: 60px;
+    width: 382px;
+  }
+  .business-cooperation-outer .icon-list.list-3 li .icon {
+    margin-right: 50px;
+  }
+  .business-cooperation-outer .icon-list span {
+    font-size: 18px;
+  }
+  .business-cooperation-outer .case-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .business-cooperation-outer .case-list li {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 3px 19px 1px rgba(0, 0, 0, 0.08);
+    flex: 1;
+    height: 317px;
+    padding-left: 27px;
+    padding-right: 30px;
+    position: relative;
+    text-align: center;
+  }
+  .business-cooperation-outer .case-list li:first-child {
+    margin-right: 50px;
+  }
+  .business-cooperation-outer .case-list li .avatar {
+    background: #eee 100%
+      url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/businessservice/img/avatar.png)
+      no-repeat;
+    background-position: -6px -6px;
+    border: 5px solid #fff;
+    border-radius: 100px;
+    height: 70px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: -35px;
+    width: 70px;
+  }
+  .business-cooperation-outer .case-list li span {
+    display: block;
+    margin: 0 auto;
+  }
+  .business-cooperation-outer .case-list li span.userName {
+    font-size: 18px;
+    margin-top: 54px;
+  }
+  .business-cooperation-outer .case-list li span.userName em {
+    color: #999;
+    font-size: 14px;
+    margin-left: 6px;
+  }
+  .business-cooperation-outer .case-list li span.des {
+    font-size: 18px;
+    line-height: 40px;
+    margin-top: 34px;
+    text-align: left;
+  }
+  .business-cooperation-outer-en .section-1 li span:last-child,
+  .business-cooperation-outer-ph .section-1 li span:last-child {
+    width: 180px;
+  }
+  .business-cooperation-outer-en .section-2 .list-3 li,
+  .business-cooperation-outer-ph .section-2 .list-3 li {
+    padding-left: 42px;
+  }
+  .business-cooperation-outer-en .section-2 .list-3 li span:first-child,
+  .business-cooperation-outer-ph .section-2 .list-3 li span:first-child {
+    margin-right: 20px;
+  }
+  .business-cooperation-outer-en .section-2 .list-3 li span:last-child,
+  .business-cooperation-outer-ph .section-2 .list-3 li span:last-child {
+    width: 252px;
+  }
+  .business-cooperation-outer-en .case-list li span.des,
+  .business-cooperation-outer-ph .case-list li span.des {
+    font-size: 16px;
+  }
+  .business-cooperation-outer .common-title {
+    color: #333;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+  .business-cooperation-outer .common-title.center {
+    text-align: center;
+  }
+  .business-cooperation-outer .common-title.white {
+    color: #fff;
+  }
+  

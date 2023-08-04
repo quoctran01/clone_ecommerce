@@ -9,17 +9,17 @@ const SignUp = () => {
         <header class='logo'>
           <div class='logo-cont'>
             <Link to='/home'>
-              <img src='https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/login/logo.png' />
+              <img
+                src='https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/login/logo.png'
+                alt=''
+              />
             </Link>
             <p>Global Leading Cross-border Integrated Service Platform</p>
           </div>
         </header>
         <div className='loginContent'>
           <div className='center-cont'>
-            <a
-              class='login-adhref'
-              href='https://www.superbuy.com/en/page/marketing/share/?htag=log&amp;nTag=en_login_banner'
-              target='_blank'></a>
+            <a class='login-adhref' href='#'></a>
             <div className='mainBox'>
               <div className='login-page loginBox-active'>
                 <h6 class='title'>Sign Up </h6>

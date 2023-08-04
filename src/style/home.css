@@ -14,7 +14,11 @@
   margin-bottom: 12px;
   text-align: center;
 }
-
+.operation-list_item > i {
+  position: relative;
+  top: 4px;
+  left: 2px;
+}
 .goods-waterfall-operation .operation-list {
   display: flex;
   padding-left: none !important;
@@ -29,6 +33,16 @@
 .operation-list li:nth-child(2):hover {
   cursor: pointer;
   background: #fff;
+}
+.operation-list > li.hover:hover {
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+  margin-left: -16px;
+  margin-top: -12px;
+  padding: 12px 16px 0;
+  z-index: 2;
 }
 .operation-list li {
   margin-right: 22px;
@@ -78,7 +92,6 @@
 }
 .operation-list_item .host-class li {
   font-size: 14px;
-  margin: 6px;
   padding: 0px;
 }
 .operation-list_item .host-class li:first-child {
@@ -99,4 +112,9 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+}
+.ant-checkbox-wrapper span:last-child {
+  color: #000 !important;
+  font-size: 14px;
+  padding-left: 4px;
 }

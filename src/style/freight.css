@@ -209,6 +209,9 @@
   display: flex;
   width: 480px;
 }
+.volume span {
+  color: #9c9c9c;
+}
 .volume .volume-title {
   color: #9c9c9c;
   cursor: default;

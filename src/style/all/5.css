@@ -1,0 +1,1008 @@
+.goods-item_container {
+  height: auto !important;
+  margin-left: -10px;
+  margin-right: 0;
+  margin-top: -10px;
+  padding: 10px;
+  padding-bottom: 0 !important;
+  transition: all 0.3s linear;
+  width: 250px;
+}
+.goods-item_container > a {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s linear;
+}
+.goods-item_container .good-description {
+  align-items: center;
+  background: hsla(0, 0%, 100%, 0.9);
+  border-radius: 10px 0 8px 0;
+  color: #333;
+  display: flex;
+  font-size: 12px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+}
+.goods-item_container .good-description .common-img-wrap {
+  border-radius: 2px;
+  margin-left: 10px;
+  margin-right: 5px;
+  overflow: hidden;
+}
+.goods-item_container .goods-img-content {
+  background: #fff;
+  border-radius: 10px 10px 0 0;
+  border-radius: 10px !important;
+  box-sizing: border-box;
+  height: 230px;
+  padding: 10px;
+  position: relative;
+  width: 230px;
+}
+.goods-item_container .goods-img-content .goods-tips {
+  background: #f55;
+  border-radius: 0 0 10px 0;
+  color: #fff;
+  font-size: 12px;
+  left: 0;
+  line-height: 12px;
+  padding: 9px 10px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.goods-item_container .goods-img-content .common-img-wrap {
+  height: 210px;
+  overflow: hidden;
+  width: 210px;
+}
+.goods-item_container .goods-title {
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: #666;
+  display: -webkit-box;
+  font-size: 14px;
+  height: 42px;
+  margin-top: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+.goods-item_container .goods-title.icon-common {
+  background-repeat: no-repeat;
+  text-indent: 26px;
+}
+.goods-item_container .goods-title.icon-common.icon-TB {
+  background-image: url(https://cdn.superbuy.com/starit-superbuy/dist/img/homepage/icon/TB.png);
+}
+.goods-item_container .goods-title.icon-common.icon-TMALL {
+  background-image: url(https://cdn.superbuy.com/starit-superbuy/dist/img/homepage/icon/TMALL.png);
+}
+.goods-item_container .goods-title.icon-common.icon-JD {
+  background-image: url(https://cdn.superbuy.com/starit-superbuy/dist/img/homepage/icon/JD.png);
+}
+.goods-item_container .goods-title.icon-common.icon-WD {
+  background-image: url(https://cdn.superbuy.com/starit-superbuy/dist/img/homepage/icon/WD.png);
+}
+.goods-item_container .goods-title.icon-common.icon-XY {
+  background-image: url(https://cdn.superbuy.com/starit-superbuy/dist/img/homepage/icon/XY.png);
+}
+.goods-item_container .goods-title.icon-common.icon-YZ {
+  background-image: url(https://cdn.superbuy.com/starit-superbuy/dist/img/homepage/icon/YZ.png);
+}
+.goods-item_container .goods-title.icon-common.icon-PP {
+  background-image: url(https://cdn.superbuy.com/starit-superbuy/dist/img/homepage/icon/PP.png);
+}
+.goods-item_container .goods-title.icon-common.icon-ALIBABA {
+  background-image: url(https://cdn.superbuy.com/starit-superbuy/dist/img/homepage/icon/ALIBABA.png);
+}
+.goods-item_container .goods-title.icon-common.icon-NOCRAWLER {
+  background-image: url(https://cdn.superbuy.com/starit-superbuy/dist/img/homepage/icon/NOCRAWLER.png);
+}
+.goods-item_container .goods-title.icon-common.icon-GL {
+  background-image: url(https://cdn.superbuy.com/starit-superbuy/dist/img/homepage/icon/GL.png);
+}
+.goods-item_container .goods-title.icon-common.icon-TM {
+  background-image: url(https://cdn.superbuy.com/starit-superbuy/dist/img/homepage/icon/TM.png);
+}
+.goods-item_container .goods-title.icon-common.icon-SUPERBUY {
+  background-image: url(https://cdn.superbuy.com/starit-superbuy/dist/img/homepage/icon/SUPERBUY.png);
+}
+.goods-item_container .goods-price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+.goods-item_container .goods-price .price-content {
+  align-items: center;
+  display: flex;
+}
+.goods-item_container .goods-price .price-content .discount-price {
+  color: #000;
+  font-family: muliBlack;
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 4px;
+}
+.goods-item_container .goods-price .price-content .price {
+  color: #999;
+  font-size: 12px;
+  text-decoration: line-through;
+}
+.goods-item_container .goods-price .add-cart {
+  color: #0083ef;
+  font-size: 24px;
+  height: 24px;
+  margin-right: 6px;
+  margin-top: -6px;
+  width: 24px;
+}
+.goods-item_container.common-item {
+  border-radius: 10px;
+  height: 310px;
+  margin-bottom: 24px;
+  padding: 10px;
+  position: relative;
+  transition: all 0.3s linear;
+  width: 250px;
+}
+.goods-item_container.common-item:nth-child(5n) {
+  margin-right: 0;
+}
+.goods-item_container.common-item:nth-child(5n).goods-item_container {
+  margin-right: -10px;
+}
+.goods-item_container.common-item a:focus {
+  text-decoration: none;
+}
+.goods-item_container.common-item:hover {
+  background: #fff;
+  box-shadow: 8px 13px 10px 0 rgba(0, 0, 0, 0.05);
+  transform: translateY(-10px);
+  z-index: 2;
+}
+.good-to-cart-pick.mask {
+  background: 50% no-repeat rgba(0, 0, 0, 0.8);
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  transition: all 0.3s linear;
+  visibility: hidden;
+  width: 100%;
+  z-index: 1000;
+}
+.good-to-cart-pick.mask.active {
+  opacity: 1;
+  visibility: visible;
+}
+.good-to-cart-pick .good-modal-content {
+  background: #fff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 750px;
+}
+.good-to-cart-pick .good-modal-content h3 {
+  color: #333;
+  cursor: default;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+}
+.good-to-cart-pick .good-modal-content h3.not-crawler-title {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  height: 63px;
+  left: 0;
+  line-height: 63px;
+  padding-left: 56px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.good-to-cart-pick .good-modal-content h3.not-crawler-title span {
+  color: #0382f0;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: all 0.3s linear;
+}
+.good-to-cart-pick .good-modal-content h3.not-crawler-title span:hover {
+  opacity: 0.9;
+}
+.good-to-cart-pick .good-modal-content.not-crawler {
+  background-image: url(https://cdn.superbuy.com/starit-superbuy/dist/img/homepage/ace.png);
+  background-position: 20px 16px;
+  background-repeat: no-repeat;
+}
+.good-to-cart-pick .good-modal-content .steps-list_container {
+  margin-top: 20px;
+}
+.good-to-cart-pick .sold-out-content {
+  color: #333;
+  cursor: default;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+.good-to-cart-pick .close-btn {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/img/homepage/close.png)
+    0 0 no-repeat;
+  cursor: pointer;
+  height: 24px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 24px;
+  z-index: 2;
+}
+.good-to-cart-pick.en .good-modal-content h3.not-crawler-title {
+  font-family: muliBlack;
+  font-size: 12px;
+}
+.good-to-cart-pick.en .user-fill-order_container h4 {
+  text-transform: uppercase;
+}
+.good-to-cart-pick.en
+  .form-row:first-child
+  .ant-row:first-child
+  .ant-form-item-label {
+  width: 66px;
+}
+.good-to-cart-pick.en
+  .form-row:first-child
+  .ant-row:first-child
+  .ant-form-item-label
+  label {
+  display: block;
+  text-align: left;
+  width: 100%;
+}
+.good-to-cart-pick.en
+  .form-row:nth-child(3)
+  .ant-input-number-lg
+  .ant-input-number-input {
+  width: 240px;
+}
+.good-to-cart-pick.en .user-fill-order_container .ant-form-explain {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/img/homepage/waring-icon.png)
+    0 3px no-repeat;
+}
+.good-detail-content .good-url {
+  background: #f5f5f5;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 14px 20px;
+}
+.good-detail-content .good-url span {
+  color: #333;
+  font-size: 12px;
+  line-height: 12px;
+}
+.good-detail-content .good-url span:nth-child(2) {
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  color: #999;
+  display: -webkit-box;
+  flex: 0 0 514px;
+  margin-left: 10px;
+  margin-right: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+.good-detail-content .good-url span:last-child {
+  color: #0382f0;
+  cursor: pointer;
+}
+.good-detail-content .good-info {
+  display: flex;
+  margin-top: 20px;
+}
+.good-detail-content .good-info .img-preview {
+  margin-right: 20px;
+}
+.good-detail-content .good-info .img-preview .common-img-wrap {
+  height: 230px;
+  width: 230px;
+}
+.good-detail-content .good-info .good-info-content {
+  width: 100%;
+}
+.good-detail-content .good-info .good-info-content .title {
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: #333;
+  display: -webkit-box;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+.good-detail-content .good-info .good-info-content .price {
+  color: #f55;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 16px;
+}
+.good-detail-content .good-info .good-info-content .price em {
+  font-size: 14px;
+  font-weight: 700;
+  margin-right: 4px;
+}
+.good-detail-content .good-info .good-info-content .props-list {
+  align-items: center;
+  display: flex;
+  margin: 16px 0;
+}
+.good-detail-content .good-info .good-info-content .props-list .props-name {
+  flex: 0 0 80px;
+  font-size: 12px;
+}
+.good-detail-content .good-info .good-info-content .props-list .props-select {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -6px;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .props-list
+  .props-select
+  li {
+  border: 1px solid #e5e5e5;
+  border-radius: 15px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 6px 10px 0 0;
+  overflow: hidden;
+  padding: 5px 10px;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .props-list
+  .props-select
+  li.selected {
+  border: 3px solid #0083ef;
+  padding: 3px 8px;
+  text-decoration: none;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .props-list
+  .props-select
+  li.disabled {
+  background: #f9f9f9;
+  border: 1px dashed #ccc;
+  color: #989898;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .props-list
+  .props-select
+  li.imgWrap {
+  border: none;
+  border-radius: 0;
+  height: 30px;
+  padding: 0;
+  width: 30px;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .props-list
+  .props-select
+  li.imgWrap.selected {
+  border: 2px solid #0083ef;
+}
+.good-detail-content .good-info .good-info-content .props-list:first-child {
+  align-items: flex-start;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .number-pick
+  .number-input-wrap {
+  align-items: center;
+  display: flex;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .number-pick
+  .number-input-wrap
+  .goods-count-button {
+  margin-left: 4px;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .number-pick
+  .number-input-wrap
+  .goods-count-button
+  i {
+  background: center -5px no-repeat;
+  border: 1px solid #eee;
+  cursor: pointer;
+  display: block;
+  height: 13px;
+  line-height: 13px;
+  overflow: hidden;
+  text-align: center;
+  text-indent: -200em;
+  transition: all 0.3s linear;
+  width: 22px;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .number-pick
+  .number-input-wrap
+  .goods-count-button
+  i.disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .number-pick
+  .number-input-wrap
+  .goods-count-button
+  .goods-count-add {
+  background-image: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/buy/icon_arrow_up.png) !important;
+  border-radius: 4px;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .number-pick
+  .number-input-wrap
+  .goods-count-button
+  .goods-count-reduce {
+  background-image: url(https://cdn.superbuy.com/starit-superbuy/dist/cn/source/img/buy/icon_arrow_down.png) !important;
+  border-radius: 4px;
+  margin-top: 2px;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .number-pick
+  .goods-count-min {
+  color: #f66;
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 10px;
+}
+.good-detail-content .good-info .good-info-content .number-pick input {
+  background: #f9f9f9;
+  border: none;
+  height: 30px;
+  text-align: center;
+  width: 50px;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .number-pick
+  input::-webkit-inner-spin-button,
+.good-detail-content
+  .good-info
+  .good-info-content
+  .number-pick
+  input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .number-pick
+  input[type="number"] {
+  -moz-appearance: textfield;
+}
+.good-detail-content .good-info .good-info-content .operation-button {
+  display: flex;
+  margin-top: 20px;
+}
+.good-detail-content .good-info .good-info-content .operation-button button {
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  height: 36px;
+  line-height: 34px;
+  transition: all 0.3s linear;
+  width: 120px;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .operation-button
+  button.button {
+  --background: #fff;
+  --text: #0382f0;
+  --cart: #0382f0;
+  --tick: var(--background);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  background: none;
+  background: var(--background);
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  -webkit-mask-image: -webkit-radial-gradient(#fff, #000);
+  min-width: 144px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  transform: scale(var(--scale, 1));
+  transition: transform 0.4s cubic-bezier(0.36, 1.01, 0.32, 1.27);
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .operation-button
+  button.button:active {
+  --scale: 0.95;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .operation-button
+  button.button
+  span {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  transform: translateY(var(--span-y, 0));
+  transition: transform 0.7s ease;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .operation-button
+  button.button
+  .cart {
+  left: 50%;
+  margin: -13px 0 0 -18px;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-120px) rotate(-18deg);
+  transform-origin: 12px 23px;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .operation-button
+  button.button
+  .cart:after,
+.good-detail-content
+  .good-info
+  .good-info-content
+  .operation-button
+  button.button
+  .cart:before {
+  content: "";
+  position: absolute;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .operation-button
+  button.button
+  .cart:before {
+  border-radius: 50%;
+  bottom: 0;
+  box-shadow: inset 0 0 0 2px var(--cart);
+  filter: drop-shadow(11px 0 0 var(--cart));
+  height: 6px;
+  left: 9px;
+  width: 6px;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .operation-button
+  button.button
+  .cart:after {
+  background: var(--cart);
+  bottom: 7px;
+  height: 9px;
+  left: 9px;
+  transform: perspective(4px) rotateX(-6deg) scaleY(var(--fill, 0));
+  transform-origin: 50% 100%;
+  transition: transform 1.2s ease var(--fill-d);
+  width: 16px;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .operation-button
+  button.button
+  .cart
+  svg {
+  fill: none;
+  stroke: var(--cart);
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  display: block;
+  height: 26px;
+  position: relative;
+  width: 36px;
+  z-index: 1;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .operation-button
+  button.button
+  .cart
+  svg
+  polyline:last-child {
+  stroke: var(--tick);
+  stroke-dasharray: 10px;
+  stroke-dashoffset: var(--offset, 10px);
+  transition: stroke-dashoffset 0.4s ease var(--offset-d);
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .operation-button
+  button.button.loading {
+  --scale: 0.95;
+  --span-y: -32px;
+  --icon-r: 180deg;
+  --fill: 1;
+  --fill-d: 0.8s;
+  --offset: 0;
+  --offset-d: 1.73s;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .operation-button
+  button.button.loading
+  .cart {
+  animation: cart 3.4s linear 0.2s forwards;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .operation-button
+  button.add-cart {
+  background: #eef5ff;
+  border: 1px solid #bed5f5;
+  color: #0382f0;
+  font-size: 14px;
+  font-weight: 700;
+  margin-right: 30px;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .operation-button
+  button.add-cart.loading {
+  --scale: 0.95;
+  --span-y: -32px;
+  --icon-r: 180deg;
+  --fill: 1;
+  --fill-d: 0.8s;
+  --offset: 0;
+  --offset-d: 1.73s;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .operation-button
+  button.add-cart.loading
+  .cart {
+  animation: cart 3.4s linear 0.2s forwards;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .operation-button
+  button.buy-now {
+  background: #0382f0;
+  color: #fff;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .operation-button
+  button:hover {
+  opacity: 0.9;
+}
+.good-detail-content
+  .good-info
+  .good-info-content
+  .operation-button
+  button:active {
+  transform: translateY(1px);
+}
+.good-detail-content .good-info .good-info-content .ant-select {
+  width: 157px;
+}
+.good-detail-content .good-info .good-info-content .sku-list-container {
+  transition: all 0.3s linear;
+}
+.good-detail-content .good-info .good-info-content .sku-list-container.error {
+  border: 1px solid #ff4c62;
+  border-radius: 2px;
+  box-shadow: 0 0 5px #ff4c62;
+  margin-left: -6px;
+  margin-top: -2px;
+  padding-bottom: 0;
+  padding-left: 6px;
+}
+.risk-list-warning {
+  align-items: center;
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/img/buy/tools-icon.png)
+    #fbfbfb 10px no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+  margin-top: 20px;
+  min-height: 36px;
+  padding: 9px 0 9px 30px;
+}
+.risk-list-warning p {
+  color: #333;
+  font-size: 12px;
+  line-height: 13px;
+}
+.risk-list-warning span {
+  color: #0382f0;
+  cursor: help;
+  line-height: 13px;
+}
+@keyframes cart {
+  12.5% {
+    transform: translateX(-60px) rotate(-18deg);
+  }
+  25%,
+  45%,
+  55%,
+  75% {
+    transform: none;
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  44%,
+  56% {
+    transform-origin: 12px 23px;
+  }
+  45%,
+  55% {
+    transform-origin: 50% 50%;
+  }
+  87.5% {
+    transform: translateX(70px) rotate(-18deg);
+  }
+  to {
+    transform: translateX(140px) rotate(-18deg);
+  }
+}
+.steps-list_container .list-content {
+  background: #f3faff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 16px;
+}
+.steps-list_container .list-content li {
+  align-items: center;
+  cursor: default;
+  display: flex;
+  margin-right: 8px;
+  position: relative;
+}
+.steps-list_container .list-content li > span {
+  color: #333;
+  font-size: 12px;
+  font-weight: 700;
+}
+.steps-list_container .list-content li > span:first-child {
+  color: #0382f0;
+  margin-right: 4px;
+}
+.steps-list_container .list-content li p span {
+  color: #333;
+  font-size: 12px;
+  font-weight: 700;
+}
+.steps-list_container .list-content li:after {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/img/homepage/row-right.png)
+    50% no-repeat;
+  content: "";
+  height: 10px;
+  margin-left: 8px;
+  margin-top: 3px;
+  width: 6px;
+}
+.steps-list_container .list-content li:last-child {
+  margin: 0;
+}
+.steps-list_container .list-content li:last-child:after {
+  content: none;
+}
+.steps-list_container .list-content li p {
+  display: flex;
+  flex-wrap: wrap;
+}
+.steps-list_container .list-content li p span {
+  font-weight: 600;
+}
+.steps-list_container .list-content li p span:last-child {
+  color: #666;
+  font-weight: 100;
+  margin-top: 4px;
+}
+.steps-list_container .list-content {
+  padding: 10px 14px;
+}
+.steps-list_container .list-content li:after {
+  flex: 0 0 6px;
+  height: 14px;
+  margin: 16px 0 0;
+}
+.steps-list_container .list-content li,
+.steps-list_container.en .list-content li {
+  align-items: flex-start;
+}
+.steps-list_container.en .list-content li > span {
+  margin-right: 6px;
+}
+.user-fill-order_container {
+  margin-top: 70px;
+}
+.user-fill-order_container h4 {
+  color: #333;
+  cursor: default;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+}
+.user-fill-order_container .number-wrapper {
+  display: flex;
+}
+.user-fill-order_container .number-wrapper .goods-price-input input {
+  width: 170px;
+}
+.user-fill-order_container .number-wrapper .goods-number-input input {
+  width: 60px;
+}
+.user-fill-order_container .number-wrapper .x-icon {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/img/homepage/x-icon.png)
+    no-repeat 50% 10px;
+  width: 50px;
+}
+.user-fill-order_container .ant-row {
+  display: flex;
+}
+.user-fill-order_container .ant-row input {
+  background: #f9f9f9;
+  border: none;
+  width: 280px;
+}
+.user-fill-order_container .ant-row input.ant-input-number-input {
+  color: #000;
+  font-size: 12px;
+}
+.user-fill-order_container .ant-row .ant-input-number {
+  border: none;
+  margin: 0;
+  width: 100%;
+}
+.user-fill-order_container .ant-form {
+  margin-top: 20px;
+}
+.user-fill-order_container .form-row {
+  display: flex;
+  justify-content: space-between;
+}
+.user-fill-order_container .form-row label {
+  font-size: 12px;
+}
+.user-fill-order_container .form-footer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.user-fill-order_container .form-footer button {
+  background: #0382f0;
+  border-radius: 100px;
+  height: 36px;
+  width: 120px;
+}
+.user-fill-order_container .upload-image {
+  align-items: center;
+  display: flex;
+}
+.user-fill-order_container .upload-image .goodsImg > em,
+.user-fill-order_container .upload-image .goodsImg > span {
+  display: none;
+}
+.user-fill-order_container .upload-image .goodsImg > button {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/img/homepage/upload-icon.png)
+    no-repeat 50% #fbfbfb;
+  border: 1px dashed #e5e5e5;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0;
+  height: 50px;
+  width: 50px;
+}
+.user-fill-order_container .upload-image .goodsImg-res {
+  border: 1px solid #eee;
+  border-radius: 6px;
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  width: 50px;
+}
+.user-fill-order_container .upload-image .goodsImg-res img {
+  height: 100%;
+  width: 100%;
+}
+.user-fill-order_container .upload-image .goodsImg-res i {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/img/homepage/x-icon.png)
+    no-repeat 100% 0;
+  cursor: pointer;
+  font-size: 0;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+.user-fill-order_container .upload-image .upload-title {
+  color: #333;
+  font-size: 12px;
+  margin-right: 10px;
+}
+.user-fill-order_container .upload-image input {
+  display: none;
+}
+.user-fill-order_container .user-fill-warning {
+  background: #fbfbfb;
+  border-radius: 6px;
+  font-size: 12px;
+  padding: 8px;
+}
+.user-fill-order_container .user-fill-warning span {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/img/buy/tools-icon.png)
+    #fbfbfb 0 2px no-repeat;
+  color: #0382f0;
+  font-weight: 700;
+  margin-right: 10px;
+  padding-left: 18px;
+}
+.user-fill-order_container .user-fill-warning p {
+  font-size: 12px;
+}
+.user-fill-order_container .ant-form-explain {
+  background: url(https://cdn.superbuy.com/starit-superbuy/dist/img/homepage/waring-icon.png)
+    0 4px no-repeat;
+  font-size: 12px;
+  margin-bottom: -1px;
+  margin-top: 3px;
+  padding-left: 16px;
+}

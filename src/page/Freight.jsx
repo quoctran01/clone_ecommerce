@@ -59,12 +59,18 @@ const Freight = () => {
                   </select>
                 </li>
                 <div class='box weight  volume-en required-form'>
-                  <span class='weight-title keyword0 text-en'>Weight</span>
+                  <span
+                    class='weight-title keyword0 text-en'
+                    style={{ color: "#9c9c9c" }}>
+                    Weight
+                  </span>
                   <input placeholder='0' maxlength='8' class='' value='' />
                   <span class='weight-pre-title'>g</span>
                 </div>
                 <li className='volume'>
-                  <span class='volume-title'>Size</span>
+                  <span class='volume-title' style={{ color: "#9c9c9c" }}>
+                    Size
+                  </span>
                   <div className='box length d-flex align-items-center'>
                     <input placeholder='0' maxlength='8' class='' value='' />
                     <span class='weight-pre-title'>Length(cm)</span>
@@ -97,7 +103,6 @@ const Freight = () => {
                   <a
                     style={{ textDecoration: "none" }}
                     className='ms-3'
-                    target='_blank'
                     href='https://bbs.superbuy.com/forum.php?mod=viewthread&amp;tid=579123'>
                     More &gt;
                   </a>
@@ -118,20 +123,13 @@ const Freight = () => {
                 </li>
                 <li class='used'>Most Used</li>
                 <li class='line-sort'>
-                  <span
-                    style={{
-                      color: "#999999",
-                      fontSize: "14px",
-                      marginRight: "10px",
-                    }}>
-                    Types of Delivery
-                  </span>
                   <span>
                     <input
                       maxlength='20'
                       type='text'
                       class='ant-input'
                       value=''
+                      placeholder='Types of Delivery'
                     />
                   </span>
                 </li>
