@@ -290,7 +290,6 @@ const Forwarding = () => {
                       type='text'
                       placeholder='Fill in the item name&nbsp;or&nbsp;paste&nbsp;item&nbsp;URL'
                       class='pro error'
-                      maxlength='200'
                       value=''
                     />
                   </li>
@@ -319,7 +318,6 @@ const Forwarding = () => {
                         type='text'
                         placeholder='Unit price'
                         class='price error'
-                        maxlength='8'
                         value=''
                       />
                     </div>
@@ -327,7 +325,6 @@ const Forwarding = () => {
                   <li class='remark'>
                     <input
                       type='text'
-                      maxlength='150'
                       placeholder='Can remake the size, color or other information'
                       class='protips error'
                       value=''

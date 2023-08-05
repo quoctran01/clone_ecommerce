@@ -54,7 +54,7 @@ export const sliderHomePage = [
     src: "https://img1.superbuy.com/images/daigou-admin/2023/07/11/fcb29eb3-1ce6-498d-82c5-f1f92e391e4a.png",
     altText: "Slide 5",
     caption: "Slide 5",
-    key: 4,
+    key: 5,
   },
 ];
 export const sliderAgent = [

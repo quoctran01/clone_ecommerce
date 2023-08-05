@@ -27,13 +27,12 @@ function UseSlider({ items }) {
     setActiveIndex(newIndex);
   };
 
-  const slides = items.map((item) => {
+  const slides = items.map((item, index) => {
     return (
       <CarouselItem
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
-        key={item.src}
-      >
+        key={index}>
         <img src={item.src} alt={item.altText} />
       </CarouselItem>
     );
@@ -48,13 +47,13 @@ function UseSlider({ items }) {
       />
       {slides}
       <CarouselControl
-        direction="prev"
-        directionText="Previous"
+        direction='prev'
+        directionText='Previous'
         onClickHandler={previous}
       />
       <CarouselControl
-        direction="next"
-        directionText="Next"
+        direction='next'
+        directionText='Next'
         onClickHandler={next}
       />
     </Carousel>

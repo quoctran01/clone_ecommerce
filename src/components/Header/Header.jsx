@@ -170,7 +170,7 @@ const Header = () => {
                 <a href='https://bbs.superbuy.com/forum.php'>BBS</a>
               </li>
               <li className='nav-item'>
-                <NavLink to='business'>BUSINESS</NavLink>
+                <NavLink to='/business/channel'>BUSINESS</NavLink>
                 <i class='ri-arrow-down-s-line'></i>
                 <ul class='sub-nav-business m-0 p-0'>
                   <li class='sub-nav-item'>

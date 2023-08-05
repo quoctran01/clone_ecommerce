@@ -88,7 +88,6 @@ const CalculatorTool = () => {
               <input
                 type='text'
                 placeholder=''
-                readonly=''
                 value={option}
                 onClick={() => setOpenCountry(!openCountry)}
               />

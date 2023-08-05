@@ -64,7 +64,7 @@ const Freight = () => {
                     style={{ color: "#9c9c9c" }}>
                     Weight
                   </span>
-                  <input placeholder='0' maxlength='8' class='' value='' />
+                  <input placeholder='0' class='' value='' />
                   <span class='weight-pre-title'>g</span>
                 </div>
                 <li className='volume'>
@@ -72,15 +72,15 @@ const Freight = () => {
                     Size
                   </span>
                   <div className='box length d-flex align-items-center'>
-                    <input placeholder='0' maxlength='8' class='' value='' />
+                    <input placeholder='0' class='' value='' />
                     <span class='weight-pre-title'>Length(cm)</span>
                   </div>
                   <div className='box breadth d-flex align-items-center'>
-                    <input placeholder='0' maxlength='8' class='' value='' />
+                    <input placeholder='0' class='' value='' />
                     <span class='weight-pre-title'>Width(cm)</span>
                   </div>
                   <div className='box height d-flex align-items-center'>
-                    <input placeholder='0' maxlength='8' class='' value='' />
+                    <input placeholder='0' class='' value='' />
                     <span class='weight-pre-title'>Height(cm)</span>
                   </div>
                 </li>
@@ -125,7 +125,6 @@ const Freight = () => {
                 <li class='line-sort'>
                   <span>
                     <input
-                      maxlength='20'
                       type='text'
                       class='ant-input'
                       value=''
