@@ -74,13 +74,13 @@
 .mainBox .title {
   color: #333;
   font-size: 20px;
-  line-height: 60px;
+  line-height: 32px;
   padding-top: 20px;
   text-align: center;
 }
 .loginMsg {
   height: 42px;
-  margin: 10px auto 0;
+  margin: 20px auto 0;
   position: relative;
   width: 280px;
 }
@@ -90,14 +90,21 @@
   border-radius: 3px;
   height: 100%;
   line-height: 38px;
-  text-indent: 20px;
   width: 100%;
+}
+.loginMsg .verCode-input {
+  text-indent: 10px;
 }
 .loginMsg input:focus {
   outline: 1px solid var(--primary-color);
 }
+.error {
+  color: red;
+  font-size: 10px;
+  padding: 2px 0;
+}
 .loading-box {
-  margin: 0 auto;
+  margin: 4px auto;
   overflow: hidden;
   position: relative;
   width: 280px;

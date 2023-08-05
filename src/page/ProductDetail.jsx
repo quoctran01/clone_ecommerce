@@ -149,7 +149,6 @@ const ProductDetail = () => {
                           <span class='label-input'>
                             <input
                               class='goods-freight'
-                              maxlength='8'
                               type='text'
                               placeholder='CN￥'
                             />

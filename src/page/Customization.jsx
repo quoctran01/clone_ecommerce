@@ -82,7 +82,6 @@ const Customization = () => {
                   <div>
                     <span class='ant-form-item-children'>
                       <input
-                        maxlength='28'
                         placeholder='Please enter the name of the contact(2-28 characters)'
                         type='text'
                         id='normal_login_contacts'
@@ -107,7 +106,6 @@ const Customization = () => {
                   <div class='d-flex'>
                     <span class='ant-form-item-children'>
                       <input
-                        maxlength='28'
                         placeholder='Country Code'
                         type='text'
                         id='normal_login_contacts'
@@ -117,7 +115,6 @@ const Customization = () => {
                       />
                       <span>-</span>
                       <input
-                        maxlength='28'
                         placeholder='Phone no'
                         type='text'
                         id='normal_login_contacts'
@@ -143,7 +140,6 @@ const Customization = () => {
                   <div class='has-success'>
                     <span class='ant-form-item-children'>
                       <input
-                        maxlength='28'
                         placeholder='Please enter a valid email address'
                         type='text'
                         id='normal_login_contacts'
@@ -367,7 +363,6 @@ const Customization = () => {
                     </label>
                     <div class='form-item'>
                       <input
-                        maxlength='28'
                         placeholder='Please enter Post/ZIP code'
                         type='text'
                         class='ant-input'
@@ -382,7 +377,6 @@ const Customization = () => {
                     </label>
                     <div class='form-item'>
                       <textarea
-                        maxlength='300'
                         placeholder='Example: Street No., Block No./Room No.'
                         class='ant-input'
                         style={{ width: "620px", height: "100px" }}></textarea>
@@ -462,19 +456,16 @@ const Customization = () => {
                         style={{ width: "270px", height: "46px" }}
                       />
                       <input
-                        maxLength='10'
                         type='text'
                         className='ant-input'
                         style={{ width: "50px", height: "46px" }}
                       />
                       <input
-                        maxLength='100'
                         type='text'
                         className='ant-input'
                         style={{ width: "170px", height: "46px" }}
                       />
                       <input
-                        maxLength='16'
                         type='text'
                         className='ant-input'
                         style={{ width: "120px", height: "46px" }}
@@ -483,21 +474,18 @@ const Customization = () => {
                         className='ant-input-group ant-input-group-compact'
                         style={{ width: "300px", height: "46px" }}>
                         <input
-                          maxLength='10'
                           placeholder='Length'
                           type='text'
                           className='ant-input'
                           style={{ width: "33%", height: "46px" }}
                         />
                         <input
-                          maxLength='10'
                           placeholder='Width'
                           type='text'
                           className='ant-input'
                           style={{ width: "33%", height: "46px" }}
                         />
                         <input
-                          maxLength='10'
                           placeholder='Height'
                           type='text'
                           className='ant-input'
@@ -520,7 +508,6 @@ const Customization = () => {
               <div class='ant-row ant-form-item'>
                 <span class='ant-form-item-children'>
                   <textarea
-                    maxlength='150'
                     placeholder='Can fill in the special requirements, such as: time, freight etc.'
                     id='normal_login_remark'
                     data-__meta='[object Object]'

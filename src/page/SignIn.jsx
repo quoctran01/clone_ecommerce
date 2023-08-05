@@ -1,26 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../style/signin.css";
-import { useFormik } from "formik";
+import { Formik, Form } from "formik";
 import * as Yup from "yup";
+import TextField from "../components/TextField/TextField";
 
 const SignIn = () => {
-  const formik = useFormik({
-    initialValues: {
-      email: "",
-      password: "",
-    },
-    validationSchema: Yup.object({
-      email: Yup.string()
-        .email("Invalid Email")
-        .required("You must fill in this section!"),
-      password: Yup.string()
-        .min(8, "Your password must be at least 8 characters")
-        .required("You must fill in this section!"),
-    }),
-    onSubmit: (values) => {
-      console.log(values);
-    },
+  const validate = Yup.object({
+    email: Yup.string().email("Email is invalid").required("Email is required"),
+    password: Yup.string()
+      .min(6, "Password must be at least 6 charaters")
+      .required("Password is required"),
   });
   return (
     <>
@@ -38,57 +28,39 @@ const SignIn = () => {
         </header>
         <div className='loginContent'>
           <div className='center-cont'>
-            <a
-              class='login-adhref'
-              href='https://www.superbuy.com/en/page/marketing/share/?htag=log&amp;nTag=en_login_banner'></a>
+            <a class='login-adhref' href='#'></a>
             <div className='mainBox'>
               <div className='login-page loginBox-active'>
-                <form onSubmit={formik.handleSubmit}>
-                  <h6 class='title'>Sign In </h6>
-                  <div class='loginMsg emailAuto'>
-                    <input
-                      type='text'
-                      id='email'
-                      class='inputS'
-                      placeholder={
-                        formik.errors.email && formik.touched.email
-                          ? formik.errors.email
-                          : "E-mail"
-                      }
-                      value={formik.values.email}
-                      onChange={formik.handleChange}
-                      style={{
-                        border:
-                          formik.errors.email && formik.touched.email
-                            ? "1px solid red"
-                            : "",
-                      }}
-                    />
-                  </div>
-                  <div class='loginMsg forgotPsw'>
-                    <input
-                      name='password'
-                      type='password'
-                      class='inputS'
-                      placeholder={
-                        formik.errors.password && formik.touched.password
-                          ? formik.errors.password
-                          : "Password"
-                      }
-                      value={formik.values.password}
-                      onChange={formik.handleChange}
-                      style={{
-                        border:
-                          formik.errors.password && formik.touched.password
-                            ? "1px solid red"
-                            : "",
-                      }}
-                    />
-                  </div>
-                  <div className='loading-box'>
-                    <input type='submit' class='btnS' value='Sign In' />
-                  </div>
-                </form>
+                <Formik
+                  initialValues={{
+                    email: "",
+                    password: "",
+                  }}
+                  validationSchema={validate}
+                  onSubmit={(values) => {
+                    console.log(values);
+                  }}>
+                  {(formik) => (
+                    <>
+                      <h6 class='title'>Sign In </h6>
+                      <Form>
+                        <TextField
+                          placeholder='Email'
+                          name='email'
+                          type='email'
+                        />
+                        <TextField
+                          placeholder='Password'
+                          name='password'
+                          type='password'
+                        />
+                        <div className='loading-box'>
+                          <input type='submit' class='btnS' value='Sign In' />
+                        </div>
+                      </Form>
+                    </>
+                  )}
+                </Formik>
                 <section class='otherWay'>
                   <span>You can sign in with third-party accounts</span>
                   <div class='list'>

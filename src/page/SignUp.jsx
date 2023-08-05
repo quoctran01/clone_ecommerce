@@ -1,8 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../style/signin.css";
+import { Formik, Form } from "formik";
+import * as Yup from "yup";
+import TextField from "../components/TextField/TextField";
 
 const SignUp = () => {
+  const validate = Yup.object({
+    email: Yup.string().email("Email is invalid").required("Email is required"),
+    password: Yup.string()
+      .min(6, "Password must be at least 6 charaters")
+      .required("Password is required"),
+    acceptTerms: Yup.boolean().oneOf(
+      [true],
+      "You must accept the Terms of Service"
+    ),
+  });
   return (
     <>
       <div className='login-layout'>
@@ -19,75 +32,87 @@ const SignUp = () => {
         </header>
         <div className='loginContent'>
           <div className='center-cont'>
-            <a class='login-adhref' href='#'></a>
             <div className='mainBox'>
               <div className='login-page loginBox-active'>
-                <h6 class='title'>Sign Up </h6>
-                <div class='loginMsg emailAuto'>
-                  <input
-                    type='email'
-                    id='email'
-                    list='loginList'
-                    class='inputS'
-                    placeholder='E-mail(Make sure it is available)'
-                    value=''
-                  />
-                </div>
-                <div class='loginMsg forgotPsw'>
-                  <input
-                    name='password'
-                    type='password'
-                    class='inputS'
-                    placeholder='Password'
-                    value=''
-                  />
-                </div>
-                <div className='loginMsg'>
-                  <input
-                    type='text'
-                    maxlength='4'
-                    class='inputS verCode-input'
-                    placeholder='Verification Code'
-                  />
-                  <div class='verCode'>
-                    <img
-                      title='Not clear? Click to change'
-                      src='//login.superbuy.com/api/site/captcha'
-                    />
-                  </div>
-                </div>
-                <div class='protocol'>
-                  <label class='ant-checkbox-wrapper'>
-                    <span class='ant-checkbox'>
-                      <input
-                        type='checkbox'
-                        class='ant-checkbox-input'
-                        value=''
-                      />
-                    </span>
-                    <span>
-                      <div class='protocol-content'>
-                        <span>I have already read and accept Superbuy's </span>
-                        <a
-                          href='/en/page/about/statementagreement/'
-                          rel='noreferrer'
-                          target='_blank'>
-                          Terms of Service
-                        </a>
-                        <span> and </span>
-                        <a
-                          href='/en/page/about/privacy/'
-                          rel='noreferrer'
-                          target='_blank'>
-                          Privacy Policy
-                        </a>
-                      </div>
-                    </span>
-                  </label>
-                </div>
-                <div className='loading-box'>
-                  <input type='button' class='btnS' value='Sign Up' />
-                </div>
+                <Formik
+                  initialValues={{
+                    email: "",
+                    password: "",
+                  }}
+                  validationSchema={validate}
+                  onSubmit={(values) => {
+                    console.log(values);
+                  }}>
+                  {(formik) => (
+                    <>
+                      <h6 class='title'>Sign Up </h6>
+                      <Form>
+                        <TextField
+                          placeholder='Email'
+                          name='email'
+                          type='email'
+                        />
+                        <TextField
+                          placeholder='Password'
+                          name='password'
+                          type='password'
+                        />
+                        <div className='loginMsg'>
+                          <input
+                            type='text'
+                            class='inputS verCode-input'
+                            placeholder='Verification Code'
+                          />
+                          <div class='verCode'>
+                            <img src='//login.superbuy.com/api/site/captcha' />
+                          </div>
+                        </div>
+                        <div class='protocol'>
+                          <label class='ant-checkbox-wrapper'>
+                            <span class='ant-checkbox'>
+                              <input
+                                type='checkbox'
+                                class='ant-checkbox-input'
+                                name='acceptTerms'
+                                checked={formik.values.acceptTerms}
+                                onChange={formik.handleChange}
+                              />
+                            </span>
+                            <span>
+                              <div class='protocol-content'>
+                                <span>
+                                  I have already read and accept Superbuy's
+                                </span>
+                                <a
+                                  href='/en/page/about/statementagreement/'
+                                  rel='noreferrer'
+                                  target='_blank'>
+                                  Terms of Service
+                                </a>
+                                <span> and </span>
+                                <a
+                                  href='/en/page/about/privacy/'
+                                  rel='noreferrer'
+                                  target='_blank'>
+                                  Privacy Policy
+                                </a>
+                              </div>
+                            </span>
+                          </label>
+                          {formik.touched.acceptTerms &&
+                          formik.errors.acceptTerms ? (
+                            <div className='error'>
+                              {formik.errors.acceptTerms}
+                            </div>
+                          ) : null}
+                        </div>
+                        <div className='loading-box'>
+                          <input type='submit' class='btnS' value='Sign Up' />
+                        </div>
+                      </Form>
+                    </>
+                  )}
+                </Formik>
                 <section class='otherWay'>
                   <div class='list'>
                     <a
